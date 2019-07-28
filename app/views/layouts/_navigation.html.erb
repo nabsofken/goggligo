@@ -38,6 +38,14 @@
                     <li class="<%= is_active_action('basic_forms') %>"><%= link_to 'New form', questions_new_path %></li>
                 </ul>
             </li>
+
+            <li class="<%= is_active_controller('forms') %>">
+                <a href="#"><i class="fa fa-edit"></i> <span class="nav-label">Users</span><span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level collapse <%= is_active_controller('forms') %>">
+                    <li class="<%= is_active_action('basic_forms') %>"><%= link_to "List", users_list_path %></li>
+                    <li class="<%= is_active_action('basic_forms') %>"><%= link_to 'New form', users_new_path %></li>
+                </ul>
+            </li>
         </ul>
     </div>
 </nav>

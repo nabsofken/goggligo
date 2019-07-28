@@ -1,7 +1,7 @@
 Myapp::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
-  root to: 'dashboards#dashboard_1'
+  root to: 'questions#list'
 
   # All routes
   get "dashboards/dashboard_1"
@@ -127,5 +127,8 @@ Myapp::Application.routes.draw do
   get "questions/new"
   post "questions/create"
 
+  get "users/list"
+  get "users/new"
+  post "users/create"
   #resources :questions
 end
