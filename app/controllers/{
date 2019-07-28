@@ -1,0 +1,69 @@
+{
+questions: [
+{
+id: "101",
+title: "Health Card available?",
+type: "mcqs",
+placeholder: "",
+options: [
+{
+text: "Yes",
+value: "yes"
+},
+{
+text: "No",
+value: "no"
+}
+],
+format: 'xxx-xx-xxxxx',
+required: true,
+conditions: [
+{
+value: 'yes',
+nextQuestion: "102"
+},
+{
+value: "no",
+nextQuestion: "103"
+}
+]
+},
+{
+id: "102",
+title: "Health Card No",
+type: "number",
+placeholder: "Health Card Number",
+options: [],
+format: 'xxxx-xxx-xxx',
+required: false,
+conditions: []
+},
+{
+id: "103",
+title: "Name your family physician",
+type: "text",
+placeholder: "Family physician",
+options: [],
+dateformat: 'xxxx-xxx-xxx',
+health_card_format: 'xxxx-xxx-xxx',
+phone_number_format: 'xxxx-xxx-xxx',
+required: false,
+conditions: []
+},
+
+
+{
+id: "104",
+title: "Health Card No",
+type: "number",
+placeholder: "Health Card Number",
+options: [],
+format: 'xxxx-xxx-xxx',
+required: false,
+conditions: []
+}
+
+
+
+]
+}

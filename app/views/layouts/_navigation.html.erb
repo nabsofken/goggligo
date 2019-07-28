@@ -1,0 +1,44 @@
+<nav class="navbar-default navbar-static-side" role="navigation">
+    <div class="sidebar-collapse">
+        <ul class="nav metismenu" id="side-menu">
+            <li class="nav-header">
+                <div class="dropdown profile-element">
+                    <span>
+                    <img src="<%= image_path('high-res.jpg') %>" width="100px" height="100px"class="img-responsive" style="margin: auto;">
+
+                    </span>
+                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                        <span class="clear">
+                            <span class="block m-t-xs">
+                                <strong class="font-bold">Goggligo Tech</strong>
+                            </span> <span class="text-muted text-xs block">Dentist <b class="caret"></b></span>
+                        </span>
+                    </a>
+                    <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                        <li><a href="">Profile</a>
+                        </li>
+                        <li><a href="">Contacts</a>
+                        </li>
+                        <li><a href="">Mailbox</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li><a href="">Logout</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="logo-element">
+                    
+                    <img src="<%= image_path('high-res.jpg') %>" class="img-responsive">
+                </div>
+            </li>
+            <li class="<%= is_active_controller('forms') %>">
+                <a href="#"><i class="fa fa-edit"></i> <span class="nav-label">Questions</span><span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level collapse <%= is_active_controller('forms') %>">
+                    <li class="<%= is_active_action('basic_forms') %>"><%= link_to "List", questions_list_path %></li>
+                    <li class="<%= is_active_action('basic_forms') %>"><%= link_to 'New form', questions_new_path %></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</nav>
+
