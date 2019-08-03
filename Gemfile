@@ -10,7 +10,7 @@ gem 'font-awesome-rails', '4.3.0.0'
 # Use sqlite3 as the database for Active Record
 #gem 'sqlite3'
 gem 'pg', '~> 0.15'
-
+gem 'devise'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.2'

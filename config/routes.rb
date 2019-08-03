@@ -3,6 +3,8 @@ Myapp::Application.routes.draw do
   # You can have the root of your site routed with "root"
   root to: 'questions#list'
 
+  devise_for :users
+
   # All routes
   get "dashboards/dashboard_1"
   get "dashboards/dashboard_2"

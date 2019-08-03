@@ -11,7 +11,7 @@
                         <span class="clear">
                             <span class="block m-t-xs">
                                 <strong class="font-bold">Goggligo Tech</strong>
-                            </span> <span class="text-muted text-xs block">Dentist <b class="caret"></b></span>
+                            </span> <span class="text-muted text-xs block"><%= current_user.full_name %> <b class="caret"></b></span>
                         </span>
                     </a>
                     <ul class="dropdown-menu animated fadeInRight m-t-xs">
@@ -22,7 +22,8 @@
                         <li><a href="">Mailbox</a>
                         </li>
                         <li class="divider"></li>
-                        <li><a href="">Logout</a>
+                        <li>
+                            <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
                         </li>
                     </ul>
                 </div>

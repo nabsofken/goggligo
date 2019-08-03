@@ -110,8 +110,9 @@
 
 
             <li>
-                <a href="<%= url_for :controller => 'pages', :action => 'login_2' %>">
-                <i class="fa fa-sign-out"></i> Log out
+                <%= link_to destroy_user_session_path do %>
+                    <i class="fa fa-sign-out"></i> <span style="color: #888888">Log out</span>
+                <% end %>
             </a>
         </li>
 
