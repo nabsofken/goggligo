@@ -40,6 +40,9 @@ group :development do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
 
+#Exception Notifier
+gem 'exception_notification'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 

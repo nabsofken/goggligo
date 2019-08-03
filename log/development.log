@@ -87970,3 +87970,136 @@ Started GET "/assets/patterns/header-profile-skin-1.png" for ::1 at 2019-08-04 0
 
 
 Started GET "/assets/patterns/header-profile-skin-3.png" for ::1 at 2019-08-04 01:48:38 +0500
+DEPRECATION WARNING: Currently, Active Record suppresses errors raised within `after_rollback`/`after_commit` callbacks and only print them to the logs. In the next version, these errors will no longer be suppressed. Instead, the errors will propagate normally just like in other Active Record callbacks.
+
+You can opt into the new behavior and remove this warning by setting:
+
+  config.active_record.raise_in_transactional_callbacks = true
+
+ (called from block in <module:Confirmable> at /Users/mac/.rvm/gems/ruby-2.5.1/gems/devise-4.6.2/lib/devise/models/confirmable.rb:52)
+DEPRECATION WARNING: Currently, Active Record suppresses errors raised within `after_rollback`/`after_commit` callbacks and only print them to the logs. In the next version, these errors will no longer be suppressed. Instead, the errors will propagate normally just like in other Active Record callbacks.
+
+You can opt into the new behavior and remove this warning by setting:
+
+  config.active_record.raise_in_transactional_callbacks = true
+
+ (called from block in <module:Confirmable> at /Users/mac/.rvm/gems/ruby-2.5.1/gems/devise-4.6.2/lib/devise/models/confirmable.rb:53)
+
+
+Started GET "/" for ::1 at 2019-08-04 02:13:28 +0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by QuestionsController#list as HTML
+  [1m[35mUser Load (1.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mQuestion Load (1.4ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY created_at DESC[0m
+  Rendered questions/list.html.erb within layouts/application (27.7ms)
+  Rendered layouts/_skinconfig.html.erb (0.7ms)
+  Rendered layouts/_navigation.html.erb (2.3ms)
+  Rendered layouts/_topnavbar.html.erb (4.8ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+  Rendered layouts/_rightsidebar.html.erb (8.6ms)
+Completed 200 OK in 343ms (Views: 262.4ms | ActiveRecord: 13.5ms)
+
+
+Started GET "/assets/animate/animate.css?body=1" for ::1 at 2019-08-04 02:13:29 +0500
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2019-08-04 02:13:29 +0500
+
+
+Started GET "/assets/font-awesome.css?body=1" for ::1 at 2019-08-04 02:13:29 +0500
+
+
+Started GET "/assets/jquery/jquery-2.1.1.js?body=1" for ::1 at 2019-08-04 02:13:29 +0500
+
+
+Started GET "/assets/style.css?body=1" for ::1 at 2019-08-04 02:13:29 +0500
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for ::1 at 2019-08-04 02:13:29 +0500
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for ::1 at 2019-08-04 02:13:29 +0500
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for ::1 at 2019-08-04 02:13:29 +0500
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for ::1 at 2019-08-04 02:13:29 +0500
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for ::1 at 2019-08-04 02:13:29 +0500
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for ::1 at 2019-08-04 02:13:29 +0500
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for ::1 at 2019-08-04 02:13:29 +0500
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for ::1 at 2019-08-04 02:13:29 +0500
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for ::1 at 2019-08-04 02:13:29 +0500
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for ::1 at 2019-08-04 02:13:29 +0500
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for ::1 at 2019-08-04 02:13:29 +0500
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for ::1 at 2019-08-04 02:13:29 +0500
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for ::1 at 2019-08-04 02:13:29 +0500
+
+
+Started GET "/assets/metisMenu/jquery.metisMenu.js?body=1" for ::1 at 2019-08-04 02:13:29 +0500
+
+
+Started GET "/assets/pace/pace.min.js?body=1" for ::1 at 2019-08-04 02:13:29 +0500
+
+
+Started GET "/assets/peity/jquery.peity.min.js?body=1" for ::1 at 2019-08-04 02:13:29 +0500
+
+
+Started GET "/assets/slimscroll/jquery.slimscroll.min.js?body=1" for ::1 at 2019-08-04 02:13:29 +0500
+
+
+Started GET "/assets/inspinia.js?body=1" for ::1 at 2019-08-04 02:13:29 +0500
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2019-08-04 02:13:29 +0500
+
+
+Started GET "/assets/high-res.jpg" for ::1 at 2019-08-04 02:13:29 +0500
+
+
+Started GET "/assets/a7.jpg" for ::1 at 2019-08-04 02:13:29 +0500
+
+
+Started GET "/assets/a4.jpg" for ::1 at 2019-08-04 02:13:29 +0500
+
+
+Started GET "/assets/a1.jpg" for ::1 at 2019-08-04 02:13:29 +0500
+
+
+Started GET "/assets/a2.jpg" for ::1 at 2019-08-04 02:13:29 +0500
+
+
+Started GET "/assets/profile.jpg" for ::1 at 2019-08-04 02:13:29 +0500
+
+
+Started GET "/assets/a3.jpg" for ::1 at 2019-08-04 02:13:29 +0500
+
+
+Started GET "/assets/a8.jpg" for ::1 at 2019-08-04 02:13:29 +0500
+
+
+Started GET "/assets/patterns/header-profile-skin-1.png" for ::1 at 2019-08-04 02:13:30 +0500
+
+
+Started GET "/assets/patterns/header-profile-skin-3.png" for ::1 at 2019-08-04 02:13:30 +0500
+
+
+Started GET "/assets/fontawesome-webfont.woff2?v=4.3.0" for ::1 at 2019-08-04 02:13:30 +0500

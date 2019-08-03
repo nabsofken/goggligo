@@ -82,6 +82,9 @@ GEM
       responders
       warden (~> 1.2.3)
     erubis (2.7.0)
+    exception_notification (4.3.0)
+      actionmailer (>= 4.0, < 6)
+      activesupport (>= 4.0, < 6)
     execjs (2.7.0)
     font-awesome-rails (4.3.0.0)
       railties (>= 3.2, < 5.0)
@@ -159,6 +162,7 @@ DEPENDENCIES
   byebug
   coffee-rails (~> 4.0.0)
   devise
+  exception_notification
   font-awesome-rails (= 4.3.0.0)
   jbuilder (~> 1.2)
   pg (~> 0.15)
