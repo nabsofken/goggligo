@@ -97001,3 +97001,122 @@ Started GET "/assets/patterns/header-profile-skin-1.png" for ::1 at 2019-08-04 2
 
 
 Started GET "/assets/patterns/header-profile-skin-3.png" for ::1 at 2019-08-04 23:36:40 +0500
+
+
+Started GET "/appointments/list" for ::1 at 2019-08-04 23:37:32 +0500
+Processing by AppointmentsController#list as HTML
+  [1m[35mAppointment Load (0.4ms)[0m  SELECT "appointments".* FROM "appointments"  ORDER BY created_at DESC
+  Rendered appointments/list.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 61ms (Views: 60.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2019-08-04 23:37:33 +0500
+
+
+Started GET "/assets/jquery/jquery-2.1.1.js?body=1" for ::1 at 2019-08-04 23:37:33 +0500
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for ::1 at 2019-08-04 23:37:33 +0500
+
+
+Started GET "/assets/font-awesome.css?body=1" for ::1 at 2019-08-04 23:37:33 +0500
+
+
+Started GET "/assets/style.css?body=1" for ::1 at 2019-08-04 23:37:33 +0500
+
+
+Started GET "/assets/animate/animate.css?body=1" for ::1 at 2019-08-04 23:37:33 +0500
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for ::1 at 2019-08-04 23:37:33 +0500
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for ::1 at 2019-08-04 23:37:33 +0500
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for ::1 at 2019-08-04 23:37:33 +0500
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for ::1 at 2019-08-04 23:37:33 +0500
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for ::1 at 2019-08-04 23:37:33 +0500
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for ::1 at 2019-08-04 23:37:33 +0500
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for ::1 at 2019-08-04 23:37:33 +0500
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for ::1 at 2019-08-04 23:37:33 +0500
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for ::1 at 2019-08-04 23:37:33 +0500
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for ::1 at 2019-08-04 23:37:33 +0500
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for ::1 at 2019-08-04 23:37:33 +0500
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for ::1 at 2019-08-04 23:37:33 +0500
+
+
+Started GET "/assets/metisMenu/jquery.metisMenu.js?body=1" for ::1 at 2019-08-04 23:37:33 +0500
+
+
+Started GET "/assets/pace/pace.min.js?body=1" for ::1 at 2019-08-04 23:37:33 +0500
+
+
+Started GET "/assets/peity/jquery.peity.min.js?body=1" for ::1 at 2019-08-04 23:37:33 +0500
+
+
+Started GET "/assets/slimscroll/jquery.slimscroll.min.js?body=1" for ::1 at 2019-08-04 23:37:33 +0500
+
+
+Started GET "/assets/inspinia.js?body=1" for ::1 at 2019-08-04 23:37:33 +0500
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2019-08-04 23:37:33 +0500
+
+
+Started GET "/assets/fontawesome-webfont.woff2?v=4.3.0" for ::1 at 2019-08-04 23:37:33 +0500
+
+
+Started GET "/appointments/list" for ::1 at 2019-08-04 23:37:59 +0500
+DEPRECATION WARNING: Currently, Active Record suppresses errors raised within `after_rollback`/`after_commit` callbacks and only print them to the logs. In the next version, these errors will no longer be suppressed. Instead, the errors will propagate normally just like in other Active Record callbacks.
+
+You can opt into the new behavior and remove this warning by setting:
+
+  config.active_record.raise_in_transactional_callbacks = true
+
+ (called from block in <module:Confirmable> at /Users/mac/.rvm/gems/ruby-2.5.1/gems/devise-4.6.2/lib/devise/models/confirmable.rb:52)
+DEPRECATION WARNING: Currently, Active Record suppresses errors raised within `after_rollback`/`after_commit` callbacks and only print them to the logs. In the next version, these errors will no longer be suppressed. Instead, the errors will propagate normally just like in other Active Record callbacks.
+
+You can opt into the new behavior and remove this warning by setting:
+
+  config.active_record.raise_in_transactional_callbacks = true
+
+ (called from block in <module:Confirmable> at /Users/mac/.rvm/gems/ruby-2.5.1/gems/devise-4.6.2/lib/devise/models/confirmable.rb:53)
+Processing by AppointmentsController#list as HTML
+Completed 401 Unauthorized in 7ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-08-04 23:37:59 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/sessions/new.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 54ms (Views: 31.1ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2019-08-04 23:37:59 +0500
+
+
+Started GET "/assets/style.css?body=1" for ::1 at 2019-08-04 23:37:59 +0500
+
+
+Started GET "/assets/animate/animate.css?body=1" for ::1 at 2019-08-04 23:37:59 +0500
+
+
+Started GET "/assets/font-awesome.css?body=1" for ::1 at 2019-08-04 23:37:59 +0500
