@@ -42,6 +42,9 @@ end
 
 #Exception Notifier
 gem 'exception_notification'
+gem 'apipie-rails'
+gem 'active_model_serializers'
+gem 'cancan'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
