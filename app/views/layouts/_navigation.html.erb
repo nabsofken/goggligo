@@ -33,7 +33,7 @@
                 <a href="#"><i class="fa fa-user-md white"></i> <span class="nav-label white">Patient Registered</span><span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level collapse <%= is_active_controller('forms') %>">
                     <li class="<%= is_active_action('basic_forms') %>"><%= link_to "List", appointments_list_path, class: 'white' %></li>
-                    <li class="<%= is_active_action('basic_forms') %>"><%= link_to 'New form', questions_new_path, class: 'white' %></li>
+                    <li class="<%= is_active_action('basic_forms') %>"><%= link_to 'New form', appointments_new_path, class: 'white' %></li>
                 </ul>
             </li>
 
