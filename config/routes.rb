@@ -144,6 +144,10 @@ Myapp::Application.routes.draw do
   get "questions/new"
   post "questions/create"
 
+  get "appointments/list"
+  get "appointments/new"
+  post "appointments/create"
+
   get "users/list"
   get "users/new"
   post "users/create"
