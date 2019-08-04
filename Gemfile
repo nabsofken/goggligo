@@ -45,6 +45,9 @@ gem 'exception_notification'
 gem 'apipie-rails'
 gem 'active_model_serializers'
 gem 'cancan'
+gem 'wicked_pdf'
+gem 'wkhtmltopdf-binary'
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'

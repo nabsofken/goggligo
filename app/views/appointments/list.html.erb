@@ -19,6 +19,8 @@
         <div class="ibox-title">
             <h5>All Appointments</h5>
             <div class="ibox-tools">
+                <%= link_to 'Generate Report', appointments_generate_report_path, class: 'white btn btn-info btn-xs' %>
+
                 <%= link_to 'Create new appointment', appointments_new_path, class: 'btn btn-primary btn-xs' %>
             </div>
         </div>

@@ -164,6 +164,9 @@ GEM
       thread_safe (~> 0.1)
     warden (1.2.7)
       rack (>= 1.0)
+    wicked_pdf (1.4.0)
+      activesupport
+    wkhtmltopdf-binary (0.12.4)
 
 PLATFORMS
   ruby
@@ -185,6 +188,8 @@ DEPENDENCIES
   sass-rails (~> 4.0.2)
   sdoc
   turbolinks
+  wicked_pdf
+  wkhtmltopdf-binary
 
 BUNDLED WITH
    1.16.6
