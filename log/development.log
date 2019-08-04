@@ -90332,3 +90332,4024 @@ Processing by Api::V1::QuestionsController#index as JSON
 [active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.24ms)
 [active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (9.07ms)
 Completed 200 OK in 41ms (Views: 13.0ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/apipie" for ::1 at 2019-08-04 22:11:04 +0500
+Processing by Apipie::ApipiesController#index as HTML
+DEPRECATION WARNING: Currently, Active Record suppresses errors raised within `after_rollback`/`after_commit` callbacks and only print them to the logs. In the next version, these errors will no longer be suppressed. Instead, the errors will propagate normally just like in other Active Record callbacks.
+
+You can opt into the new behavior and remove this warning by setting:
+
+  config.active_record.raise_in_transactional_callbacks = true
+
+ (called from block in <module:Confirmable> at /Users/mac/.rvm/gems/ruby-2.5.1/gems/devise-4.6.2/lib/devise/models/confirmable.rb:52)
+DEPRECATION WARNING: Currently, Active Record suppresses errors raised within `after_rollback`/`after_commit` callbacks and only print them to the logs. In the next version, these errors will no longer be suppressed. Instead, the errors will propagate normally just like in other Active Record callbacks.
+
+You can opt into the new behavior and remove this warning by setting:
+
+  config.active_record.raise_in_transactional_callbacks = true
+
+ (called from block in <module:Confirmable> at /Users/mac/.rvm/gems/ruby-2.5.1/gems/devise-4.6.2/lib/devise/models/confirmable.rb:53)
+  Rendered /Users/mac/.rvm/gems/ruby-2.5.1/gems/apipie-rails-0.5.16/app/views/apipie/apipies/_languages.erb (0.4ms)
+  Rendered /Users/mac/.rvm/gems/ruby-2.5.1/gems/apipie-rails-0.5.16/app/views/apipie/apipies/index.html.erb within layouts/apipie/apipie (5.1ms)
+Completed 200 OK in 523ms (Views: 16.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/apipie/javascripts/bundled/jquery.js" for ::1 at 2019-08-04 22:11:04 +0500
+
+
+Started GET "/apipie/stylesheets/application.css" for ::1 at 2019-08-04 22:11:05 +0500
+
+
+Started GET "/apipie/stylesheets/bundled/prettify.css" for ::1 at 2019-08-04 22:11:05 +0500
+
+
+Started GET "/apipie/stylesheets/bundled/bootstrap-responsive.min.css" for ::1 at 2019-08-04 22:11:05 +0500
+
+
+Started GET "/apipie/javascripts/bundled/bootstrap-collapse.js" for ::1 at 2019-08-04 22:11:05 +0500
+
+
+Started GET "/apipie/stylesheets/bundled/bootstrap.min.css" for ::1 at 2019-08-04 22:11:05 +0500
+
+
+Started GET "/apipie/javascripts/bundled/prettify.js" for ::1 at 2019-08-04 22:11:05 +0500
+
+
+Started GET "/apipie/javascripts/apipie.js" for ::1 at 2019-08-04 22:11:05 +0500
+
+
+Started GET "/apipie/1.0/registrations/create.en.html" for ::1 at 2019-08-04 22:11:15 +0500
+Processing by Apipie::ApipiesController#index as HTML
+  Parameters: {"version"=>"1.0", "resource"=>"registrations", "method"=>"create.en.html"}
+DEPRECATION WARNING: Currently, Active Record suppresses errors raised within `after_rollback`/`after_commit` callbacks and only print them to the logs. In the next version, these errors will no longer be suppressed. Instead, the errors will propagate normally just like in other Active Record callbacks.
+
+You can opt into the new behavior and remove this warning by setting:
+
+  config.active_record.raise_in_transactional_callbacks = true
+
+ (called from block in <module:Confirmable> at /Users/mac/.rvm/gems/ruby-2.5.1/gems/devise-4.6.2/lib/devise/models/confirmable.rb:52)
+DEPRECATION WARNING: Currently, Active Record suppresses errors raised within `after_rollback`/`after_commit` callbacks and only print them to the logs. In the next version, these errors will no longer be suppressed. Instead, the errors will propagate normally just like in other Active Record callbacks.
+
+You can opt into the new behavior and remove this warning by setting:
+
+  config.active_record.raise_in_transactional_callbacks = true
+
+ (called from block in <module:Confirmable> at /Users/mac/.rvm/gems/ruby-2.5.1/gems/devise-4.6.2/lib/devise/models/confirmable.rb:53)
+  Rendered /Users/mac/.rvm/gems/ruby-2.5.1/gems/apipie-rails-0.5.16/app/views/apipie/apipies/apipie_404.html.erb within layouts/apipie/apipie (1.0ms)
+Completed 404 Not Found in 317ms (Views: 12.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/apipie/stylesheets/bundled/bootstrap.min.css" for ::1 at 2019-08-04 22:11:15 +0500
+
+
+Started GET "/apipie/stylesheets/bundled/bootstrap-responsive.min.css" for ::1 at 2019-08-04 22:11:15 +0500
+
+
+Started GET "/apipie/javascripts/bundled/bootstrap-collapse.js" for ::1 at 2019-08-04 22:11:15 +0500
+
+
+Started GET "/apipie/javascripts/bundled/jquery.js" for ::1 at 2019-08-04 22:11:15 +0500
+
+
+Started GET "/apipie/stylesheets/application.css" for ::1 at 2019-08-04 22:11:15 +0500
+
+
+Started GET "/apipie/stylesheets/bundled/prettify.css" for ::1 at 2019-08-04 22:11:15 +0500
+
+
+Started GET "/apipie/javascripts/apipie.js" for ::1 at 2019-08-04 22:11:15 +0500
+
+
+Started GET "/apipie/javascripts/bundled/prettify.js" for ::1 at 2019-08-04 22:11:15 +0500
+
+
+Started GET "/" for ::1 at 2019-08-04 22:12:25 +0500
+Processing by QuestionsController#list as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mQuestion Load (1.4ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY created_at DESC[0m
+  Rendered questions/list.html.erb within layouts/application (21.5ms)
+  Rendered layouts/_skinconfig.html.erb (0.8ms)
+  Rendered layouts/_navigation.html.erb (2.5ms)
+  Rendered layouts/_topnavbar.html.erb (5.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+  Rendered layouts/_rightsidebar.html.erb (6.4ms)
+Completed 200 OK in 266ms (Views: 226.6ms | ActiveRecord: 8.1ms)
+
+
+Started GET "/assets/style.css?body=1" for ::1 at 2019-08-04 22:12:25 +0500
+
+
+Started GET "/" for ::1 at 2019-08-04 22:12:31 +0500
+Processing by QuestionsController#list as HTML
+  [1m[35mUser Load (1.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mQuestion Load (2.0ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY created_at DESC[0m
+  Rendered questions/list.html.erb within layouts/application (8.0ms)
+  Rendered layouts/_skinconfig.html.erb (0.6ms)
+  Rendered layouts/_navigation.html.erb (1.4ms)
+  Rendered layouts/_topnavbar.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+  Rendered layouts/_rightsidebar.html.erb (0.9ms)
+Completed 200 OK in 97ms (Views: 87.5ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2019-08-04 22:12:31 +0500
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for ::1 at 2019-08-04 22:12:31 +0500
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for ::1 at 2019-08-04 22:12:31 +0500
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for ::1 at 2019-08-04 22:12:31 +0500
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for ::1 at 2019-08-04 22:12:31 +0500
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for ::1 at 2019-08-04 22:12:31 +0500
+
+
+Started GET "/assets/font-awesome.css?body=1" for ::1 at 2019-08-04 22:12:31 +0500
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for ::1 at 2019-08-04 22:12:31 +0500
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for ::1 at 2019-08-04 22:12:31 +0500
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for ::1 at 2019-08-04 22:12:31 +0500
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for ::1 at 2019-08-04 22:12:31 +0500
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for ::1 at 2019-08-04 22:12:31 +0500
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for ::1 at 2019-08-04 22:12:31 +0500
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for ::1 at 2019-08-04 22:12:31 +0500
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for ::1 at 2019-08-04 22:12:31 +0500
+
+
+Started GET "/assets/metisMenu/jquery.metisMenu.js?body=1" for ::1 at 2019-08-04 22:12:31 +0500
+
+
+Started GET "/assets/pace/pace.min.js?body=1" for ::1 at 2019-08-04 22:12:31 +0500
+
+
+Started GET "/assets/peity/jquery.peity.min.js?body=1" for ::1 at 2019-08-04 22:12:31 +0500
+
+
+Started GET "/assets/slimscroll/jquery.slimscroll.min.js?body=1" for ::1 at 2019-08-04 22:12:31 +0500
+
+
+Started GET "/assets/inspinia.js?body=1" for ::1 at 2019-08-04 22:12:31 +0500
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2019-08-04 22:12:31 +0500
+
+
+Started GET "/assets/a7.jpg" for ::1 at 2019-08-04 22:12:31 +0500
+
+
+Started GET "/assets/a4.jpg" for ::1 at 2019-08-04 22:12:31 +0500
+
+
+Started GET "/assets/profile.jpg" for ::1 at 2019-08-04 22:12:31 +0500
+
+
+Started GET "/assets/a1.jpg" for ::1 at 2019-08-04 22:12:31 +0500
+
+
+Started GET "/assets/a2.jpg" for ::1 at 2019-08-04 22:12:31 +0500
+
+
+Started GET "/assets/a3.jpg" for ::1 at 2019-08-04 22:12:31 +0500
+
+
+Started GET "/assets/a8.jpg" for ::1 at 2019-08-04 22:12:31 +0500
+
+
+Started GET "/assets/patterns/header-profile-skin-1.png" for ::1 at 2019-08-04 22:12:31 +0500
+
+
+Started GET "/assets/patterns/header-profile-skin-3.png" for ::1 at 2019-08-04 22:12:31 +0500
+
+
+Started GET "/users/list" for ::1 at 2019-08-04 22:13:06 +0500
+Processing by UsersController#list as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users"  ORDER BY created_at DESC
+  Rendered users/list.html.erb within layouts/application (2.4ms)
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered layouts/_skinconfig.html.erb (0.1ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_topnavbar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+  Rendered layouts/_rightsidebar.html.erb (0.5ms)
+Completed 200 OK in 54ms (Views: 52.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/font-awesome.css?body=1" for ::1 at 2019-08-04 22:13:06 +0500
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2019-08-04 22:13:06 +0500
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for ::1 at 2019-08-04 22:13:06 +0500
+
+
+Started GET "/assets/style.css?body=1" for ::1 at 2019-08-04 22:13:06 +0500
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for ::1 at 2019-08-04 22:13:06 +0500
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for ::1 at 2019-08-04 22:13:06 +0500
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for ::1 at 2019-08-04 22:13:06 +0500
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for ::1 at 2019-08-04 22:13:06 +0500
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for ::1 at 2019-08-04 22:13:06 +0500
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for ::1 at 2019-08-04 22:13:06 +0500
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for ::1 at 2019-08-04 22:13:06 +0500
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for ::1 at 2019-08-04 22:13:06 +0500
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for ::1 at 2019-08-04 22:13:06 +0500
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for ::1 at 2019-08-04 22:13:06 +0500
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for ::1 at 2019-08-04 22:13:06 +0500
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for ::1 at 2019-08-04 22:13:06 +0500
+
+
+Started GET "/assets/metisMenu/jquery.metisMenu.js?body=1" for ::1 at 2019-08-04 22:13:06 +0500
+
+
+Started GET "/assets/pace/pace.min.js?body=1" for ::1 at 2019-08-04 22:13:06 +0500
+
+
+Started GET "/assets/peity/jquery.peity.min.js?body=1" for ::1 at 2019-08-04 22:13:06 +0500
+
+
+Started GET "/assets/slimscroll/jquery.slimscroll.min.js?body=1" for ::1 at 2019-08-04 22:13:06 +0500
+
+
+Started GET "/assets/inspinia.js?body=1" for ::1 at 2019-08-04 22:13:06 +0500
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2019-08-04 22:13:06 +0500
+
+
+Started GET "/assets/a7.jpg" for ::1 at 2019-08-04 22:13:06 +0500
+
+
+Started GET "/assets/a4.jpg" for ::1 at 2019-08-04 22:13:06 +0500
+
+
+Started GET "/assets/profile.jpg" for ::1 at 2019-08-04 22:13:06 +0500
+
+
+Started GET "/assets/a8.jpg" for ::1 at 2019-08-04 22:13:06 +0500
+
+
+Started GET "/assets/a2.jpg" for ::1 at 2019-08-04 22:13:06 +0500
+
+
+Started GET "/assets/a3.jpg" for ::1 at 2019-08-04 22:13:06 +0500
+
+
+Started GET "/assets/a1.jpg" for ::1 at 2019-08-04 22:13:06 +0500
+
+
+Started GET "/assets/patterns/header-profile-skin-3.png" for ::1 at 2019-08-04 22:13:06 +0500
+
+
+Started GET "/assets/patterns/header-profile-skin-1.png" for ::1 at 2019-08-04 22:13:06 +0500
+
+
+Started GET "/users/sign_out" for ::1 at 2019-08-04 22:18:31 +0500
+Processing by Devise::SessionsController#destroy as HTML
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2019-08-04 22:18:31 +0500
+Processing by QuestionsController#list as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-08-04 22:18:31 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/sessions/new.html.erb within layouts/application (32.7ms)
+Completed 200 OK in 62ms (Views: 61.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/font-awesome.css?body=1" for ::1 at 2019-08-04 22:18:31 +0500
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for ::1 at 2019-08-04 22:18:31 +0500
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2019-08-04 22:18:31 +0500
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for ::1 at 2019-08-04 22:18:31 +0500
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for ::1 at 2019-08-04 22:18:31 +0500
+
+
+Started GET "/assets/style.css?body=1" for ::1 at 2019-08-04 22:18:31 +0500
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for ::1 at 2019-08-04 22:18:31 +0500
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for ::1 at 2019-08-04 22:18:31 +0500
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for ::1 at 2019-08-04 22:18:31 +0500
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for ::1 at 2019-08-04 22:18:31 +0500
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for ::1 at 2019-08-04 22:18:31 +0500
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for ::1 at 2019-08-04 22:18:31 +0500
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for ::1 at 2019-08-04 22:18:31 +0500
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for ::1 at 2019-08-04 22:18:31 +0500
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for ::1 at 2019-08-04 22:18:31 +0500
+
+
+Started GET "/assets/metisMenu/jquery.metisMenu.js?body=1" for ::1 at 2019-08-04 22:18:31 +0500
+
+
+Started GET "/assets/pace/pace.min.js?body=1" for ::1 at 2019-08-04 22:18:31 +0500
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for ::1 at 2019-08-04 22:18:31 +0500
+
+
+Started GET "/assets/peity/jquery.peity.min.js?body=1" for ::1 at 2019-08-04 22:18:31 +0500
+
+
+Started GET "/assets/slimscroll/jquery.slimscroll.min.js?body=1" for ::1 at 2019-08-04 22:18:31 +0500
+
+
+Started GET "/assets/inspinia.js?body=1" for ::1 at 2019-08-04 22:18:31 +0500
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2019-08-04 22:18:31 +0500
+
+
+Started GET "/users/sign_in" for ::1 at 2019-08-04 22:19:45 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/sessions/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 57ms (Views: 56.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/font-awesome.css?body=1" for ::1 at 2019-08-04 22:19:45 +0500
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2019-08-04 22:19:45 +0500
+
+
+Started GET "/assets/style.css?body=1" for ::1 at 2019-08-04 22:19:45 +0500
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for ::1 at 2019-08-04 22:19:45 +0500
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for ::1 at 2019-08-04 22:19:45 +0500
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for ::1 at 2019-08-04 22:19:45 +0500
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for ::1 at 2019-08-04 22:19:45 +0500
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for ::1 at 2019-08-04 22:19:45 +0500
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for ::1 at 2019-08-04 22:19:45 +0500
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for ::1 at 2019-08-04 22:19:45 +0500
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for ::1 at 2019-08-04 22:19:45 +0500
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for ::1 at 2019-08-04 22:19:45 +0500
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for ::1 at 2019-08-04 22:19:45 +0500
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for ::1 at 2019-08-04 22:19:45 +0500
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for ::1 at 2019-08-04 22:19:45 +0500
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for ::1 at 2019-08-04 22:19:45 +0500
+
+
+Started GET "/assets/metisMenu/jquery.metisMenu.js?body=1" for ::1 at 2019-08-04 22:19:45 +0500
+
+
+Started GET "/assets/pace/pace.min.js?body=1" for ::1 at 2019-08-04 22:19:45 +0500
+
+
+Started GET "/assets/peity/jquery.peity.min.js?body=1" for ::1 at 2019-08-04 22:19:45 +0500
+
+
+Started GET "/assets/slimscroll/jquery.slimscroll.min.js?body=1" for ::1 at 2019-08-04 22:19:45 +0500
+
+
+Started GET "/assets/inspinia.js?body=1" for ::1 at 2019-08-04 22:19:45 +0500
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2019-08-04 22:19:45 +0500
+
+
+Started GET "/users/sign_in" for ::1 at 2019-08-04 22:20:02 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/sessions/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 39ms (Views: 38.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/font-awesome.css?body=1" for ::1 at 2019-08-04 22:20:02 +0500
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2019-08-04 22:20:02 +0500
+
+
+Started GET "/assets/style.css?body=1" for ::1 at 2019-08-04 22:20:02 +0500
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for ::1 at 2019-08-04 22:20:02 +0500
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for ::1 at 2019-08-04 22:20:02 +0500
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for ::1 at 2019-08-04 22:20:02 +0500
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for ::1 at 2019-08-04 22:20:02 +0500
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for ::1 at 2019-08-04 22:20:02 +0500
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for ::1 at 2019-08-04 22:20:02 +0500
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for ::1 at 2019-08-04 22:20:02 +0500
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for ::1 at 2019-08-04 22:20:02 +0500
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for ::1 at 2019-08-04 22:20:02 +0500
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for ::1 at 2019-08-04 22:20:02 +0500
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for ::1 at 2019-08-04 22:20:02 +0500
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for ::1 at 2019-08-04 22:20:02 +0500
+
+
+Started GET "/assets/metisMenu/jquery.metisMenu.js?body=1" for ::1 at 2019-08-04 22:20:02 +0500
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for ::1 at 2019-08-04 22:20:02 +0500
+
+
+Started GET "/assets/pace/pace.min.js?body=1" for ::1 at 2019-08-04 22:20:02 +0500
+
+
+Started GET "/assets/peity/jquery.peity.min.js?body=1" for ::1 at 2019-08-04 22:20:02 +0500
+
+
+Started GET "/assets/slimscroll/jquery.slimscroll.min.js?body=1" for ::1 at 2019-08-04 22:20:02 +0500
+
+
+Started GET "/assets/inspinia.js?body=1" for ::1 at 2019-08-04 22:20:02 +0500
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2019-08-04 22:20:02 +0500
+
+
+Started GET "/users/sign_in" for ::1 at 2019-08-04 22:20:20 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/sessions/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 21ms (Views: 20.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/font-awesome.css?body=1" for ::1 at 2019-08-04 22:20:21 +0500
+
+
+Started GET "/assets/style.css?body=1" for ::1 at 2019-08-04 22:20:21 +0500
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2019-08-04 22:20:21 +0500
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for ::1 at 2019-08-04 22:20:21 +0500
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for ::1 at 2019-08-04 22:20:21 +0500
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for ::1 at 2019-08-04 22:20:21 +0500
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for ::1 at 2019-08-04 22:20:21 +0500
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for ::1 at 2019-08-04 22:20:21 +0500
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for ::1 at 2019-08-04 22:20:21 +0500
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for ::1 at 2019-08-04 22:20:21 +0500
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for ::1 at 2019-08-04 22:20:21 +0500
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for ::1 at 2019-08-04 22:20:21 +0500
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for ::1 at 2019-08-04 22:20:21 +0500
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for ::1 at 2019-08-04 22:20:21 +0500
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for ::1 at 2019-08-04 22:20:21 +0500
+
+
+Started GET "/assets/pace/pace.min.js?body=1" for ::1 at 2019-08-04 22:20:21 +0500
+
+
+Started GET "/assets/peity/jquery.peity.min.js?body=1" for ::1 at 2019-08-04 22:20:21 +0500
+
+
+Started GET "/assets/slimscroll/jquery.slimscroll.min.js?body=1" for ::1 at 2019-08-04 22:20:21 +0500
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for ::1 at 2019-08-04 22:20:21 +0500
+
+
+Started GET "/assets/inspinia.js?body=1" for ::1 at 2019-08-04 22:20:21 +0500
+
+
+Started GET "/assets/metisMenu/jquery.metisMenu.js?body=1" for ::1 at 2019-08-04 22:20:21 +0500
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2019-08-04 22:20:21 +0500
+
+
+Started GET "/users/sign_in" for ::1 at 2019-08-04 22:20:50 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/sessions/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 49ms (Views: 48.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for ::1 at 2019-08-04 22:20:50 +0500
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for ::1 at 2019-08-04 22:20:50 +0500
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for ::1 at 2019-08-04 22:20:50 +0500
+
+
+Started GET "/assets/font-awesome.css?body=1" for ::1 at 2019-08-04 22:20:50 +0500
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for ::1 at 2019-08-04 22:20:50 +0500
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2019-08-04 22:20:50 +0500
+
+
+Started GET "/assets/style.css?body=1" for ::1 at 2019-08-04 22:20:50 +0500
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for ::1 at 2019-08-04 22:20:50 +0500
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for ::1 at 2019-08-04 22:20:50 +0500
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for ::1 at 2019-08-04 22:20:50 +0500
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for ::1 at 2019-08-04 22:20:50 +0500
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for ::1 at 2019-08-04 22:20:50 +0500
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for ::1 at 2019-08-04 22:20:50 +0500
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for ::1 at 2019-08-04 22:20:50 +0500
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for ::1 at 2019-08-04 22:20:50 +0500
+
+
+Started GET "/assets/metisMenu/jquery.metisMenu.js?body=1" for ::1 at 2019-08-04 22:20:50 +0500
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for ::1 at 2019-08-04 22:20:50 +0500
+
+
+Started GET "/assets/pace/pace.min.js?body=1" for ::1 at 2019-08-04 22:20:50 +0500
+
+
+Started GET "/assets/inspinia.js?body=1" for ::1 at 2019-08-04 22:20:50 +0500
+
+
+Started GET "/assets/peity/jquery.peity.min.js?body=1" for ::1 at 2019-08-04 22:20:50 +0500
+
+
+Started GET "/assets/slimscroll/jquery.slimscroll.min.js?body=1" for ::1 at 2019-08-04 22:20:50 +0500
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2019-08-04 22:20:50 +0500
+
+
+Started GET "/users/sign_in" for ::1 at 2019-08-04 22:21:15 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/sessions/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 25ms (Views: 24.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/font-awesome.css?body=1" for ::1 at 2019-08-04 22:21:16 +0500
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2019-08-04 22:21:16 +0500
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for ::1 at 2019-08-04 22:21:16 +0500
+
+
+Started GET "/assets/style.css?body=1" for ::1 at 2019-08-04 22:21:16 +0500
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for ::1 at 2019-08-04 22:21:16 +0500
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for ::1 at 2019-08-04 22:21:16 +0500
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for ::1 at 2019-08-04 22:21:16 +0500
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for ::1 at 2019-08-04 22:21:16 +0500
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for ::1 at 2019-08-04 22:21:16 +0500
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for ::1 at 2019-08-04 22:21:16 +0500
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for ::1 at 2019-08-04 22:21:16 +0500
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for ::1 at 2019-08-04 22:21:16 +0500
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for ::1 at 2019-08-04 22:21:16 +0500
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for ::1 at 2019-08-04 22:21:16 +0500
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for ::1 at 2019-08-04 22:21:16 +0500
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for ::1 at 2019-08-04 22:21:16 +0500
+
+
+Started GET "/assets/metisMenu/jquery.metisMenu.js?body=1" for ::1 at 2019-08-04 22:21:16 +0500
+
+
+Started GET "/assets/pace/pace.min.js?body=1" for ::1 at 2019-08-04 22:21:16 +0500
+
+
+Started GET "/assets/peity/jquery.peity.min.js?body=1" for ::1 at 2019-08-04 22:21:16 +0500
+
+
+Started GET "/assets/slimscroll/jquery.slimscroll.min.js?body=1" for ::1 at 2019-08-04 22:21:16 +0500
+
+
+Started GET "/assets/inspinia.js?body=1" for ::1 at 2019-08-04 22:21:16 +0500
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2019-08-04 22:21:16 +0500
+
+
+Started GET "/users/sign_in" for ::1 at 2019-08-04 22:21:33 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/sessions/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 30ms (Views: 29.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/font-awesome.css?body=1" for ::1 at 2019-08-04 22:21:33 +0500
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for ::1 at 2019-08-04 22:21:33 +0500
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for ::1 at 2019-08-04 22:21:33 +0500
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2019-08-04 22:21:33 +0500
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for ::1 at 2019-08-04 22:21:33 +0500
+
+
+Started GET "/assets/style.css?body=1" for ::1 at 2019-08-04 22:21:33 +0500
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for ::1 at 2019-08-04 22:21:33 +0500
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for ::1 at 2019-08-04 22:21:33 +0500
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for ::1 at 2019-08-04 22:21:33 +0500
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for ::1 at 2019-08-04 22:21:33 +0500
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for ::1 at 2019-08-04 22:21:33 +0500
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for ::1 at 2019-08-04 22:21:33 +0500
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for ::1 at 2019-08-04 22:21:33 +0500
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for ::1 at 2019-08-04 22:21:33 +0500
+
+
+Started GET "/assets/metisMenu/jquery.metisMenu.js?body=1" for ::1 at 2019-08-04 22:21:33 +0500
+
+
+Started GET "/assets/pace/pace.min.js?body=1" for ::1 at 2019-08-04 22:21:33 +0500
+
+
+Started GET "/assets/peity/jquery.peity.min.js?body=1" for ::1 at 2019-08-04 22:21:33 +0500
+
+
+Started GET "/assets/slimscroll/jquery.slimscroll.min.js?body=1" for ::1 at 2019-08-04 22:21:33 +0500
+
+
+Started GET "/assets/inspinia.js?body=1" for ::1 at 2019-08-04 22:21:33 +0500
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2019-08-04 22:21:33 +0500
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for ::1 at 2019-08-04 22:21:33 +0500
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for ::1 at 2019-08-04 22:21:33 +0500
+
+
+Started POST "/users/sign_in" for ::1 at 2019-08-04 22:21:39 +0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZRofYBn9pgqusNlRU1MyVUQTmnu9W9ypHW5pA4XzjgTo7KEQ04iKEnnzoHcsLHQxmnfNSowA0ML69xeQ/a8AxQ==", "user"=>{"email"=>"arslan.rao@tintash.com", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "arslan.rao@tintash.com"]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 262ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2019-08-04 22:21:39 +0500
+Processing by QuestionsController#list as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mQuestion Load (0.8ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY created_at DESC[0m
+  Rendered questions/list.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_skinconfig.html.erb (0.1ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_topnavbar.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+  Rendered layouts/_rightsidebar.html.erb (0.5ms)
+Completed 200 OK in 40ms (Views: 37.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/font-awesome.css?body=1" for ::1 at 2019-08-04 22:21:39 +0500
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2019-08-04 22:21:39 +0500
+
+
+Started GET "/assets/style.css?body=1" for ::1 at 2019-08-04 22:21:39 +0500
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for ::1 at 2019-08-04 22:21:39 +0500
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for ::1 at 2019-08-04 22:21:39 +0500
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for ::1 at 2019-08-04 22:21:39 +0500
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for ::1 at 2019-08-04 22:21:39 +0500
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for ::1 at 2019-08-04 22:21:39 +0500
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for ::1 at 2019-08-04 22:21:39 +0500
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for ::1 at 2019-08-04 22:21:39 +0500
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for ::1 at 2019-08-04 22:21:39 +0500
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for ::1 at 2019-08-04 22:21:39 +0500
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for ::1 at 2019-08-04 22:21:39 +0500
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for ::1 at 2019-08-04 22:21:39 +0500
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for ::1 at 2019-08-04 22:21:39 +0500
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for ::1 at 2019-08-04 22:21:39 +0500
+
+
+Started GET "/assets/metisMenu/jquery.metisMenu.js?body=1" for ::1 at 2019-08-04 22:21:39 +0500
+
+
+Started GET "/assets/pace/pace.min.js?body=1" for ::1 at 2019-08-04 22:21:39 +0500
+
+
+Started GET "/assets/peity/jquery.peity.min.js?body=1" for ::1 at 2019-08-04 22:21:39 +0500
+
+
+Started GET "/assets/slimscroll/jquery.slimscroll.min.js?body=1" for ::1 at 2019-08-04 22:21:39 +0500
+
+
+Started GET "/assets/inspinia.js?body=1" for ::1 at 2019-08-04 22:21:39 +0500
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2019-08-04 22:21:39 +0500
+
+
+Started GET "/assets/high-res.jpg" for ::1 at 2019-08-04 22:21:39 +0500
+
+
+Started GET "/assets/a7.jpg" for ::1 at 2019-08-04 22:21:40 +0500
+
+
+Started GET "/assets/profile.jpg" for ::1 at 2019-08-04 22:21:40 +0500
+
+
+Started GET "/assets/a2.jpg" for ::1 at 2019-08-04 22:21:40 +0500
+
+
+Started GET "/assets/a4.jpg" for ::1 at 2019-08-04 22:21:40 +0500
+
+
+Started GET "/assets/a1.jpg" for ::1 at 2019-08-04 22:21:40 +0500
+
+
+Started GET "/assets/a3.jpg" for ::1 at 2019-08-04 22:21:40 +0500
+
+
+Started GET "/assets/a8.jpg" for ::1 at 2019-08-04 22:21:40 +0500
+
+
+Started GET "/assets/patterns/header-profile-skin-1.png" for ::1 at 2019-08-04 22:21:40 +0500
+
+
+Started GET "/assets/patterns/header-profile-skin-3.png" for ::1 at 2019-08-04 22:21:40 +0500
+
+
+Started GET "/" for ::1 at 2019-08-04 22:22:59 +0500
+Processing by QuestionsController#list as HTML
+  [1m[35mUser Load (1.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mQuestion Load (0.5ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY created_at DESC[0m
+  Rendered questions/list.html.erb within layouts/application (10.0ms)
+  Rendered layouts/_skinconfig.html.erb (0.9ms)
+  Rendered layouts/_navigation.html.erb (2.0ms)
+  Rendered layouts/_topnavbar.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+  Rendered layouts/_rightsidebar.html.erb (0.4ms)
+Completed 200 OK in 78ms (Views: 72.2ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/style.css?body=1" for ::1 at 2019-08-04 22:23:00 +0500
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2019-08-04 22:23:00 +0500
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for ::1 at 2019-08-04 22:23:00 +0500
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for ::1 at 2019-08-04 22:23:00 +0500
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for ::1 at 2019-08-04 22:23:00 +0500
+
+
+Started GET "/assets/font-awesome.css?body=1" for ::1 at 2019-08-04 22:23:00 +0500
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for ::1 at 2019-08-04 22:23:00 +0500
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for ::1 at 2019-08-04 22:23:00 +0500
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for ::1 at 2019-08-04 22:23:00 +0500
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for ::1 at 2019-08-04 22:23:00 +0500
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for ::1 at 2019-08-04 22:23:00 +0500
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for ::1 at 2019-08-04 22:23:00 +0500
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for ::1 at 2019-08-04 22:23:00 +0500
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for ::1 at 2019-08-04 22:23:00 +0500
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for ::1 at 2019-08-04 22:23:00 +0500
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for ::1 at 2019-08-04 22:23:00 +0500
+
+
+Started GET "/assets/metisMenu/jquery.metisMenu.js?body=1" for ::1 at 2019-08-04 22:23:00 +0500
+
+
+Started GET "/assets/pace/pace.min.js?body=1" for ::1 at 2019-08-04 22:23:00 +0500
+
+
+Started GET "/assets/peity/jquery.peity.min.js?body=1" for ::1 at 2019-08-04 22:23:00 +0500
+
+
+Started GET "/assets/slimscroll/jquery.slimscroll.min.js?body=1" for ::1 at 2019-08-04 22:23:00 +0500
+
+
+Started GET "/assets/inspinia.js?body=1" for ::1 at 2019-08-04 22:23:00 +0500
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2019-08-04 22:23:00 +0500
+
+
+Started GET "/assets/a7.jpg" for ::1 at 2019-08-04 22:23:00 +0500
+
+
+Started GET "/assets/a4.jpg" for ::1 at 2019-08-04 22:23:00 +0500
+
+
+Started GET "/assets/a1.jpg" for ::1 at 2019-08-04 22:23:00 +0500
+
+
+Started GET "/assets/a3.jpg" for ::1 at 2019-08-04 22:23:00 +0500
+
+
+Started GET "/assets/font-awesome.css?body=1" for ::1 at 2019-08-04 22:23:36 +0500
+
+
+Started GET "/assets/style.css?body=1" for ::1 at 2019-08-04 22:23:36 +0500
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2019-08-04 22:23:36 +0500
+
+
+Started GET "/" for ::1 at 2019-08-04 22:24:32 +0500
+Processing by QuestionsController#list as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mQuestion Load (1.2ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY created_at DESC[0m
+  Rendered questions/list.html.erb within layouts/application (8.6ms)
+  Rendered layouts/_skinconfig.html.erb (0.1ms)
+  Rendered layouts/_navigation.html.erb (0.8ms)
+  Rendered layouts/_topnavbar.html.erb (1.3ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+  Rendered layouts/_rightsidebar.html.erb (1.2ms)
+Completed 200 OK in 66ms (Views: 60.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/style.css?body=1" for ::1 at 2019-08-04 22:24:32 +0500
+
+
+Started GET "/assets/font-awesome.css?body=1" for ::1 at 2019-08-04 22:24:33 +0500
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2019-08-04 22:24:33 +0500
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for ::1 at 2019-08-04 22:24:33 +0500
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for ::1 at 2019-08-04 22:24:33 +0500
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for ::1 at 2019-08-04 22:24:33 +0500
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for ::1 at 2019-08-04 22:24:33 +0500
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for ::1 at 2019-08-04 22:24:33 +0500
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for ::1 at 2019-08-04 22:24:33 +0500
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for ::1 at 2019-08-04 22:24:33 +0500
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for ::1 at 2019-08-04 22:24:33 +0500
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for ::1 at 2019-08-04 22:24:33 +0500
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for ::1 at 2019-08-04 22:24:33 +0500
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for ::1 at 2019-08-04 22:24:33 +0500
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for ::1 at 2019-08-04 22:24:33 +0500
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for ::1 at 2019-08-04 22:24:33 +0500
+
+
+Started GET "/assets/metisMenu/jquery.metisMenu.js?body=1" for ::1 at 2019-08-04 22:24:33 +0500
+
+
+Started GET "/assets/pace/pace.min.js?body=1" for ::1 at 2019-08-04 22:24:33 +0500
+
+
+Started GET "/assets/peity/jquery.peity.min.js?body=1" for ::1 at 2019-08-04 22:24:33 +0500
+
+
+Started GET "/assets/slimscroll/jquery.slimscroll.min.js?body=1" for ::1 at 2019-08-04 22:24:33 +0500
+
+
+Started GET "/assets/inspinia.js?body=1" for ::1 at 2019-08-04 22:24:33 +0500
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2019-08-04 22:24:33 +0500
+
+
+Started GET "/assets/a7.jpg" for ::1 at 2019-08-04 22:24:33 +0500
+
+
+Started GET "/assets/a4.jpg" for ::1 at 2019-08-04 22:24:33 +0500
+
+
+Started GET "/assets/a1.jpg" for ::1 at 2019-08-04 22:24:33 +0500
+
+
+Started GET "/assets/a3.jpg" for ::1 at 2019-08-04 22:24:33 +0500
+
+
+Started GET "/" for ::1 at 2019-08-04 22:25:33 +0500
+Processing by QuestionsController#list as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mQuestion Load (0.4ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY created_at DESC[0m
+  Rendered questions/list.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_skinconfig.html.erb (0.1ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_topnavbar.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+  Rendered layouts/_rightsidebar.html.erb (1.6ms)
+Completed 200 OK in 44ms (Views: 40.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/font-awesome.css?body=1" for ::1 at 2019-08-04 22:25:33 +0500
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2019-08-04 22:25:33 +0500
+
+
+Started GET "/assets/style.css?body=1" for ::1 at 2019-08-04 22:25:33 +0500
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for ::1 at 2019-08-04 22:25:33 +0500
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for ::1 at 2019-08-04 22:25:33 +0500
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for ::1 at 2019-08-04 22:25:33 +0500
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for ::1 at 2019-08-04 22:25:33 +0500
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for ::1 at 2019-08-04 22:25:33 +0500
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for ::1 at 2019-08-04 22:25:33 +0500
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for ::1 at 2019-08-04 22:25:33 +0500
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for ::1 at 2019-08-04 22:25:33 +0500
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for ::1 at 2019-08-04 22:25:33 +0500
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for ::1 at 2019-08-04 22:25:33 +0500
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for ::1 at 2019-08-04 22:25:33 +0500
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for ::1 at 2019-08-04 22:25:33 +0500
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for ::1 at 2019-08-04 22:25:33 +0500
+
+
+Started GET "/assets/metisMenu/jquery.metisMenu.js?body=1" for ::1 at 2019-08-04 22:25:33 +0500
+
+
+Started GET "/assets/pace/pace.min.js?body=1" for ::1 at 2019-08-04 22:25:34 +0500
+
+
+Started GET "/assets/peity/jquery.peity.min.js?body=1" for ::1 at 2019-08-04 22:25:34 +0500
+
+
+Started GET "/assets/slimscroll/jquery.slimscroll.min.js?body=1" for ::1 at 2019-08-04 22:25:34 +0500
+
+
+Started GET "/assets/inspinia.js?body=1" for ::1 at 2019-08-04 22:25:34 +0500
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2019-08-04 22:25:34 +0500
+
+
+Started GET "/assets/a7.jpg" for ::1 at 2019-08-04 22:25:34 +0500
+
+
+Started GET "/assets/a4.jpg" for ::1 at 2019-08-04 22:25:34 +0500
+
+
+Started GET "/assets/a1.jpg" for ::1 at 2019-08-04 22:25:34 +0500
+
+
+Started GET "/assets/a3.jpg" for ::1 at 2019-08-04 22:25:34 +0500
+
+
+Started GET "/" for ::1 at 2019-08-04 22:27:31 +0500
+Processing by QuestionsController#list as HTML
+  [1m[35mUser Load (2.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mQuestion Load (2.2ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY created_at DESC[0m
+  Rendered questions/list.html.erb within layouts/application (10.7ms)
+  Rendered layouts/_skinconfig.html.erb (0.1ms)
+  Rendered layouts/_navigation.html.erb (4.7ms)
+  Rendered layouts/_topnavbar.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+  Rendered layouts/_rightsidebar.html.erb (0.5ms)
+Completed 200 OK in 2955ms (Views: 2947.2ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2019-08-04 22:27:34 +0500
+
+
+Started GET "/assets/style.css?body=1" for ::1 at 2019-08-04 22:27:34 +0500
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for ::1 at 2019-08-04 22:27:34 +0500
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for ::1 at 2019-08-04 22:27:34 +0500
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for ::1 at 2019-08-04 22:27:34 +0500
+
+
+Started GET "/assets/font-awesome.css?body=1" for ::1 at 2019-08-04 22:27:34 +0500
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for ::1 at 2019-08-04 22:27:34 +0500
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for ::1 at 2019-08-04 22:27:34 +0500
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for ::1 at 2019-08-04 22:27:34 +0500
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for ::1 at 2019-08-04 22:27:34 +0500
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for ::1 at 2019-08-04 22:27:34 +0500
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for ::1 at 2019-08-04 22:27:34 +0500
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for ::1 at 2019-08-04 22:27:34 +0500
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for ::1 at 2019-08-04 22:27:34 +0500
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for ::1 at 2019-08-04 22:27:34 +0500
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for ::1 at 2019-08-04 22:27:34 +0500
+
+
+Started GET "/assets/metisMenu/jquery.metisMenu.js?body=1" for ::1 at 2019-08-04 22:27:34 +0500
+
+
+Started GET "/assets/peity/jquery.peity.min.js?body=1" for ::1 at 2019-08-04 22:27:34 +0500
+
+
+Started GET "/assets/slimscroll/jquery.slimscroll.min.js?body=1" for ::1 at 2019-08-04 22:27:34 +0500
+
+
+Started GET "/assets/pace/pace.min.js?body=1" for ::1 at 2019-08-04 22:27:34 +0500
+
+
+Started GET "/assets/inspinia.js?body=1" for ::1 at 2019-08-04 22:27:34 +0500
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2019-08-04 22:27:34 +0500
+
+
+Started GET "/assets/a7.jpg" for ::1 at 2019-08-04 22:27:34 +0500
+
+
+Started GET "/assets/a4.jpg" for ::1 at 2019-08-04 22:27:34 +0500
+
+
+Started GET "/assets/a1.jpg" for ::1 at 2019-08-04 22:27:34 +0500
+
+
+Started GET "/assets/a3.jpg" for ::1 at 2019-08-04 22:27:35 +0500
+
+
+Started GET "/users/sign_out" for ::1 at 2019-08-04 22:27:47 +0500
+Processing by Devise::SessionsController#destroy as HTML
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2019-08-04 22:27:47 +0500
+Processing by QuestionsController#list as HTML
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-08-04 22:27:47 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/sessions/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 26ms (Views: 25.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for ::1 at 2019-08-04 22:27:47 +0500
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for ::1 at 2019-08-04 22:27:47 +0500
+
+
+Started GET "/assets/style.css?body=1" for ::1 at 2019-08-04 22:27:47 +0500
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2019-08-04 22:27:47 +0500
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for ::1 at 2019-08-04 22:27:47 +0500
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for ::1 at 2019-08-04 22:27:47 +0500
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for ::1 at 2019-08-04 22:27:47 +0500
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for ::1 at 2019-08-04 22:27:47 +0500
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for ::1 at 2019-08-04 22:27:47 +0500
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for ::1 at 2019-08-04 22:27:47 +0500
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for ::1 at 2019-08-04 22:27:47 +0500
+
+
+Started GET "/assets/font-awesome.css?body=1" for ::1 at 2019-08-04 22:27:47 +0500
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for ::1 at 2019-08-04 22:27:47 +0500
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for ::1 at 2019-08-04 22:27:47 +0500
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for ::1 at 2019-08-04 22:27:47 +0500
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for ::1 at 2019-08-04 22:27:47 +0500
+
+
+Started GET "/assets/metisMenu/jquery.metisMenu.js?body=1" for ::1 at 2019-08-04 22:27:47 +0500
+
+
+Started GET "/assets/pace/pace.min.js?body=1" for ::1 at 2019-08-04 22:27:47 +0500
+
+
+Started GET "/assets/peity/jquery.peity.min.js?body=1" for ::1 at 2019-08-04 22:27:47 +0500
+
+
+Started GET "/assets/slimscroll/jquery.slimscroll.min.js?body=1" for ::1 at 2019-08-04 22:27:47 +0500
+
+
+Started GET "/assets/inspinia.js?body=1" for ::1 at 2019-08-04 22:27:47 +0500
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2019-08-04 22:27:47 +0500
+
+
+Started POST "/users/sign_in" for ::1 at 2019-08-04 22:27:49 +0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"j7wAxGWNjJjKp2+GoBHc2FBCUVaXlBLIWvnXPiAGG3SNwG4aLti6nAgEdSOAPb4vP1w0pCNgENIQoZBYwVWdzQ==", "user"=>{"email"=>"arslan.rao@tintash.com", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[36mUser Load (5.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "arslan.rao@tintash.com"]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 282ms (ActiveRecord: 5.3ms)
+
+
+Started GET "/" for ::1 at 2019-08-04 22:27:49 +0500
+Processing by QuestionsController#list as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mQuestion Load (0.4ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY created_at DESC[0m
+  Rendered questions/list.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_skinconfig.html.erb (0.1ms)
+  Rendered layouts/_navigation.html.erb (1.3ms)
+  Rendered layouts/_topnavbar.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+  Rendered layouts/_rightsidebar.html.erb (0.4ms)
+Completed 200 OK in 37ms (Views: 34.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2019-08-04 22:27:49 +0500
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for ::1 at 2019-08-04 22:27:49 +0500
+
+
+Started GET "/assets/style.css?body=1" for ::1 at 2019-08-04 22:27:49 +0500
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for ::1 at 2019-08-04 22:27:49 +0500
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for ::1 at 2019-08-04 22:27:49 +0500
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for ::1 at 2019-08-04 22:27:49 +0500
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for ::1 at 2019-08-04 22:27:49 +0500
+
+
+Started GET "/assets/font-awesome.css?body=1" for ::1 at 2019-08-04 22:27:49 +0500
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for ::1 at 2019-08-04 22:27:49 +0500
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for ::1 at 2019-08-04 22:27:49 +0500
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for ::1 at 2019-08-04 22:27:49 +0500
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for ::1 at 2019-08-04 22:27:49 +0500
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for ::1 at 2019-08-04 22:27:49 +0500
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for ::1 at 2019-08-04 22:27:49 +0500
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for ::1 at 2019-08-04 22:27:49 +0500
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for ::1 at 2019-08-04 22:27:49 +0500
+
+
+Started GET "/assets/metisMenu/jquery.metisMenu.js?body=1" for ::1 at 2019-08-04 22:27:49 +0500
+
+
+Started GET "/assets/pace/pace.min.js?body=1" for ::1 at 2019-08-04 22:27:49 +0500
+
+
+Started GET "/assets/peity/jquery.peity.min.js?body=1" for ::1 at 2019-08-04 22:27:49 +0500
+
+
+Started GET "/assets/slimscroll/jquery.slimscroll.min.js?body=1" for ::1 at 2019-08-04 22:27:49 +0500
+
+
+Started GET "/assets/inspinia.js?body=1" for ::1 at 2019-08-04 22:27:49 +0500
+
+
+Started GET "/assets/a7.jpg" for ::1 at 2019-08-04 22:27:49 +0500
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2019-08-04 22:27:49 +0500
+
+
+Started GET "/assets/a4.jpg" for ::1 at 2019-08-04 22:27:49 +0500
+
+
+Started GET "/assets/a1.jpg" for ::1 at 2019-08-04 22:27:49 +0500
+
+
+Started GET "/assets/a3.jpg" for ::1 at 2019-08-04 22:27:49 +0500
+
+
+Started GET "/" for ::1 at 2019-08-04 22:28:03 +0500
+Processing by QuestionsController#list as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mQuestion Load (0.5ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY created_at DESC[0m
+  Rendered questions/list.html.erb within layouts/application (4.7ms)
+  Rendered layouts/_skinconfig.html.erb (1.1ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_topnavbar.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+  Rendered layouts/_rightsidebar.html.erb (0.3ms)
+Completed 200 OK in 1955ms (Views: 1951.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for ::1 at 2019-08-04 22:28:05 +0500
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2019-08-04 22:28:05 +0500
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for ::1 at 2019-08-04 22:28:05 +0500
+
+
+Started GET "/assets/style.css?body=1" for ::1 at 2019-08-04 22:28:05 +0500
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for ::1 at 2019-08-04 22:28:05 +0500
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for ::1 at 2019-08-04 22:28:05 +0500
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for ::1 at 2019-08-04 22:28:05 +0500
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for ::1 at 2019-08-04 22:28:05 +0500
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for ::1 at 2019-08-04 22:28:05 +0500
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for ::1 at 2019-08-04 22:28:05 +0500
+
+
+Started GET "/assets/font-awesome.css?body=1" for ::1 at 2019-08-04 22:28:05 +0500
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for ::1 at 2019-08-04 22:28:05 +0500
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for ::1 at 2019-08-04 22:28:05 +0500
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for ::1 at 2019-08-04 22:28:05 +0500
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for ::1 at 2019-08-04 22:28:05 +0500
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for ::1 at 2019-08-04 22:28:05 +0500
+
+
+Started GET "/assets/metisMenu/jquery.metisMenu.js?body=1" for ::1 at 2019-08-04 22:28:05 +0500
+
+
+Started GET "/assets/pace/pace.min.js?body=1" for ::1 at 2019-08-04 22:28:05 +0500
+
+
+Started GET "/assets/peity/jquery.peity.min.js?body=1" for ::1 at 2019-08-04 22:28:05 +0500
+
+
+Started GET "/assets/slimscroll/jquery.slimscroll.min.js?body=1" for ::1 at 2019-08-04 22:28:06 +0500
+
+
+Started GET "/assets/inspinia.js?body=1" for ::1 at 2019-08-04 22:28:06 +0500
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2019-08-04 22:28:06 +0500
+
+
+Started GET "/assets/a7.jpg" for ::1 at 2019-08-04 22:28:06 +0500
+
+
+Started GET "/assets/a4.jpg" for ::1 at 2019-08-04 22:28:06 +0500
+
+
+Started GET "/assets/a1.jpg" for ::1 at 2019-08-04 22:28:06 +0500
+
+
+Started GET "/assets/a3.jpg" for ::1 at 2019-08-04 22:28:06 +0500
+
+
+Started GET "/users/sign_out" for ::1 at 2019-08-04 22:28:11 +0500
+Processing by Devise::SessionsController#destroy as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 11ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2019-08-04 22:28:11 +0500
+Processing by QuestionsController#list as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-08-04 22:28:11 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/sessions/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 2076ms (Views: 2070.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2019-08-04 22:28:13 +0500
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for ::1 at 2019-08-04 22:28:13 +0500
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for ::1 at 2019-08-04 22:28:13 +0500
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for ::1 at 2019-08-04 22:28:13 +0500
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for ::1 at 2019-08-04 22:28:13 +0500
+
+
+Started GET "/assets/font-awesome.css?body=1" for ::1 at 2019-08-04 22:28:13 +0500
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for ::1 at 2019-08-04 22:28:13 +0500
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for ::1 at 2019-08-04 22:28:13 +0500
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for ::1 at 2019-08-04 22:28:13 +0500
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for ::1 at 2019-08-04 22:28:13 +0500
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for ::1 at 2019-08-04 22:28:13 +0500
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for ::1 at 2019-08-04 22:28:13 +0500
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for ::1 at 2019-08-04 22:28:13 +0500
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for ::1 at 2019-08-04 22:28:13 +0500
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for ::1 at 2019-08-04 22:28:13 +0500
+
+
+Started GET "/assets/metisMenu/jquery.metisMenu.js?body=1" for ::1 at 2019-08-04 22:28:13 +0500
+
+
+Started GET "/assets/pace/pace.min.js?body=1" for ::1 at 2019-08-04 22:28:13 +0500
+
+
+Started GET "/assets/peity/jquery.peity.min.js?body=1" for ::1 at 2019-08-04 22:28:13 +0500
+
+
+Started GET "/assets/slimscroll/jquery.slimscroll.min.js?body=1" for ::1 at 2019-08-04 22:28:13 +0500
+
+
+Started GET "/assets/inspinia.js?body=1" for ::1 at 2019-08-04 22:28:13 +0500
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2019-08-04 22:28:14 +0500
+
+
+Started POST "/users/sign_in" for ::1 at 2019-08-04 22:28:20 +0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"t8diKH38Fitym7r3MgYARxeLuuqTmkhRfOgKrdSDib06fr/sY6vxabSoHqzV6jKO5DV3kOSTmiIMBL+pfIA+rg==", "user"=>{"email"=>"arslan.rao@tintash.com", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "arslan.rao@tintash.com"]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 264ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2019-08-04 22:28:20 +0500
+Processing by QuestionsController#list as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mQuestion Load (0.4ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY created_at DESC[0m
+  Rendered questions/list.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_skinconfig.html.erb (0.1ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_topnavbar.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+  Rendered layouts/_rightsidebar.html.erb (0.3ms)
+Completed 200 OK in 35ms (Views: 33.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/font-awesome.css?body=1" for ::1 at 2019-08-04 22:28:20 +0500
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2019-08-04 22:28:20 +0500
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for ::1 at 2019-08-04 22:28:20 +0500
+
+
+Started GET "/assets/style.css?body=1" for ::1 at 2019-08-04 22:28:20 +0500
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for ::1 at 2019-08-04 22:28:21 +0500
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for ::1 at 2019-08-04 22:28:21 +0500
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for ::1 at 2019-08-04 22:28:21 +0500
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for ::1 at 2019-08-04 22:28:21 +0500
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for ::1 at 2019-08-04 22:28:21 +0500
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for ::1 at 2019-08-04 22:28:21 +0500
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for ::1 at 2019-08-04 22:28:21 +0500
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for ::1 at 2019-08-04 22:28:21 +0500
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for ::1 at 2019-08-04 22:28:21 +0500
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for ::1 at 2019-08-04 22:28:21 +0500
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for ::1 at 2019-08-04 22:28:21 +0500
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for ::1 at 2019-08-04 22:28:21 +0500
+
+
+Started GET "/assets/metisMenu/jquery.metisMenu.js?body=1" for ::1 at 2019-08-04 22:28:21 +0500
+
+
+Started GET "/assets/pace/pace.min.js?body=1" for ::1 at 2019-08-04 22:28:21 +0500
+
+
+Started GET "/assets/peity/jquery.peity.min.js?body=1" for ::1 at 2019-08-04 22:28:21 +0500
+
+
+Started GET "/assets/slimscroll/jquery.slimscroll.min.js?body=1" for ::1 at 2019-08-04 22:28:21 +0500
+
+
+Started GET "/assets/inspinia.js?body=1" for ::1 at 2019-08-04 22:28:21 +0500
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2019-08-04 22:28:21 +0500
+
+
+Started GET "/assets/high-res.jpg" for ::1 at 2019-08-04 22:28:21 +0500
+
+
+Started GET "/assets/a7.jpg" for ::1 at 2019-08-04 22:28:21 +0500
+
+
+Started GET "/assets/a4.jpg" for ::1 at 2019-08-04 22:28:21 +0500
+
+
+Started GET "/assets/profile.jpg" for ::1 at 2019-08-04 22:28:21 +0500
+
+
+Started GET "/assets/a1.jpg" for ::1 at 2019-08-04 22:28:21 +0500
+
+
+Started GET "/assets/a2.jpg" for ::1 at 2019-08-04 22:28:21 +0500
+
+
+Started GET "/assets/a3.jpg" for ::1 at 2019-08-04 22:28:21 +0500
+
+
+Started GET "/assets/a8.jpg" for ::1 at 2019-08-04 22:28:21 +0500
+
+
+Started GET "/assets/patterns/header-profile-skin-1.png" for ::1 at 2019-08-04 22:28:21 +0500
+
+
+Started GET "/assets/patterns/header-profile-skin-3.png" for ::1 at 2019-08-04 22:28:21 +0500
+
+
+Started GET "/users/sign_out" for ::1 at 2019-08-04 22:28:48 +0500
+Processing by Devise::SessionsController#destroy as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2019-08-04 22:28:49 +0500
+Processing by QuestionsController#list as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-08-04 22:28:49 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/sessions/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 32ms (Views: 31.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/style.css?body=1" for ::1 at 2019-08-04 22:28:49 +0500
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2019-08-04 22:28:49 +0500
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for ::1 at 2019-08-04 22:28:49 +0500
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for ::1 at 2019-08-04 22:28:49 +0500
+
+
+Started GET "/assets/font-awesome.css?body=1" for ::1 at 2019-08-04 22:28:49 +0500
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for ::1 at 2019-08-04 22:28:49 +0500
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for ::1 at 2019-08-04 22:28:49 +0500
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for ::1 at 2019-08-04 22:28:49 +0500
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for ::1 at 2019-08-04 22:28:49 +0500
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for ::1 at 2019-08-04 22:28:49 +0500
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for ::1 at 2019-08-04 22:28:49 +0500
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for ::1 at 2019-08-04 22:28:49 +0500
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for ::1 at 2019-08-04 22:28:49 +0500
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for ::1 at 2019-08-04 22:28:49 +0500
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for ::1 at 2019-08-04 22:28:49 +0500
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for ::1 at 2019-08-04 22:28:49 +0500
+
+
+Started GET "/assets/metisMenu/jquery.metisMenu.js?body=1" for ::1 at 2019-08-04 22:28:49 +0500
+
+
+Started GET "/assets/pace/pace.min.js?body=1" for ::1 at 2019-08-04 22:28:49 +0500
+
+
+Started GET "/assets/peity/jquery.peity.min.js?body=1" for ::1 at 2019-08-04 22:28:49 +0500
+
+
+Started GET "/assets/slimscroll/jquery.slimscroll.min.js?body=1" for ::1 at 2019-08-04 22:28:49 +0500
+
+
+Started GET "/assets/inspinia.js?body=1" for ::1 at 2019-08-04 22:28:49 +0500
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2019-08-04 22:28:49 +0500
+
+
+Started GET "/users/sign_in" for ::1 at 2019-08-04 22:28:50 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/sessions/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 39ms (Views: 37.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/font-awesome.css?body=1" for ::1 at 2019-08-04 22:28:50 +0500
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2019-08-04 22:28:50 +0500
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for ::1 at 2019-08-04 22:28:50 +0500
+
+
+Started GET "/assets/style.css?body=1" for ::1 at 2019-08-04 22:28:50 +0500
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for ::1 at 2019-08-04 22:28:50 +0500
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for ::1 at 2019-08-04 22:28:50 +0500
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for ::1 at 2019-08-04 22:28:50 +0500
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for ::1 at 2019-08-04 22:28:50 +0500
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for ::1 at 2019-08-04 22:28:50 +0500
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for ::1 at 2019-08-04 22:28:50 +0500
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for ::1 at 2019-08-04 22:28:50 +0500
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for ::1 at 2019-08-04 22:28:50 +0500
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for ::1 at 2019-08-04 22:28:50 +0500
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for ::1 at 2019-08-04 22:28:50 +0500
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for ::1 at 2019-08-04 22:28:50 +0500
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for ::1 at 2019-08-04 22:28:50 +0500
+
+
+Started GET "/assets/metisMenu/jquery.metisMenu.js?body=1" for ::1 at 2019-08-04 22:28:50 +0500
+
+
+Started GET "/assets/pace/pace.min.js?body=1" for ::1 at 2019-08-04 22:28:50 +0500
+
+
+Started GET "/assets/peity/jquery.peity.min.js?body=1" for ::1 at 2019-08-04 22:28:50 +0500
+
+
+Started GET "/assets/slimscroll/jquery.slimscroll.min.js?body=1" for ::1 at 2019-08-04 22:28:50 +0500
+
+
+Started GET "/assets/inspinia.js?body=1" for ::1 at 2019-08-04 22:28:50 +0500
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2019-08-04 22:28:50 +0500
+
+
+Started POST "/users/sign_in" for ::1 at 2019-08-04 22:28:53 +0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"F3uQk+rczeWxjjLzZ99bHkWzAsNp/6NCbFgwyNhoW5Pr2+DUBOlE/MszVw9d8WMpMyXiv+hqHwqApI8YyPrAug==", "user"=>{"email"=>"arslan.rao@tintash.com", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[36mUser Load (1.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "arslan.rao@tintash.com"]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 263ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/" for ::1 at 2019-08-04 22:28:53 +0500
+Processing by QuestionsController#list as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mQuestion Load (0.5ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY created_at DESC[0m
+  Rendered questions/list.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_skinconfig.html.erb (0.1ms)
+  Rendered layouts/_navigation.html.erb (0.8ms)
+  Rendered layouts/_topnavbar.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+  Rendered layouts/_rightsidebar.html.erb (0.4ms)
+Completed 200 OK in 35ms (Views: 31.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/font-awesome.css?body=1" for ::1 at 2019-08-04 22:28:53 +0500
+
+
+Started GET "/assets/style.css?body=1" for ::1 at 2019-08-04 22:28:53 +0500
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2019-08-04 22:28:53 +0500
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for ::1 at 2019-08-04 22:28:53 +0500
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for ::1 at 2019-08-04 22:28:53 +0500
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for ::1 at 2019-08-04 22:28:53 +0500
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for ::1 at 2019-08-04 22:28:53 +0500
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for ::1 at 2019-08-04 22:28:53 +0500
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for ::1 at 2019-08-04 22:28:53 +0500
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for ::1 at 2019-08-04 22:28:53 +0500
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for ::1 at 2019-08-04 22:28:53 +0500
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for ::1 at 2019-08-04 22:28:53 +0500
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for ::1 at 2019-08-04 22:28:53 +0500
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for ::1 at 2019-08-04 22:28:53 +0500
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for ::1 at 2019-08-04 22:28:53 +0500
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for ::1 at 2019-08-04 22:28:53 +0500
+
+
+Started GET "/assets/metisMenu/jquery.metisMenu.js?body=1" for ::1 at 2019-08-04 22:28:53 +0500
+
+
+Started GET "/assets/pace/pace.min.js?body=1" for ::1 at 2019-08-04 22:28:53 +0500
+
+
+Started GET "/assets/peity/jquery.peity.min.js?body=1" for ::1 at 2019-08-04 22:28:53 +0500
+
+
+Started GET "/assets/slimscroll/jquery.slimscroll.min.js?body=1" for ::1 at 2019-08-04 22:28:53 +0500
+
+
+Started GET "/assets/inspinia.js?body=1" for ::1 at 2019-08-04 22:28:53 +0500
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2019-08-04 22:28:53 +0500
+
+
+Started GET "/assets/high-res.jpg" for ::1 at 2019-08-04 22:28:53 +0500
+
+
+Started GET "/assets/a7.jpg" for ::1 at 2019-08-04 22:28:53 +0500
+
+
+Started GET "/assets/profile.jpg" for ::1 at 2019-08-04 22:28:53 +0500
+
+
+Started GET "/assets/a4.jpg" for ::1 at 2019-08-04 22:28:53 +0500
+
+
+Started GET "/assets/a3.jpg" for ::1 at 2019-08-04 22:28:53 +0500
+
+
+Started GET "/assets/a2.jpg" for ::1 at 2019-08-04 22:28:53 +0500
+
+
+Started GET "/assets/a1.jpg" for ::1 at 2019-08-04 22:28:53 +0500
+
+
+Started GET "/assets/a8.jpg" for ::1 at 2019-08-04 22:28:53 +0500
+
+
+Started GET "/assets/patterns/header-profile-skin-1.png" for ::1 at 2019-08-04 22:28:53 +0500
+
+
+Started GET "/assets/patterns/header-profile-skin-3.png" for ::1 at 2019-08-04 22:28:53 +0500
+
+
+Started GET "/" for ::1 at 2019-08-04 22:29:12 +0500
+Processing by QuestionsController#list as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mQuestion Load (0.6ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY created_at DESC[0m
+  Rendered questions/list.html.erb within layouts/application (3.3ms)
+  Rendered layouts/_skinconfig.html.erb (0.1ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_topnavbar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+  Rendered layouts/_rightsidebar.html.erb (0.6ms)
+Completed 200 OK in 37ms (Views: 35.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/font-awesome.css?body=1" for ::1 at 2019-08-04 22:29:12 +0500
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2019-08-04 22:29:12 +0500
+
+
+Started GET "/assets/style.css?body=1" for ::1 at 2019-08-04 22:29:12 +0500
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for ::1 at 2019-08-04 22:29:12 +0500
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for ::1 at 2019-08-04 22:29:12 +0500
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for ::1 at 2019-08-04 22:29:12 +0500
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for ::1 at 2019-08-04 22:29:12 +0500
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for ::1 at 2019-08-04 22:29:12 +0500
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for ::1 at 2019-08-04 22:29:12 +0500
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for ::1 at 2019-08-04 22:29:12 +0500
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for ::1 at 2019-08-04 22:29:12 +0500
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for ::1 at 2019-08-04 22:29:12 +0500
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for ::1 at 2019-08-04 22:29:12 +0500
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for ::1 at 2019-08-04 22:29:12 +0500
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for ::1 at 2019-08-04 22:29:12 +0500
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for ::1 at 2019-08-04 22:29:12 +0500
+
+
+Started GET "/assets/metisMenu/jquery.metisMenu.js?body=1" for ::1 at 2019-08-04 22:29:12 +0500
+
+
+Started GET "/assets/pace/pace.min.js?body=1" for ::1 at 2019-08-04 22:29:12 +0500
+
+
+Started GET "/assets/peity/jquery.peity.min.js?body=1" for ::1 at 2019-08-04 22:29:12 +0500
+
+
+Started GET "/assets/slimscroll/jquery.slimscroll.min.js?body=1" for ::1 at 2019-08-04 22:29:12 +0500
+
+
+Started GET "/assets/inspinia.js?body=1" for ::1 at 2019-08-04 22:29:12 +0500
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2019-08-04 22:29:12 +0500
+
+
+Started GET "/assets/high-res.jpg" for ::1 at 2019-08-04 22:29:12 +0500
+
+
+Started GET "/assets/a7.jpg" for ::1 at 2019-08-04 22:29:12 +0500
+
+
+Started GET "/assets/a1.jpg" for ::1 at 2019-08-04 22:29:12 +0500
+
+
+Started GET "/assets/a2.jpg" for ::1 at 2019-08-04 22:29:12 +0500
+
+
+Started GET "/assets/a4.jpg" for ::1 at 2019-08-04 22:29:12 +0500
+
+
+Started GET "/assets/profile.jpg" for ::1 at 2019-08-04 22:29:12 +0500
+
+
+Started GET "/assets/a3.jpg" for ::1 at 2019-08-04 22:29:12 +0500
+
+
+Started GET "/assets/a8.jpg" for ::1 at 2019-08-04 22:29:12 +0500
+
+
+Started GET "/assets/patterns/header-profile-skin-1.png" for ::1 at 2019-08-04 22:29:12 +0500
+
+
+Started GET "/assets/patterns/header-profile-skin-3.png" for ::1 at 2019-08-04 22:29:12 +0500
+
+
+Started GET "/users/sign_out" for ::1 at 2019-08-04 22:29:13 +0500
+Processing by Devise::SessionsController#destroy as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2019-08-04 22:29:13 +0500
+Processing by QuestionsController#list as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-08-04 22:29:14 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/sessions/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 31ms (Views: 29.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/font-awesome.css?body=1" for ::1 at 2019-08-04 22:29:14 +0500
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2019-08-04 22:29:14 +0500
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for ::1 at 2019-08-04 22:29:14 +0500
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for ::1 at 2019-08-04 22:29:14 +0500
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for ::1 at 2019-08-04 22:29:14 +0500
+
+
+Started GET "/assets/style.css?body=1" for ::1 at 2019-08-04 22:29:14 +0500
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for ::1 at 2019-08-04 22:29:14 +0500
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for ::1 at 2019-08-04 22:29:14 +0500
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for ::1 at 2019-08-04 22:29:14 +0500
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for ::1 at 2019-08-04 22:29:14 +0500
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for ::1 at 2019-08-04 22:29:14 +0500
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for ::1 at 2019-08-04 22:29:14 +0500
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for ::1 at 2019-08-04 22:29:14 +0500
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for ::1 at 2019-08-04 22:29:14 +0500
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for ::1 at 2019-08-04 22:29:14 +0500
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for ::1 at 2019-08-04 22:29:14 +0500
+
+
+Started GET "/assets/metisMenu/jquery.metisMenu.js?body=1" for ::1 at 2019-08-04 22:29:14 +0500
+
+
+Started GET "/assets/pace/pace.min.js?body=1" for ::1 at 2019-08-04 22:29:14 +0500
+
+
+Started GET "/assets/peity/jquery.peity.min.js?body=1" for ::1 at 2019-08-04 22:29:14 +0500
+
+
+Started GET "/assets/slimscroll/jquery.slimscroll.min.js?body=1" for ::1 at 2019-08-04 22:29:14 +0500
+
+
+Started GET "/assets/inspinia.js?body=1" for ::1 at 2019-08-04 22:29:14 +0500
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2019-08-04 22:29:14 +0500
+
+
+Started POST "/users/sign_in" for ::1 at 2019-08-04 22:29:15 +0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dyAyHrWYAZE68hAiolENACCbC3q74SyfV+qxja7+YdL5Os6K4oWWDq9NGhEjp7Kw3pY+kpiuMiqIDNlCIx0wcA==", "user"=>{"email"=>"arslan.rao@tintash.com", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "arslan.rao@tintash.com"]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 311ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2019-08-04 22:29:16 +0500
+Processing by QuestionsController#list as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mQuestion Load (0.5ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY created_at DESC[0m
+  Rendered questions/list.html.erb within layouts/application (4.5ms)
+  Rendered layouts/_skinconfig.html.erb (0.3ms)
+  Rendered layouts/_navigation.html.erb (0.9ms)
+  Rendered layouts/_topnavbar.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+  Rendered layouts/_rightsidebar.html.erb (0.6ms)
+Completed 200 OK in 55ms (Views: 52.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for ::1 at 2019-08-04 22:29:16 +0500
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for ::1 at 2019-08-04 22:29:16 +0500
+
+
+Started GET "/assets/style.css?body=1" for ::1 at 2019-08-04 22:29:16 +0500
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2019-08-04 22:29:16 +0500
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for ::1 at 2019-08-04 22:29:16 +0500
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for ::1 at 2019-08-04 22:29:16 +0500
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for ::1 at 2019-08-04 22:29:16 +0500
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for ::1 at 2019-08-04 22:29:16 +0500
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for ::1 at 2019-08-04 22:29:16 +0500
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for ::1 at 2019-08-04 22:29:16 +0500
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for ::1 at 2019-08-04 22:29:16 +0500
+
+
+Started GET "/assets/font-awesome.css?body=1" for ::1 at 2019-08-04 22:29:16 +0500
+
+
+Started GET "/assets/pace/pace.min.js?body=1" for ::1 at 2019-08-04 22:29:16 +0500
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for ::1 at 2019-08-04 22:29:16 +0500
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for ::1 at 2019-08-04 22:29:16 +0500
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for ::1 at 2019-08-04 22:29:16 +0500
+
+
+Started GET "/assets/metisMenu/jquery.metisMenu.js?body=1" for ::1 at 2019-08-04 22:29:16 +0500
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for ::1 at 2019-08-04 22:29:16 +0500
+
+
+Started GET "/assets/peity/jquery.peity.min.js?body=1" for ::1 at 2019-08-04 22:29:16 +0500
+
+
+Started GET "/assets/slimscroll/jquery.slimscroll.min.js?body=1" for ::1 at 2019-08-04 22:29:16 +0500
+
+
+Started GET "/assets/inspinia.js?body=1" for ::1 at 2019-08-04 22:29:16 +0500
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2019-08-04 22:29:16 +0500
+
+
+Started GET "/assets/high-res.jpg" for ::1 at 2019-08-04 22:29:16 +0500
+
+
+Started GET "/assets/a3.jpg" for ::1 at 2019-08-04 22:29:16 +0500
+
+
+Started GET "/assets/a4.jpg" for ::1 at 2019-08-04 22:29:16 +0500
+
+
+Started GET "/assets/profile.jpg" for ::1 at 2019-08-04 22:29:16 +0500
+
+
+Started GET "/assets/a1.jpg" for ::1 at 2019-08-04 22:29:16 +0500
+
+
+Started GET "/assets/a2.jpg" for ::1 at 2019-08-04 22:29:16 +0500
+
+
+Started GET "/assets/a7.jpg" for ::1 at 2019-08-04 22:29:16 +0500
+
+
+Started GET "/assets/a8.jpg" for ::1 at 2019-08-04 22:29:16 +0500
+
+
+Started GET "/assets/patterns/header-profile-skin-1.png" for ::1 at 2019-08-04 22:29:16 +0500
+
+
+Started GET "/assets/patterns/header-profile-skin-3.png" for ::1 at 2019-08-04 22:29:16 +0500
+
+
+Started GET "/users/sign_out" for ::1 at 2019-08-04 22:29:29 +0500
+Processing by Devise::SessionsController#destroy as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2019-08-04 22:29:29 +0500
+Processing by QuestionsController#list as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-08-04 22:29:29 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/sessions/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 22ms (Views: 21.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/font-awesome.css?body=1" for ::1 at 2019-08-04 22:29:29 +0500
+
+
+Started GET "/assets/style.css?body=1" for ::1 at 2019-08-04 22:29:29 +0500
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for ::1 at 2019-08-04 22:29:29 +0500
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for ::1 at 2019-08-04 22:29:29 +0500
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2019-08-04 22:29:29 +0500
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for ::1 at 2019-08-04 22:29:29 +0500
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for ::1 at 2019-08-04 22:29:30 +0500
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for ::1 at 2019-08-04 22:29:30 +0500
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for ::1 at 2019-08-04 22:29:30 +0500
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for ::1 at 2019-08-04 22:29:30 +0500
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for ::1 at 2019-08-04 22:29:30 +0500
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for ::1 at 2019-08-04 22:29:30 +0500
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for ::1 at 2019-08-04 22:29:30 +0500
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for ::1 at 2019-08-04 22:29:30 +0500
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for ::1 at 2019-08-04 22:29:30 +0500
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for ::1 at 2019-08-04 22:29:30 +0500
+
+
+Started GET "/assets/metisMenu/jquery.metisMenu.js?body=1" for ::1 at 2019-08-04 22:29:30 +0500
+
+
+Started GET "/assets/pace/pace.min.js?body=1" for ::1 at 2019-08-04 22:29:30 +0500
+
+
+Started GET "/assets/peity/jquery.peity.min.js?body=1" for ::1 at 2019-08-04 22:29:30 +0500
+
+
+Started GET "/assets/slimscroll/jquery.slimscroll.min.js?body=1" for ::1 at 2019-08-04 22:29:30 +0500
+
+
+Started GET "/assets/inspinia.js?body=1" for ::1 at 2019-08-04 22:29:30 +0500
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2019-08-04 22:29:30 +0500
+
+
+Started GET "/users/sign_in" for ::1 at 2019-08-04 22:29:33 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/sessions/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 22ms (Views: 21.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/font-awesome.css?body=1" for ::1 at 2019-08-04 22:29:33 +0500
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for ::1 at 2019-08-04 22:29:33 +0500
+
+
+Started GET "/assets/style.css?body=1" for ::1 at 2019-08-04 22:29:33 +0500
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for ::1 at 2019-08-04 22:29:33 +0500
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for ::1 at 2019-08-04 22:29:33 +0500
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for ::1 at 2019-08-04 22:29:33 +0500
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2019-08-04 22:29:33 +0500
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for ::1 at 2019-08-04 22:29:33 +0500
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for ::1 at 2019-08-04 22:29:33 +0500
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for ::1 at 2019-08-04 22:29:33 +0500
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for ::1 at 2019-08-04 22:29:33 +0500
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for ::1 at 2019-08-04 22:29:33 +0500
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for ::1 at 2019-08-04 22:29:33 +0500
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for ::1 at 2019-08-04 22:29:33 +0500
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for ::1 at 2019-08-04 22:29:33 +0500
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for ::1 at 2019-08-04 22:29:33 +0500
+
+
+Started GET "/assets/metisMenu/jquery.metisMenu.js?body=1" for ::1 at 2019-08-04 22:29:33 +0500
+
+
+Started GET "/assets/pace/pace.min.js?body=1" for ::1 at 2019-08-04 22:29:33 +0500
+
+
+Started GET "/assets/peity/jquery.peity.min.js?body=1" for ::1 at 2019-08-04 22:29:33 +0500
+
+
+Started GET "/assets/slimscroll/jquery.slimscroll.min.js?body=1" for ::1 at 2019-08-04 22:29:33 +0500
+
+
+Started GET "/assets/inspinia.js?body=1" for ::1 at 2019-08-04 22:29:33 +0500
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2019-08-04 22:29:33 +0500
+
+
+Started GET "/users/sign_in" for ::1 at 2019-08-04 22:29:51 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/sessions/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 28ms (Views: 27.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/font-awesome.css?body=1" for ::1 at 2019-08-04 22:29:51 +0500
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2019-08-04 22:29:51 +0500
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for ::1 at 2019-08-04 22:29:51 +0500
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for ::1 at 2019-08-04 22:29:51 +0500
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for ::1 at 2019-08-04 22:29:51 +0500
+
+
+Started GET "/assets/style.css?body=1" for ::1 at 2019-08-04 22:29:51 +0500
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for ::1 at 2019-08-04 22:29:51 +0500
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for ::1 at 2019-08-04 22:29:51 +0500
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for ::1 at 2019-08-04 22:29:51 +0500
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for ::1 at 2019-08-04 22:29:51 +0500
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for ::1 at 2019-08-04 22:29:51 +0500
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for ::1 at 2019-08-04 22:29:51 +0500
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for ::1 at 2019-08-04 22:29:51 +0500
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for ::1 at 2019-08-04 22:29:51 +0500
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for ::1 at 2019-08-04 22:29:51 +0500
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for ::1 at 2019-08-04 22:29:51 +0500
+
+
+Started GET "/assets/metisMenu/jquery.metisMenu.js?body=1" for ::1 at 2019-08-04 22:29:51 +0500
+
+
+Started GET "/assets/pace/pace.min.js?body=1" for ::1 at 2019-08-04 22:29:51 +0500
+
+
+Started GET "/assets/peity/jquery.peity.min.js?body=1" for ::1 at 2019-08-04 22:29:51 +0500
+
+
+Started GET "/assets/slimscroll/jquery.slimscroll.min.js?body=1" for ::1 at 2019-08-04 22:29:51 +0500
+
+
+Started GET "/assets/inspinia.js?body=1" for ::1 at 2019-08-04 22:29:51 +0500
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2019-08-04 22:29:51 +0500
+
+
+Started POST "/users/sign_in" for ::1 at 2019-08-04 22:29:53 +0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xnNa3KaSZrxGwUKWQXGMl8AnLpLcVqZfnMf8dnjVQdSFaE6tILKvzKw8EErassPtusxO+fGX04PgPZneoIlGtQ==", "user"=>{"email"=>"arslan.rao@tintash.com", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "arslan.rao@tintash.com"]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 260ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2019-08-04 22:29:53 +0500
+Processing by QuestionsController#list as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mQuestion Load (0.4ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY created_at DESC[0m
+  Rendered questions/list.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_skinconfig.html.erb (0.2ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_topnavbar.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+  Rendered layouts/_rightsidebar.html.erb (0.4ms)
+Completed 200 OK in 38ms (Views: 35.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2019-08-04 22:29:53 +0500
+
+
+Started GET "/assets/style.css?body=1" for ::1 at 2019-08-04 22:29:53 +0500
+
+
+Started GET "/assets/font-awesome.css?body=1" for ::1 at 2019-08-04 22:29:53 +0500
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for ::1 at 2019-08-04 22:29:53 +0500
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for ::1 at 2019-08-04 22:29:53 +0500
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for ::1 at 2019-08-04 22:29:53 +0500
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for ::1 at 2019-08-04 22:29:53 +0500
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for ::1 at 2019-08-04 22:29:53 +0500
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for ::1 at 2019-08-04 22:29:53 +0500
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for ::1 at 2019-08-04 22:29:53 +0500
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for ::1 at 2019-08-04 22:29:53 +0500
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for ::1 at 2019-08-04 22:29:53 +0500
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for ::1 at 2019-08-04 22:29:53 +0500
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for ::1 at 2019-08-04 22:29:53 +0500
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for ::1 at 2019-08-04 22:29:53 +0500
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for ::1 at 2019-08-04 22:29:53 +0500
+
+
+Started GET "/assets/metisMenu/jquery.metisMenu.js?body=1" for ::1 at 2019-08-04 22:29:53 +0500
+
+
+Started GET "/assets/pace/pace.min.js?body=1" for ::1 at 2019-08-04 22:29:53 +0500
+
+
+Started GET "/assets/peity/jquery.peity.min.js?body=1" for ::1 at 2019-08-04 22:29:53 +0500
+
+
+Started GET "/assets/slimscroll/jquery.slimscroll.min.js?body=1" for ::1 at 2019-08-04 22:29:53 +0500
+
+
+Started GET "/assets/inspinia.js?body=1" for ::1 at 2019-08-04 22:29:53 +0500
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2019-08-04 22:29:53 +0500
+
+
+Started GET "/assets/a7.jpg" for ::1 at 2019-08-04 22:29:53 +0500
+
+
+Started GET "/assets/high-res.jpg" for ::1 at 2019-08-04 22:29:53 +0500
+
+
+Started GET "/assets/a4.jpg" for ::1 at 2019-08-04 22:29:53 +0500
+
+
+Started GET "/assets/profile.jpg" for ::1 at 2019-08-04 22:29:53 +0500
+
+
+Started GET "/assets/a1.jpg" for ::1 at 2019-08-04 22:29:53 +0500
+
+
+Started GET "/assets/a2.jpg" for ::1 at 2019-08-04 22:29:53 +0500
+
+
+Started GET "/assets/a3.jpg" for ::1 at 2019-08-04 22:29:53 +0500
+
+
+Started GET "/assets/a8.jpg" for ::1 at 2019-08-04 22:29:53 +0500
+
+
+Started GET "/assets/patterns/header-profile-skin-1.png" for ::1 at 2019-08-04 22:29:53 +0500
+
+
+Started GET "/assets/patterns/header-profile-skin-3.png" for ::1 at 2019-08-04 22:29:53 +0500
+
+
+Started GET "/users/sign_out" for ::1 at 2019-08-04 22:29:59 +0500
+Processing by Devise::SessionsController#destroy as HTML
+  [1m[35mUser Load (6.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 11ms (ActiveRecord: 6.2ms)
+
+
+Started GET "/" for ::1 at 2019-08-04 22:29:59 +0500
+Processing by QuestionsController#list as HTML
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-08-04 22:29:59 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/sessions/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 29ms (Views: 27.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for ::1 at 2019-08-04 22:30:00 +0500
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for ::1 at 2019-08-04 22:30:00 +0500
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2019-08-04 22:30:00 +0500
+
+
+Started GET "/assets/style.css?body=1" for ::1 at 2019-08-04 22:30:00 +0500
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for ::1 at 2019-08-04 22:30:00 +0500
+
+
+Started GET "/assets/font-awesome.css?body=1" for ::1 at 2019-08-04 22:30:00 +0500
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for ::1 at 2019-08-04 22:30:00 +0500
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for ::1 at 2019-08-04 22:30:00 +0500
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for ::1 at 2019-08-04 22:30:00 +0500
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for ::1 at 2019-08-04 22:30:00 +0500
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for ::1 at 2019-08-04 22:30:00 +0500
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for ::1 at 2019-08-04 22:30:00 +0500
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for ::1 at 2019-08-04 22:30:00 +0500
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for ::1 at 2019-08-04 22:30:00 +0500
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for ::1 at 2019-08-04 22:30:00 +0500
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for ::1 at 2019-08-04 22:30:00 +0500
+
+
+Started GET "/assets/metisMenu/jquery.metisMenu.js?body=1" for ::1 at 2019-08-04 22:30:00 +0500
+
+
+Started GET "/assets/pace/pace.min.js?body=1" for ::1 at 2019-08-04 22:30:00 +0500
+
+
+Started GET "/assets/peity/jquery.peity.min.js?body=1" for ::1 at 2019-08-04 22:30:00 +0500
+
+
+Started GET "/assets/slimscroll/jquery.slimscroll.min.js?body=1" for ::1 at 2019-08-04 22:30:00 +0500
+
+
+Started GET "/assets/inspinia.js?body=1" for ::1 at 2019-08-04 22:30:00 +0500
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2019-08-04 22:30:00 +0500
+
+
+Started POST "/users/sign_in" for ::1 at 2019-08-04 22:30:02 +0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IMfeyy3N0DopkiKAZQht5Lv7n73OrgoM0CUpjnLI08oWjoHAbwOP5h9Fh7Dov8Vhd7gJLVfkhfq8yG5HcR0ofA==", "user"=>{"email"=>"arslan.rao@tintash.com", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[36mUser Load (2.8ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "arslan.rao@tintash.com"]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 282ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/" for ::1 at 2019-08-04 22:30:02 +0500
+Processing by QuestionsController#list as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mQuestion Load (0.4ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY created_at DESC[0m
+  Rendered questions/list.html.erb within layouts/application (3.7ms)
+  Rendered layouts/_skinconfig.html.erb (0.1ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_topnavbar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+  Rendered layouts/_rightsidebar.html.erb (0.4ms)
+Completed 200 OK in 39ms (Views: 35.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for ::1 at 2019-08-04 22:30:02 +0500
+
+
+Started GET "/assets/style.css?body=1" for ::1 at 2019-08-04 22:30:02 +0500
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2019-08-04 22:30:02 +0500
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for ::1 at 2019-08-04 22:30:02 +0500
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for ::1 at 2019-08-04 22:30:02 +0500
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for ::1 at 2019-08-04 22:30:02 +0500
+
+
+Started GET "/assets/font-awesome.css?body=1" for ::1 at 2019-08-04 22:30:02 +0500
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for ::1 at 2019-08-04 22:30:02 +0500
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for ::1 at 2019-08-04 22:30:02 +0500
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for ::1 at 2019-08-04 22:30:02 +0500
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for ::1 at 2019-08-04 22:30:02 +0500
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for ::1 at 2019-08-04 22:30:02 +0500
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for ::1 at 2019-08-04 22:30:02 +0500
+
+
+Started GET "/assets/peity/jquery.peity.min.js?body=1" for ::1 at 2019-08-04 22:30:02 +0500
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for ::1 at 2019-08-04 22:30:02 +0500
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for ::1 at 2019-08-04 22:30:02 +0500
+
+
+Started GET "/assets/metisMenu/jquery.metisMenu.js?body=1" for ::1 at 2019-08-04 22:30:02 +0500
+
+
+Started GET "/assets/pace/pace.min.js?body=1" for ::1 at 2019-08-04 22:30:02 +0500
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for ::1 at 2019-08-04 22:30:02 +0500
+
+
+Started GET "/assets/slimscroll/jquery.slimscroll.min.js?body=1" for ::1 at 2019-08-04 22:30:02 +0500
+
+
+Started GET "/assets/inspinia.js?body=1" for ::1 at 2019-08-04 22:30:02 +0500
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2019-08-04 22:30:02 +0500
+
+
+Started GET "/assets/high-res.jpg" for ::1 at 2019-08-04 22:30:02 +0500
+
+
+Started GET "/assets/a7.jpg" for ::1 at 2019-08-04 22:30:02 +0500
+
+
+Started GET "/assets/a4.jpg" for ::1 at 2019-08-04 22:30:02 +0500
+
+
+Started GET "/assets/profile.jpg" for ::1 at 2019-08-04 22:30:02 +0500
+
+
+Started GET "/assets/a2.jpg" for ::1 at 2019-08-04 22:30:02 +0500
+
+
+Started GET "/assets/a1.jpg" for ::1 at 2019-08-04 22:30:02 +0500
+
+
+Started GET "/assets/a3.jpg" for ::1 at 2019-08-04 22:30:02 +0500
+
+
+Started GET "/assets/a8.jpg" for ::1 at 2019-08-04 22:30:03 +0500
+
+
+Started GET "/assets/patterns/header-profile-skin-1.png" for ::1 at 2019-08-04 22:30:03 +0500
+
+
+Started GET "/assets/patterns/header-profile-skin-3.png" for ::1 at 2019-08-04 22:30:03 +0500
+
+
+Started GET "/" for ::1 at 2019-08-04 22:30:10 +0500
+Processing by QuestionsController#list as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mQuestion Load (1.5ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY created_at DESC[0m
+  Rendered questions/list.html.erb within layouts/application (6.8ms)
+  Rendered layouts/_skinconfig.html.erb (0.1ms)
+  Rendered layouts/_navigation.html.erb (1.6ms)
+  Rendered layouts/_topnavbar.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+  Rendered layouts/_rightsidebar.html.erb (0.5ms)
+Completed 200 OK in 39ms (Views: 34.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/style.css?body=1" for ::1 at 2019-08-04 22:30:10 +0500
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for ::1 at 2019-08-04 22:30:10 +0500
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for ::1 at 2019-08-04 22:30:10 +0500
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for ::1 at 2019-08-04 22:30:10 +0500
+
+
+Started GET "/assets/font-awesome.css?body=1" for ::1 at 2019-08-04 22:30:10 +0500
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2019-08-04 22:30:10 +0500
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for ::1 at 2019-08-04 22:30:10 +0500
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for ::1 at 2019-08-04 22:30:10 +0500
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for ::1 at 2019-08-04 22:30:10 +0500
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for ::1 at 2019-08-04 22:30:10 +0500
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for ::1 at 2019-08-04 22:30:10 +0500
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for ::1 at 2019-08-04 22:30:10 +0500
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for ::1 at 2019-08-04 22:30:10 +0500
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for ::1 at 2019-08-04 22:30:10 +0500
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for ::1 at 2019-08-04 22:30:10 +0500
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for ::1 at 2019-08-04 22:30:10 +0500
+
+
+Started GET "/assets/metisMenu/jquery.metisMenu.js?body=1" for ::1 at 2019-08-04 22:30:10 +0500
+
+
+Started GET "/assets/pace/pace.min.js?body=1" for ::1 at 2019-08-04 22:30:10 +0500
+
+
+Started GET "/assets/peity/jquery.peity.min.js?body=1" for ::1 at 2019-08-04 22:30:10 +0500
+
+
+Started GET "/assets/slimscroll/jquery.slimscroll.min.js?body=1" for ::1 at 2019-08-04 22:30:10 +0500
+
+
+Started GET "/assets/inspinia.js?body=1" for ::1 at 2019-08-04 22:30:10 +0500
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2019-08-04 22:30:10 +0500
+
+
+Started GET "/assets/a7.jpg" for ::1 at 2019-08-04 22:30:10 +0500
+
+
+Started GET "/assets/high-res.jpg" for ::1 at 2019-08-04 22:30:10 +0500
+
+
+Started GET "/assets/a4.jpg" for ::1 at 2019-08-04 22:30:10 +0500
+
+
+Started GET "/assets/profile.jpg" for ::1 at 2019-08-04 22:30:11 +0500
+
+
+Started GET "/assets/a1.jpg" for ::1 at 2019-08-04 22:30:11 +0500
+
+
+Started GET "/assets/a2.jpg" for ::1 at 2019-08-04 22:30:11 +0500
+
+
+Started GET "/assets/a3.jpg" for ::1 at 2019-08-04 22:30:11 +0500
+
+
+Started GET "/assets/a8.jpg" for ::1 at 2019-08-04 22:30:11 +0500
+
+
+Started GET "/assets/patterns/header-profile-skin-1.png" for ::1 at 2019-08-04 22:30:11 +0500
+
+
+Started GET "/assets/patterns/header-profile-skin-3.png" for ::1 at 2019-08-04 22:30:11 +0500
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2019-08-04 22:30:31 +0500
+
+
+Started GET "/assets/style.css?body=1" for ::1 at 2019-08-04 22:30:31 +0500
+
+
+Started GET "/assets/font-awesome.css?body=1" for ::1 at 2019-08-04 22:30:31 +0500
+
+
+Started GET "/" for ::1 at 2019-08-04 22:31:20 +0500
+Processing by QuestionsController#list as HTML
+  [1m[35mUser Load (7.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mQuestion Load (1.5ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY created_at DESC[0m
+  Rendered questions/list.html.erb within layouts/application (4.5ms)
+  Rendered layouts/_skinconfig.html.erb (0.2ms)
+  Rendered layouts/_navigation.html.erb (1.8ms)
+  Rendered layouts/_topnavbar.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+  Rendered layouts/_rightsidebar.html.erb (0.7ms)
+Completed 200 OK in 3125ms (Views: 3111.9ms | ActiveRecord: 8.4ms)
+
+
+Started GET "/assets/font-awesome.css?body=1" for ::1 at 2019-08-04 22:31:23 +0500
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for ::1 at 2019-08-04 22:31:23 +0500
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for ::1 at 2019-08-04 22:31:23 +0500
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2019-08-04 22:31:23 +0500
+
+
+Started GET "/assets/style.css?body=1" for ::1 at 2019-08-04 22:31:23 +0500
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for ::1 at 2019-08-04 22:31:23 +0500
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for ::1 at 2019-08-04 22:31:23 +0500
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for ::1 at 2019-08-04 22:31:23 +0500
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for ::1 at 2019-08-04 22:31:23 +0500
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for ::1 at 2019-08-04 22:31:23 +0500
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for ::1 at 2019-08-04 22:31:23 +0500
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for ::1 at 2019-08-04 22:31:23 +0500
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for ::1 at 2019-08-04 22:31:23 +0500
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for ::1 at 2019-08-04 22:31:23 +0500
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for ::1 at 2019-08-04 22:31:23 +0500
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for ::1 at 2019-08-04 22:31:23 +0500
+
+
+Started GET "/assets/metisMenu/jquery.metisMenu.js?body=1" for ::1 at 2019-08-04 22:31:23 +0500
+
+
+Started GET "/assets/pace/pace.min.js?body=1" for ::1 at 2019-08-04 22:31:23 +0500
+
+
+Started GET "/assets/slimscroll/jquery.slimscroll.min.js?body=1" for ::1 at 2019-08-04 22:31:23 +0500
+
+
+Started GET "/assets/inspinia.js?body=1" for ::1 at 2019-08-04 22:31:23 +0500
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2019-08-04 22:31:24 +0500
+
+
+Started GET "/assets/peity/jquery.peity.min.js?body=1" for ::1 at 2019-08-04 22:31:24 +0500
+
+
+Started GET "/assets/high-res.jpg" for ::1 at 2019-08-04 22:31:24 +0500
+
+
+Started GET "/assets/a7.jpg" for ::1 at 2019-08-04 22:31:24 +0500
+
+
+Started GET "/assets/a4.jpg" for ::1 at 2019-08-04 22:31:24 +0500
+
+
+Started GET "/assets/profile.jpg" for ::1 at 2019-08-04 22:31:24 +0500
+
+
+Started GET "/assets/a1.jpg" for ::1 at 2019-08-04 22:31:24 +0500
+
+
+Started GET "/assets/a2.jpg" for ::1 at 2019-08-04 22:31:24 +0500
+
+
+Started GET "/assets/a3.jpg" for ::1 at 2019-08-04 22:31:24 +0500
+
+
+Started GET "/assets/a8.jpg" for ::1 at 2019-08-04 22:31:24 +0500
+
+
+Started GET "/assets/patterns/header-profile-skin-1.png" for ::1 at 2019-08-04 22:31:24 +0500
+
+
+Started GET "/assets/patterns/header-profile-skin-3.png" for ::1 at 2019-08-04 22:31:24 +0500
+
+
+Started GET "/" for ::1 at 2019-08-04 22:32:17 +0500
+Processing by QuestionsController#list as HTML
+  [1m[35mUser Load (11.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mQuestion Load (1.5ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY created_at DESC[0m
+  Rendered questions/list.html.erb within layouts/application (12.4ms)
+  Rendered layouts/_skinconfig.html.erb (0.1ms)
+  Rendered layouts/_navigation.html.erb (1.6ms)
+  Rendered layouts/_topnavbar.html.erb (3.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+  Rendered layouts/_rightsidebar.html.erb (0.5ms)
+Completed 200 OK in 116ms (Views: 100.0ms | ActiveRecord: 12.6ms)
+
+
+Started GET "/assets/style.css?body=1" for ::1 at 2019-08-04 22:32:17 +0500
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2019-08-04 22:32:17 +0500
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for ::1 at 2019-08-04 22:32:17 +0500
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for ::1 at 2019-08-04 22:32:18 +0500
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for ::1 at 2019-08-04 22:32:18 +0500
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for ::1 at 2019-08-04 22:32:18 +0500
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for ::1 at 2019-08-04 22:32:18 +0500
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for ::1 at 2019-08-04 22:32:18 +0500
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for ::1 at 2019-08-04 22:32:18 +0500
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for ::1 at 2019-08-04 22:32:18 +0500
+
+
+Started GET "/assets/font-awesome.css?body=1" for ::1 at 2019-08-04 22:32:18 +0500
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for ::1 at 2019-08-04 22:32:18 +0500
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for ::1 at 2019-08-04 22:32:18 +0500
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for ::1 at 2019-08-04 22:32:18 +0500
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for ::1 at 2019-08-04 22:32:18 +0500
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for ::1 at 2019-08-04 22:32:18 +0500
+
+
+Started GET "/assets/metisMenu/jquery.metisMenu.js?body=1" for ::1 at 2019-08-04 22:32:18 +0500
+
+
+Started GET "/assets/pace/pace.min.js?body=1" for ::1 at 2019-08-04 22:32:18 +0500
+
+
+Started GET "/assets/peity/jquery.peity.min.js?body=1" for ::1 at 2019-08-04 22:32:18 +0500
+
+
+Started GET "/assets/slimscroll/jquery.slimscroll.min.js?body=1" for ::1 at 2019-08-04 22:32:18 +0500
+
+
+Started GET "/assets/inspinia.js?body=1" for ::1 at 2019-08-04 22:32:18 +0500
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2019-08-04 22:32:18 +0500
+
+
+Started GET "/assets/high-res.jpg" for ::1 at 2019-08-04 22:32:18 +0500
+
+
+Started GET "/assets/a7.jpg" for ::1 at 2019-08-04 22:32:18 +0500
+
+
+Started GET "/assets/a4.jpg" for ::1 at 2019-08-04 22:32:18 +0500
+
+
+Started GET "/assets/profile.jpg" for ::1 at 2019-08-04 22:32:18 +0500
+
+
+Started GET "/assets/a1.jpg" for ::1 at 2019-08-04 22:32:18 +0500
+
+
+Started GET "/assets/a2.jpg" for ::1 at 2019-08-04 22:32:18 +0500
+
+
+Started GET "/assets/a3.jpg" for ::1 at 2019-08-04 22:32:18 +0500
+
+
+Started GET "/assets/a8.jpg" for ::1 at 2019-08-04 22:32:18 +0500
+
+
+Started GET "/assets/patterns/header-profile-skin-1.png" for ::1 at 2019-08-04 22:32:19 +0500
+
+
+Started GET "/assets/patterns/header-profile-skin-3.png" for ::1 at 2019-08-04 22:32:19 +0500
+
+
+Started GET "/" for ::1 at 2019-08-04 22:33:10 +0500
+Processing by QuestionsController#list as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mQuestion Load (1.7ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY created_at DESC[0m
+  Rendered questions/list.html.erb within layouts/application (6.9ms)
+  Rendered layouts/_skinconfig.html.erb (0.2ms)
+  Rendered layouts/_navigation.html.erb (1.6ms)
+  Rendered layouts/_topnavbar.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+  Rendered layouts/_rightsidebar.html.erb (1.3ms)
+Completed 200 OK in 100ms (Views: 96.0ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/style.css?body=1" for ::1 at 2019-08-04 22:33:10 +0500
+
+
+Started GET "/assets/font-awesome.css?body=1" for ::1 at 2019-08-04 22:33:10 +0500
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for ::1 at 2019-08-04 22:33:10 +0500
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for ::1 at 2019-08-04 22:33:11 +0500
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for ::1 at 2019-08-04 22:33:11 +0500
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2019-08-04 22:33:11 +0500
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for ::1 at 2019-08-04 22:33:11 +0500
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for ::1 at 2019-08-04 22:33:11 +0500
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for ::1 at 2019-08-04 22:33:11 +0500
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for ::1 at 2019-08-04 22:33:11 +0500
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for ::1 at 2019-08-04 22:33:11 +0500
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for ::1 at 2019-08-04 22:33:11 +0500
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for ::1 at 2019-08-04 22:33:11 +0500
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for ::1 at 2019-08-04 22:33:11 +0500
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for ::1 at 2019-08-04 22:33:11 +0500
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for ::1 at 2019-08-04 22:33:11 +0500
+
+
+Started GET "/assets/metisMenu/jquery.metisMenu.js?body=1" for ::1 at 2019-08-04 22:33:11 +0500
+
+
+Started GET "/assets/pace/pace.min.js?body=1" for ::1 at 2019-08-04 22:33:11 +0500
+
+
+Started GET "/assets/peity/jquery.peity.min.js?body=1" for ::1 at 2019-08-04 22:33:11 +0500
+
+
+Started GET "/assets/slimscroll/jquery.slimscroll.min.js?body=1" for ::1 at 2019-08-04 22:33:11 +0500
+
+
+Started GET "/assets/inspinia.js?body=1" for ::1 at 2019-08-04 22:33:11 +0500
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2019-08-04 22:33:11 +0500
+
+
+Started GET "/assets/high-res.jpg" for ::1 at 2019-08-04 22:33:11 +0500
+
+
+Started GET "/assets/a7.jpg" for ::1 at 2019-08-04 22:33:11 +0500
+
+
+Started GET "/assets/a4.jpg" for ::1 at 2019-08-04 22:33:11 +0500
+
+
+Started GET "/assets/profile.jpg" for ::1 at 2019-08-04 22:33:11 +0500
+
+
+Started GET "/assets/a2.jpg" for ::1 at 2019-08-04 22:33:11 +0500
+
+
+Started GET "/assets/a1.jpg" for ::1 at 2019-08-04 22:33:11 +0500
+
+
+Started GET "/assets/a3.jpg" for ::1 at 2019-08-04 22:33:11 +0500
+
+
+Started GET "/assets/a8.jpg" for ::1 at 2019-08-04 22:33:11 +0500
+
+
+Started GET "/assets/patterns/header-profile-skin-1.png" for ::1 at 2019-08-04 22:33:11 +0500
+
+
+Started GET "/assets/patterns/header-profile-skin-3.png" for ::1 at 2019-08-04 22:33:11 +0500
+
+
+Started GET "/" for ::1 at 2019-08-04 22:33:44 +0500
+Processing by QuestionsController#list as HTML
+  [1m[35mUser Load (6.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mQuestion Load (3.3ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY created_at DESC[0m
+  Rendered questions/list.html.erb within layouts/application (9.3ms)
+  Rendered layouts/_skinconfig.html.erb (0.1ms)
+  Rendered layouts/_navigation.html.erb (1.8ms)
+  Rendered layouts/_topnavbar.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+  Rendered layouts/_rightsidebar.html.erb (0.5ms)
+Completed 200 OK in 90ms (Views: 77.4ms | ActiveRecord: 9.6ms)
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2019-08-04 22:33:44 +0500
+
+
+Started GET "/assets/style.css?body=1" for ::1 at 2019-08-04 22:33:44 +0500
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for ::1 at 2019-08-04 22:33:44 +0500
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for ::1 at 2019-08-04 22:33:44 +0500
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for ::1 at 2019-08-04 22:33:44 +0500
+
+
+Started GET "/assets/font-awesome.css?body=1" for ::1 at 2019-08-04 22:33:44 +0500
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for ::1 at 2019-08-04 22:33:44 +0500
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for ::1 at 2019-08-04 22:33:44 +0500
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for ::1 at 2019-08-04 22:33:44 +0500
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for ::1 at 2019-08-04 22:33:45 +0500
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for ::1 at 2019-08-04 22:33:45 +0500
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for ::1 at 2019-08-04 22:33:45 +0500
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for ::1 at 2019-08-04 22:33:45 +0500
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for ::1 at 2019-08-04 22:33:45 +0500
+
+
+Started GET "/assets/metisMenu/jquery.metisMenu.js?body=1" for ::1 at 2019-08-04 22:33:45 +0500
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for ::1 at 2019-08-04 22:33:45 +0500
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for ::1 at 2019-08-04 22:33:45 +0500
+
+
+Started GET "/assets/pace/pace.min.js?body=1" for ::1 at 2019-08-04 22:33:45 +0500
+
+
+Started GET "/assets/peity/jquery.peity.min.js?body=1" for ::1 at 2019-08-04 22:33:45 +0500
+
+
+Started GET "/assets/slimscroll/jquery.slimscroll.min.js?body=1" for ::1 at 2019-08-04 22:33:45 +0500
+
+
+Started GET "/assets/inspinia.js?body=1" for ::1 at 2019-08-04 22:33:45 +0500
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2019-08-04 22:33:45 +0500
+
+
+Started GET "/assets/high-res.jpg" for ::1 at 2019-08-04 22:33:45 +0500
+
+
+Started GET "/assets/a7.jpg" for ::1 at 2019-08-04 22:33:45 +0500
+
+
+Started GET "/assets/a4.jpg" for ::1 at 2019-08-04 22:33:45 +0500
+
+
+Started GET "/assets/profile.jpg" for ::1 at 2019-08-04 22:33:45 +0500
+
+
+Started GET "/assets/a1.jpg" for ::1 at 2019-08-04 22:33:45 +0500
+
+
+Started GET "/assets/a2.jpg" for ::1 at 2019-08-04 22:33:45 +0500
+
+
+Started GET "/assets/a3.jpg" for ::1 at 2019-08-04 22:33:45 +0500
+
+
+Started GET "/assets/a8.jpg" for ::1 at 2019-08-04 22:33:45 +0500
+
+
+Started GET "/assets/patterns/header-profile-skin-1.png" for ::1 at 2019-08-04 22:33:45 +0500
+
+
+Started GET "/assets/patterns/header-profile-skin-3.png" for ::1 at 2019-08-04 22:33:45 +0500
+
+
+Started GET "/" for ::1 at 2019-08-04 22:33:56 +0500
+Processing by QuestionsController#list as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mQuestion Load (0.5ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY created_at DESC[0m
+  Rendered questions/list.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_skinconfig.html.erb (0.1ms)
+  Rendered layouts/_navigation.html.erb (4.7ms)
+  Rendered layouts/_topnavbar.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+  Rendered layouts/_rightsidebar.html.erb (2.0ms)
+Completed 200 OK in 68ms (Views: 64.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/font-awesome.css?body=1" for ::1 at 2019-08-04 22:33:56 +0500
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2019-08-04 22:33:56 +0500
+
+
+Started GET "/assets/style.css?body=1" for ::1 at 2019-08-04 22:33:56 +0500
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for ::1 at 2019-08-04 22:33:56 +0500
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for ::1 at 2019-08-04 22:33:56 +0500
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for ::1 at 2019-08-04 22:33:56 +0500
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for ::1 at 2019-08-04 22:33:56 +0500
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for ::1 at 2019-08-04 22:33:56 +0500
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for ::1 at 2019-08-04 22:33:56 +0500
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for ::1 at 2019-08-04 22:33:56 +0500
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for ::1 at 2019-08-04 22:33:56 +0500
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for ::1 at 2019-08-04 22:33:56 +0500
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for ::1 at 2019-08-04 22:33:56 +0500
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for ::1 at 2019-08-04 22:33:56 +0500
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for ::1 at 2019-08-04 22:33:56 +0500
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for ::1 at 2019-08-04 22:33:56 +0500
+
+
+Started GET "/assets/metisMenu/jquery.metisMenu.js?body=1" for ::1 at 2019-08-04 22:33:56 +0500
+
+
+Started GET "/assets/pace/pace.min.js?body=1" for ::1 at 2019-08-04 22:33:57 +0500
+
+
+Started GET "/assets/peity/jquery.peity.min.js?body=1" for ::1 at 2019-08-04 22:33:57 +0500
+
+
+Started GET "/assets/slimscroll/jquery.slimscroll.min.js?body=1" for ::1 at 2019-08-04 22:33:57 +0500
+
+
+Started GET "/assets/inspinia.js?body=1" for ::1 at 2019-08-04 22:33:57 +0500
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2019-08-04 22:33:57 +0500
+
+
+Started GET "/assets/high-res.jpg" for ::1 at 2019-08-04 22:33:58 +0500
+
+
+Started GET "/assets/a7.jpg" for ::1 at 2019-08-04 22:33:58 +0500
+
+
+Started GET "/assets/a4.jpg" for ::1 at 2019-08-04 22:33:58 +0500
+
+
+Started GET "/assets/a1.jpg" for ::1 at 2019-08-04 22:33:58 +0500
+
+
+Started GET "/assets/a2.jpg" for ::1 at 2019-08-04 22:33:58 +0500
+
+
+Started GET "/assets/profile.jpg" for ::1 at 2019-08-04 22:33:58 +0500
+
+
+Started GET "/assets/a3.jpg" for ::1 at 2019-08-04 22:33:58 +0500
+
+
+Started GET "/assets/a8.jpg" for ::1 at 2019-08-04 22:33:58 +0500
+
+
+Started GET "/assets/patterns/header-profile-skin-1.png" for ::1 at 2019-08-04 22:33:58 +0500
+
+
+Started GET "/assets/patterns/header-profile-skin-3.png" for ::1 at 2019-08-04 22:33:58 +0500
+
+
+Started GET "/" for ::1 at 2019-08-04 22:34:12 +0500
+Processing by QuestionsController#list as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mQuestion Load (1.4ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY created_at DESC[0m
+  Rendered questions/list.html.erb within layouts/application (7.8ms)
+  Rendered layouts/_skinconfig.html.erb (0.1ms)
+  Rendered layouts/_navigation.html.erb (1.7ms)
+  Rendered layouts/_topnavbar.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+  Rendered layouts/_rightsidebar.html.erb (0.5ms)
+Completed 200 OK in 85ms (Views: 81.2ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/font-awesome.css?body=1" for ::1 at 2019-08-04 22:34:12 +0500
+
+
+Started GET "/assets/style.css?body=1" for ::1 at 2019-08-04 22:34:12 +0500
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for ::1 at 2019-08-04 22:34:12 +0500
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for ::1 at 2019-08-04 22:34:12 +0500
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for ::1 at 2019-08-04 22:34:12 +0500
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2019-08-04 22:34:12 +0500
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for ::1 at 2019-08-04 22:34:12 +0500
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for ::1 at 2019-08-04 22:34:12 +0500
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for ::1 at 2019-08-04 22:34:12 +0500
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for ::1 at 2019-08-04 22:34:12 +0500
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for ::1 at 2019-08-04 22:34:12 +0500
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for ::1 at 2019-08-04 22:34:12 +0500
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for ::1 at 2019-08-04 22:34:12 +0500
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for ::1 at 2019-08-04 22:34:12 +0500
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for ::1 at 2019-08-04 22:34:12 +0500
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for ::1 at 2019-08-04 22:34:12 +0500
+
+
+Started GET "/assets/metisMenu/jquery.metisMenu.js?body=1" for ::1 at 2019-08-04 22:34:12 +0500
+
+
+Started GET "/assets/pace/pace.min.js?body=1" for ::1 at 2019-08-04 22:34:12 +0500
+
+
+Started GET "/assets/peity/jquery.peity.min.js?body=1" for ::1 at 2019-08-04 22:34:12 +0500
+
+
+Started GET "/assets/slimscroll/jquery.slimscroll.min.js?body=1" for ::1 at 2019-08-04 22:34:12 +0500
+
+
+Started GET "/assets/inspinia.js?body=1" for ::1 at 2019-08-04 22:34:12 +0500
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2019-08-04 22:34:12 +0500
+
+
+Started GET "/assets/high-res.jpg" for ::1 at 2019-08-04 22:34:12 +0500
+
+
+Started GET "/assets/a7.jpg" for ::1 at 2019-08-04 22:34:12 +0500
+
+
+Started GET "/assets/a4.jpg" for ::1 at 2019-08-04 22:34:13 +0500
+
+
+Started GET "/assets/profile.jpg" for ::1 at 2019-08-04 22:34:13 +0500
+
+
+Started GET "/assets/a1.jpg" for ::1 at 2019-08-04 22:34:13 +0500
+
+
+Started GET "/assets/a2.jpg" for ::1 at 2019-08-04 22:34:13 +0500
+
+
+Started GET "/assets/a3.jpg" for ::1 at 2019-08-04 22:34:13 +0500
+
+
+Started GET "/assets/a8.jpg" for ::1 at 2019-08-04 22:34:13 +0500
+
+
+Started GET "/assets/patterns/header-profile-skin-1.png" for ::1 at 2019-08-04 22:34:13 +0500
+
+
+Started GET "/assets/patterns/header-profile-skin-3.png" for ::1 at 2019-08-04 22:34:13 +0500
+
+
+Started GET "/" for ::1 at 2019-08-04 22:34:33 +0500
+Processing by QuestionsController#list as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mQuestion Load (0.4ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY created_at DESC[0m
+  Rendered questions/list.html.erb within layouts/application (3.7ms)
+  Rendered layouts/_skinconfig.html.erb (0.1ms)
+  Rendered layouts/_navigation.html.erb (1.5ms)
+  Rendered layouts/_topnavbar.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+  Rendered layouts/_rightsidebar.html.erb (0.9ms)
+Completed 200 OK in 81ms (Views: 77.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/font-awesome.css?body=1" for ::1 at 2019-08-04 22:34:33 +0500
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for ::1 at 2019-08-04 22:34:33 +0500
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for ::1 at 2019-08-04 22:34:33 +0500
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for ::1 at 2019-08-04 22:34:33 +0500
+
+
+Started GET "/assets/style.css?body=1" for ::1 at 2019-08-04 22:34:33 +0500
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2019-08-04 22:34:33 +0500
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for ::1 at 2019-08-04 22:34:33 +0500
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for ::1 at 2019-08-04 22:34:33 +0500
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for ::1 at 2019-08-04 22:34:34 +0500
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for ::1 at 2019-08-04 22:34:34 +0500
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for ::1 at 2019-08-04 22:34:34 +0500
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for ::1 at 2019-08-04 22:34:34 +0500
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for ::1 at 2019-08-04 22:34:34 +0500
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for ::1 at 2019-08-04 22:34:34 +0500
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for ::1 at 2019-08-04 22:34:34 +0500
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for ::1 at 2019-08-04 22:34:34 +0500
+
+
+Started GET "/assets/metisMenu/jquery.metisMenu.js?body=1" for ::1 at 2019-08-04 22:34:34 +0500
+
+
+Started GET "/assets/pace/pace.min.js?body=1" for ::1 at 2019-08-04 22:34:34 +0500
+
+
+Started GET "/assets/peity/jquery.peity.min.js?body=1" for ::1 at 2019-08-04 22:34:34 +0500
+
+
+Started GET "/assets/slimscroll/jquery.slimscroll.min.js?body=1" for ::1 at 2019-08-04 22:34:34 +0500
+
+
+Started GET "/assets/inspinia.js?body=1" for ::1 at 2019-08-04 22:34:34 +0500
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2019-08-04 22:34:34 +0500
+
+
+Started GET "/assets/high-res.jpg" for ::1 at 2019-08-04 22:34:34 +0500
+
+
+Started GET "/assets/a7.jpg" for ::1 at 2019-08-04 22:34:34 +0500
+
+
+Started GET "/assets/a4.jpg" for ::1 at 2019-08-04 22:34:34 +0500
+
+
+Started GET "/assets/profile.jpg" for ::1 at 2019-08-04 22:34:34 +0500
+
+
+Started GET "/assets/a1.jpg" for ::1 at 2019-08-04 22:34:34 +0500
+
+
+Started GET "/assets/a2.jpg" for ::1 at 2019-08-04 22:34:34 +0500
+
+
+Started GET "/assets/a3.jpg" for ::1 at 2019-08-04 22:34:34 +0500
+
+
+Started GET "/assets/a8.jpg" for ::1 at 2019-08-04 22:34:34 +0500
+
+
+Started GET "/assets/patterns/header-profile-skin-1.png" for ::1 at 2019-08-04 22:34:34 +0500
+
+
+Started GET "/assets/patterns/header-profile-skin-3.png" for ::1 at 2019-08-04 22:34:34 +0500
+
+
+Started GET "/" for ::1 at 2019-08-04 22:34:47 +0500
+Processing by QuestionsController#list as HTML
+  [1m[35mUser Load (2.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mQuestion Load (0.5ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY created_at DESC[0m
+  Rendered questions/list.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_skinconfig.html.erb (0.1ms)
+  Rendered layouts/_navigation.html.erb (3.4ms)
+  Rendered layouts/_topnavbar.html.erb (1.5ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+  Rendered layouts/_rightsidebar.html.erb (1.1ms)
+Completed 200 OK in 90ms (Views: 81.8ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2019-08-04 22:34:48 +0500
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for ::1 at 2019-08-04 22:34:48 +0500
+
+
+Started GET "/assets/style.css?body=1" for ::1 at 2019-08-04 22:34:48 +0500
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for ::1 at 2019-08-04 22:34:48 +0500
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for ::1 at 2019-08-04 22:34:48 +0500
+
+
+Started GET "/assets/font-awesome.css?body=1" for ::1 at 2019-08-04 22:34:48 +0500
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for ::1 at 2019-08-04 22:34:48 +0500
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for ::1 at 2019-08-04 22:34:48 +0500
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for ::1 at 2019-08-04 22:34:48 +0500
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for ::1 at 2019-08-04 22:34:48 +0500
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for ::1 at 2019-08-04 22:34:48 +0500
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for ::1 at 2019-08-04 22:34:48 +0500
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for ::1 at 2019-08-04 22:34:48 +0500
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for ::1 at 2019-08-04 22:34:48 +0500
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for ::1 at 2019-08-04 22:34:48 +0500
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for ::1 at 2019-08-04 22:34:48 +0500
+
+
+Started GET "/assets/metisMenu/jquery.metisMenu.js?body=1" for ::1 at 2019-08-04 22:34:48 +0500
+
+
+Started GET "/assets/pace/pace.min.js?body=1" for ::1 at 2019-08-04 22:34:48 +0500
+
+
+Started GET "/assets/peity/jquery.peity.min.js?body=1" for ::1 at 2019-08-04 22:34:48 +0500
+
+
+Started GET "/assets/slimscroll/jquery.slimscroll.min.js?body=1" for ::1 at 2019-08-04 22:34:48 +0500
+
+
+Started GET "/assets/inspinia.js?body=1" for ::1 at 2019-08-04 22:34:49 +0500
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2019-08-04 22:34:49 +0500
+
+
+Started GET "/assets/high-res.jpg" for ::1 at 2019-08-04 22:34:49 +0500
+
+
+Started GET "/assets/a7.jpg" for ::1 at 2019-08-04 22:34:49 +0500
+
+
+Started GET "/assets/a4.jpg" for ::1 at 2019-08-04 22:34:49 +0500
+
+
+Started GET "/assets/profile.jpg" for ::1 at 2019-08-04 22:34:49 +0500
+
+
+Started GET "/assets/a1.jpg" for ::1 at 2019-08-04 22:34:49 +0500
+
+
+Started GET "/assets/a2.jpg" for ::1 at 2019-08-04 22:34:49 +0500
+
+
+Started GET "/assets/a3.jpg" for ::1 at 2019-08-04 22:34:49 +0500
+
+
+Started GET "/assets/a8.jpg" for ::1 at 2019-08-04 22:34:49 +0500
+
+
+Started GET "/assets/patterns/header-profile-skin-1.png" for ::1 at 2019-08-04 22:34:49 +0500
+
+
+Started GET "/assets/patterns/header-profile-skin-3.png" for ::1 at 2019-08-04 22:34:49 +0500
+
+
+Started GET "/" for ::1 at 2019-08-04 22:35:01 +0500
+Processing by QuestionsController#list as HTML
+  [1m[35mUser Load (1.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mQuestion Load (1.1ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY created_at DESC[0m
+  Rendered questions/list.html.erb within layouts/application (7.1ms)
+  Rendered layouts/_skinconfig.html.erb (0.2ms)
+  Rendered layouts/_navigation.html.erb (6.2ms)
+  Rendered layouts/_topnavbar.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+  Rendered layouts/_rightsidebar.html.erb (1.9ms)
+Completed 200 OK in 79ms (Views: 70.7ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for ::1 at 2019-08-04 22:35:01 +0500
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for ::1 at 2019-08-04 22:35:02 +0500
+
+
+Started GET "/assets/font-awesome.css?body=1" for ::1 at 2019-08-04 22:35:02 +0500
+
+
+Started GET "/assets/style.css?body=1" for ::1 at 2019-08-04 22:35:02 +0500
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2019-08-04 22:35:02 +0500
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for ::1 at 2019-08-04 22:35:02 +0500
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for ::1 at 2019-08-04 22:35:02 +0500
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for ::1 at 2019-08-04 22:35:02 +0500
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for ::1 at 2019-08-04 22:35:02 +0500
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for ::1 at 2019-08-04 22:35:02 +0500
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for ::1 at 2019-08-04 22:35:02 +0500
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for ::1 at 2019-08-04 22:35:02 +0500
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for ::1 at 2019-08-04 22:35:02 +0500
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for ::1 at 2019-08-04 22:35:02 +0500
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for ::1 at 2019-08-04 22:35:02 +0500
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for ::1 at 2019-08-04 22:35:02 +0500
+
+
+Started GET "/assets/metisMenu/jquery.metisMenu.js?body=1" for ::1 at 2019-08-04 22:35:02 +0500
+
+
+Started GET "/assets/pace/pace.min.js?body=1" for ::1 at 2019-08-04 22:35:02 +0500
+
+
+Started GET "/assets/peity/jquery.peity.min.js?body=1" for ::1 at 2019-08-04 22:35:02 +0500
+
+
+Started GET "/assets/slimscroll/jquery.slimscroll.min.js?body=1" for ::1 at 2019-08-04 22:35:02 +0500
+
+
+Started GET "/assets/inspinia.js?body=1" for ::1 at 2019-08-04 22:35:02 +0500
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2019-08-04 22:35:02 +0500
+
+
+Started GET "/assets/high-res.jpg" for ::1 at 2019-08-04 22:35:02 +0500
+
+
+Started GET "/assets/a7.jpg" for ::1 at 2019-08-04 22:35:02 +0500
+
+
+Started GET "/assets/a4.jpg" for ::1 at 2019-08-04 22:35:02 +0500
+
+
+Started GET "/assets/profile.jpg" for ::1 at 2019-08-04 22:35:02 +0500
+
+
+Started GET "/assets/a1.jpg" for ::1 at 2019-08-04 22:35:02 +0500
+
+
+Started GET "/assets/a2.jpg" for ::1 at 2019-08-04 22:35:02 +0500
+
+
+Started GET "/assets/a3.jpg" for ::1 at 2019-08-04 22:35:02 +0500
+
+
+Started GET "/assets/a8.jpg" for ::1 at 2019-08-04 22:35:02 +0500
+
+
+Started GET "/assets/patterns/header-profile-skin-1.png" for ::1 at 2019-08-04 22:35:02 +0500
+
+
+Started GET "/assets/patterns/header-profile-skin-3.png" for ::1 at 2019-08-04 22:35:02 +0500

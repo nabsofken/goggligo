@@ -409,6 +409,10 @@ body.skin-3 {
 
 .skin-3 #page-wrapper {
   background: $skin-3-page-bg;
+  margin-top: -5%;
+}
+.skin-3 .nav > li > a {
+  color: #999c9e;
 }
 
 .skin-3 .ibox-title, .skin-3 .ibox-content {
