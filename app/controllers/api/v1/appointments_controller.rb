@@ -7,8 +7,8 @@ class Api::V1::AppointmentsController < ApiController
   end
 
   def create
-  	appointment = Appointment.new(appointment_params)
-  	appointment.current_user = current_user
+    appointment = current_user.appointments.build(appointment_params)
+    appointment.current_user = current_user
   	if appointment.save
       created(data: AppointmentSerializer.new(appointment))
   	else
