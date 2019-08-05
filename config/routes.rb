@@ -147,6 +147,7 @@ Myapp::Application.routes.draw do
   get "appointments/new"
   post "appointments/create"
   get "appointments/generate_report"
+  get "appointments/generate_csv"
 
   get "users/list"
   get "users/new"

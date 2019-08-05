@@ -1,9 +1,22 @@
+require 'csv'
+
 class Appointment < ActiveRecord::Base
 	belongs_to :user
 	serialize :answer_values
 	after_create :send_report
   	attr_accessor :current_user
 
+	def self.to_csv(user)
+	    attributes = %w{first_name last_name email mobile_number date_of_visit reason_of_visit}
+
+	    CSV.generate(headers: true) do |csv|
+	      csv << attributes
+
+	      user.appointments.each do |user|
+	        csv << attributes.map{ |attr| user.send(attr) }
+	      end
+	    end
+	end
 
 	def send_report
 		appointment = self

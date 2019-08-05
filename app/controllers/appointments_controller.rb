@@ -18,6 +18,13 @@ class AppointmentsController < ApplicationController
   	@appointments = current_user.appointments.order('created_at DESC')
   end
 
+  def generate_csv
+  	respond_to do |format|
+      format.html
+      format.csv { send_data Appointment.to_csv(current_user), filename: "Patients-#{Date.today}.csv" }
+    end
+  end
+
   def generate_report
   	header = '<h1 style="text-align: center; color: #4285F4">Patients Report!</h1>'
   	body = '<table><tr><th>Full Name</th><th>Email</th><th>Mobile</th><th>Date</th><th>Reason</th><th>Questions</th></tr>'
