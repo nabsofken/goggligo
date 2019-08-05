@@ -2,6 +2,8 @@ class User < ActiveRecord::Base
 devise :database_authenticatable, :registerable, :confirmable, :recoverable, stretches: 12
 
 has_many :user_identities
+has_many :appointments
+
 
 def full_name
 	[self.first_name, self.last_name].join(' ')

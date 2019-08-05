@@ -12,9 +12,8 @@ Myapp::Application.routes.draw do
         post :reset_password, on: :collection
       end
 
-      resources :questions, only: [:index, :create, :show, :destroy] do
-
-      end
+      resources :questions, only: [:index]
+      resources :appointments, only: [:index, :create]
 
     end
   end

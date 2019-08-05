@@ -21,7 +21,7 @@
             <div class="ibox-tools">
                 <%= link_to 'Generate Report', appointments_generate_report_path, class: 'white btn btn-info btn-xs' %>
 
-                <%= link_to 'Create new appointment', appointments_new_path, class: 'btn btn-primary btn-xs' %>
+                <%#= link_to 'Create new appointment', appointments_new_path, class: 'btn btn-primary btn-xs' %>
             </div>
         </div>
         <div class="ibox-content">
@@ -60,6 +60,13 @@
                     </td>
                     <td class="project-people">
                     	<%= appointment.reason_of_visit %>
+                    </td>
+                    <td class="">
+                    	<ul>
+                    		<% appointment.answer_values.keys.each do |key| %>
+                    			<li><%= Question.find_by_id(key.to_s).try(:title) %>: <strong><%= appointment.answer_values[key] %></strong></li>
+                    		<% end %>
+                    	</ul>
                     </td>
                     <td class="project-actions">
                         <a href="#" class="btn btn-white btn-sm"><i class="fa fa-folder"></i> View </a>
