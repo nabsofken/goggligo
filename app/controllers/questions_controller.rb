@@ -1,5 +1,6 @@
 class QuestionsController < ApplicationController
   before_action :authenticate_user!
+  load_and_authorize_resource
 
   def new
   	@question = Question.new
@@ -15,10 +16,11 @@ class QuestionsController < ApplicationController
   end
 
   def list
-  	@questions = Question.all.order('created_at DESC')
+  	@questions = current_user.questions.order('created_at DESC') if current_user.doctor?
+    @questions = Question.all.order('created_at DESC') if current_user.admin?
   end
 
   def question_params
-  	params.require(:question).permit(:title, :placeholder, :question_type, :active, :required, :options)
+  	params.require(:question).permit(:title, :placeholder, :question_type, :active, :required, :options, :user_id)
   end
 end

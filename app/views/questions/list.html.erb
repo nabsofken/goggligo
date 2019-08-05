@@ -18,9 +18,11 @@
     <div class="ibox">
         <div class="ibox-title">
             <h5>All Questions</h5>
-            <div class="ibox-tools">
-                <%= link_to 'Create new question', questions_new_path, class: 'btn btn-primary btn-xs' %>
-            </div>
+            <% if can? :create, Question %>
+                <div class="ibox-tools">
+                    <%= link_to 'Create new question', questions_new_path, class: 'btn btn-primary btn-xs' %>
+                </div>
+            <% end %>
         </div>
         <div class="ibox-content">
             <div class="row m-b-sm m-t-sm">
