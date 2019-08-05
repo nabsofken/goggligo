@@ -27,8 +27,8 @@
 
         <!-- Navigation -->
         <%= render 'layouts/navigation'  if user_signed_in? %>
-        <p class="notice"><%= notice %></p>
-       <p class="alert"><%= alert %></p>
+        <p class="notice"><%#= notice %></p>
+       <p class="alert"><%#= alert %></p>
 
         <!-- Page wraper -->
         <div id="<%= user_signed_in? ? 'page-wrapper' : '' %>" class="gray-bg <%= @extra_class %>">

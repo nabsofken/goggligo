@@ -2,7 +2,9 @@
         <div class="row">
 
             <div class="col-md-6">
+              <img src="<%= image_path('logo-transparent.svg') %>" width="300px" height="300px"class="img-responsive" >
             </div>
+
             <div class="col-md-6">
                 <div class="ibox-content">
                 <h2 class="font-bold">Welcome to Goggligo</h2>
@@ -28,11 +30,11 @@
   </div>
 
 
-                        <a href="#">
-                            <small>Forgot password?</small>
-                        </a>
+                        <%#= link_to edit_user_password_path do %>
+                            <!-- <small>Forgot password?</small> -->
+                        <%# end %>
 
-                        <p class="text-muted text-center">
+                        <p class="text-muted">
                             <small>Do not have an account? Please ask admin to create for you.</small>
                         </p>
                         <%#= link_to 'Create an account', new_user_registration_path, class: 'btn btn-sm btn-white btn-block' %>
