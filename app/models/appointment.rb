@@ -6,23 +6,25 @@ class Appointment < ActiveRecord::Base
 
 
 	def send_report
-		header = '<h1>Patient Registered!</h1>'
-	  	body = '<table><tr><th>First Name</th><th>Last Name</th><th>Email</th><th>Mobile Number</th><th>Date Of Visit</th><th>Reason Of Visit</th><th>Questions</th></tr>'
-	  	next_column = '</td><td>'
+		appointment = self
+		header = '<h1 style="margin: auto; color: #4285F4">Patient Registered!</h1>'
+	  	body = '<h3><strong>First Name: </strong></h3>' + appointment.first_name.to_s +
+	  	       '<h3><strong>Last Name: </strong></h3>' + appointment.last_name.to_s +
+	  	       '<h3><strong>Email: </strong></h3>' + appointment.email.to_s +
+	  	       '<h3><strong>Mobile Number: </strong></h3>' + appointment.mobile_number.to_s +
+	  	       '<h3><strong>Date Of Visit: </strong></h3>' + appointment.date_of_visit.to_s +
+	  	       '<h3><strong>Reason Of Visit: </strong></h3>' + appointment.reason_of_visit.to_s +
+	  	       '<h3><strong>Questions: </strong></h3><ul>'
 
-	  	appointment = self
-  		body = body + '<tr><td>' + appointment.first_name.to_s + next_column + appointment.last_name.to_s + next_column + appointment.email.to_s + next_column + appointment.mobile_number.to_s + next_column + appointment.date_of_visit.to_s + next_column + appointment.reason_of_visit.to_s
-
-		body = body + '</td><td><ul>'
         appointment.answer_values.keys.each do |key|
             body = body + '<li>' + Question.find_by_id(key.to_s).try(:title) + ': <strong>' + appointment.answer_values[key].to_s + '</strong></li>'
         end
 
-  		body + '</ul></td></tr>'
+  		body + '</ul>'
   	
-	  	footer = '</table><h1>Goggligo Tech</h1>'
+	  	footer = '<h1 style="margin: auto; color: #2DAD68">Goggligo Tech</h1>'
 		pdf = WickedPdf.new.pdf_from_string(header + body + footer)
-		UserMailer.generate_report(self.current_user, pdf, self.email).deliver_later
+		UserMailer.generate_patient_report(self, pdf, self.current_user).deliver_later
 	end
 
 end
