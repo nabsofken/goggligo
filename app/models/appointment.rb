@@ -7,7 +7,7 @@ class Appointment < ActiveRecord::Base
 
 	def send_report
 		appointment = self
-		header = '<h1 style="margin: auto; color: #4285F4">Patient Registered!</h1>'
+		header = '<h1 style="text-align: center; color: #4285F4">Patient Report!</h1>'
 	  	body = '<h3><strong>First Name: </strong></h3>' + appointment.first_name.to_s +
 	  	       '<h3><strong>Last Name: </strong></h3>' + appointment.last_name.to_s +
 	  	       '<h3><strong>Email: </strong></h3>' + appointment.email.to_s +
@@ -22,7 +22,7 @@ class Appointment < ActiveRecord::Base
 
   		body + '</ul>'
   	
-	  	footer = '<h1 style="margin: auto; color: #2DAD68">Goggligo Tech</h1>'
+	  	footer = '<h1 style="text-align: center; color: #2DAD68">Goggligo Tech</h1>'
 		pdf = WickedPdf.new.pdf_from_string(header + body + footer)
 		UserMailer.generate_patient_report(self, pdf, self.current_user).deliver_later
 	end

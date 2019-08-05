@@ -19,14 +19,14 @@ class AppointmentsController < ApplicationController
   end
 
   def generate_report
-  	header = '<h1>Patient Registered!</h1>'
-  	body = '<table><tr><th>First Name</th><th>Last Name</th><th>Email</th><th>Mobile Number</th><th>Date Of Visit</th><th>Reason Of Visit</th><th>Questions</th></tr>'
+  	header = '<h1 style="text-align: center; color: #4285F4">Patients Report!</h1>'
+  	body = '<table><tr><th>Full Name</th><th>Email</th><th>Mobile</th><th>Date</th><th>Reason</th><th>Questions</th></tr>'
   	next_column = '</td><td>'
 
   	@appointments = current_user.appointments.order('created_at DESC')
 
   	@appointments.each do |appointment|
-  		body = body + '<tr><td>' + appointment.first_name.to_s + next_column + appointment.last_name.to_s + next_column + appointment.email.to_s + next_column + appointment.mobile_number.to_s + next_column + appointment.date_of_visit.to_s + next_column + appointment.reason_of_visit.to_s
+  		body = body + '<tr><td>' + appointment.first_name.to_s + ' ' + appointment.last_name.to_s + next_column + appointment.email.to_s + next_column + appointment.mobile_number.to_s + next_column + appointment.date_of_visit.to_s + next_column + appointment.reason_of_visit.to_s
 
 		body = body + '</td><td><ul>'
         appointment.answer_values.keys.each do |key|
@@ -36,7 +36,7 @@ class AppointmentsController < ApplicationController
   		body + '</ul></td></tr>'
   	end
 
-  	footer = '</table><h1>Goggligo Tech</h1>'
+  	footer = '</table><h1 style="text-align: center; color: #2DAD68">Goggligo Tech</h1>'
 	pdf = WickedPdf.new.pdf_from_string(header + body + footer)
 
 

@@ -19,6 +19,6 @@ class UserMailer < ApplicationMailer
 
     mail(to: @user.email,
     	bcc: bcc,
-        subject: 'Goggligo Patients Report')
+        subject: 'Goggligo Patient Report')
   end
 end
