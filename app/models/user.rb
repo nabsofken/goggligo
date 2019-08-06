@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-devise :database_authenticatable, :registerable, :confirmable, :recoverable, stretches: 12
+devise :database_authenticatable, :registerable, :confirmable, :recoverable, :timeoutable, stretches: 12
 
 has_many :user_identities, dependent: :destroy
 has_many :appointments, dependent: :destroy
