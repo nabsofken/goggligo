@@ -1,0 +1,77 @@
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-sm-4">
+        <h2>User detail</h2>
+        <ol class="breadcrumb">
+            <li>
+                <a href="<%= url_for :controller => 'dashboards', :action => 'dashboard_1' %>">Home</a>
+        </li>
+        <li class="active">
+            <strong>User detail</strong>
+        </li>
+    </ol>
+</div>
+        </div>
+<div class="row">
+<div class="col-lg-9">
+<div class="wrapper wrapper-content animated fadeInUp">
+<div class="ibox">
+<div class="ibox-content">
+<div class="row">
+    <div class="col-lg-12">
+        <div class="m-b-md">
+            <%= link_to 'Edit User', edit_user_path(@user), class: "btn btn-white btn-xs pull-right" %>
+            <h2>Details for <%= @user.full_name %></h2>
+        </div>
+        <dl class="dl-horizontal">
+            <dt>Status:</dt>
+            <dd><span class="label <%= @user.active ? 'label-primary' : 'label-default' %>"><%= @user.active ? 'Active' : 'InActive' %></span></dd>
+        </dl>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-5">
+        <dl class="dl-horizontal">
+            <dt>Business Name:</dt>
+            <dd><%= @user.business_name %></dd>
+            <dt>Address:</dt>
+            <dd><%= @user.address %></dd>
+            <dt>Phone:</dt>
+            <dd><%= @user.contact_person_number %></dd>
+            <dt>Fax:</dt>
+            <dd><%= @user.fax %></dd>
+            <dt>Website:</dt>
+            <dd><%= @user.website %></dd>
+            <dt>Business Email:</dt>
+            <dd><%= @user.contact_person_email %></dd>
+        </dl>
+    </div>
+
+    <div class="col-lg-7" id="cluster_info">
+        <dl class="dl-horizontal">
+            <dt>First Name:</dt>
+            <dd><%= @user.first_name %></dd>
+            <dt>Last Name:</dt>
+            <dd><%= @user.last_name %></dd>
+            <dt>Email:</dt>
+            <dd><%= @user.email %></dd>
+            <dt>Number:</dt>
+            <dd><%= @user.last_sign_in_at %></dd>
+            <dt>Created_at:</dt>
+            <dd><%= @user.created_at %></dd>
+        </dl>
+    </div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>

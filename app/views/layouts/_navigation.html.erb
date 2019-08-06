@@ -40,8 +40,8 @@
                 <li class="<%= is_active_controller('forms') %>">
                     <a href="#"><i class="fa fa-users white"></i> <span class="nav-label white">Users</span><span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level collapse <%= is_active_controller('forms') %>">
-                        <li class="<%= is_active_action('basic_forms') %>"><%= link_to "List", users_list_path, class: 'white' %></li>
-                        <li class="<%= is_active_action('basic_forms') %>"><%= link_to 'New form', users_new_path, class: 'white' %></li>
+                        <li class="<%= is_active_action('basic_forms') %>"><%= link_to "List", users_path, class: 'white' %></li>
+                        <li class="<%= is_active_action('basic_forms') %>"><%= link_to 'New form', new_user_path, class: 'white' %></li>
                     </ul>
                 </li>
 

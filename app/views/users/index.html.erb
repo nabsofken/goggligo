@@ -19,13 +19,13 @@
         <div class="ibox-title">
             <h5>All Users</h5>
             <div class="ibox-tools">
-                <%= link_to 'Create new user', users_new_path, class: 'btn btn-primary btn-xs' %>
+                <%= link_to 'Create new user', new_user_path, class: 'btn btn-primary btn-xs' %>
             </div>
         </div>
         <div class="ibox-content">
             <div class="row m-b-sm m-t-sm">
                 <div class="col-md-1">
-                    <button type="button" id="loading-example-btn" class="btn btn-white btn-sm"><i class="fa fa-refresh"></i> <%= link_to 'Refresh', users_list_path %></button>
+                    <button type="button" id="loading-example-btn" class="btn btn-white btn-sm"><i class="fa fa-refresh"></i> <%= link_to 'Refresh', users_path %></button>
                 </div>
                 <div class="col-md-11">
                     <div class="input-group">
@@ -57,8 +57,12 @@
                     	<%= user.email %>
                     </td>
                     <td class="project-actions">
-                        <a href="#" class="btn btn-white btn-sm"><i class="fa fa-folder"></i> View </a>
-                        <a href="#" class="btn btn-white btn-sm"><i class="fa fa-pencil"></i> Edit </a>
+                        <%= link_to user_path(user), class: "btn btn-white btn-sm" do %>
+                            <i class="fa fa-folder"></i> View
+                        <% end %>
+                        <%= link_to edit_user_path(user), class: "btn btn-white btn-sm" do %>
+                            <i class="fa fa-pencil"></i> Edit
+                        <% end %>
                     </td>
                     </tr>
                     <% end %>

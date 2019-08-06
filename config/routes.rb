@@ -149,8 +149,10 @@ Myapp::Application.routes.draw do
   get "appointments/generate_report"
   get "appointments/generate_csv"
 
-  get "users/list"
-  get "users/new"
-  post "users/create"
+  resources :users
+
+  # get "users/list"
+  # get "users/new"
+  post "users/create_user"
   #resources :questions
 end
