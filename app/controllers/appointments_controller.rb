@@ -22,17 +22,21 @@ class AppointmentsController < ApplicationController
   	start_date = params[:start_date] || 1.year.ago
   	end_date = params[:end_date] || Date.today
 
-  	@appointments = current_user.appointments.between(start_date, end_date).order('created_at DESC')
+    @appointments = current_user.admin? ? Appointment.all : current_user.appointments
+  	@appointments = @appointments.between(start_date, end_date).order('created_at DESC')
   end
 
   def index
-  	@appointments = current_user.appointments.order('created_at DESC')
+  	@appointments = current_user.appointments.order('created_at DESC') if current_user.doctor?
+    @appointments = Appointment.all.order('created_at DESC') if current_user.admin?
   end
 
   def generate_csv
   	start_date = params[:start_date] || 1.year.ago
   	end_date = params[:end_date] || Date.today
-  	@appointments = current_user.appointments.between(start_date, end_date).order('created_at DESC')
+    @appointments = current_user.admin? ? Appointment.all : current_user.appointments
+
+  	@appointments = @appointments.between(start_date, end_date).order('created_at DESC')
 
   	respond_to do |format|
       format.html
@@ -45,7 +49,8 @@ class AppointmentsController < ApplicationController
   	body = '<table><tr><th>Full Name</th><th>Email</th><th>Mobile</th><th>Date</th><th>Reason</th><th>Questions</th></tr>'
   	next_column = '</td><td>'
 
-  	@appointments = current_user.appointments.order('created_at DESC')
+    @appointments = current_user.admin? ? Appointment.all : current_user.appointments
+  	@appointments = @appointments.order('created_at DESC')
 
   	@appointments.each do |appointment|
   		body = body + '<tr><td>' + appointment.first_name.to_s + ' ' + appointment.last_name.to_s + next_column + appointment.email.to_s + next_column + appointment.mobile_number.to_s + next_column + appointment.date_of_visit.to_s + next_column + appointment.reason_of_visit.to_s
