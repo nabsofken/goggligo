@@ -56,6 +56,13 @@
                     <% end %>
                 </ul>
             </li>
+
+            <li class="<%= is_active_controller('forms') %>">
+                <a href="#"><i class="fa fa-file" style="color: white"></i> <span class="nav-label" style="color: white">Reporting</span><span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level collapse <%= is_active_controller('forms') %>">
+                    <li class="<%= is_active_action('basic_forms') %> white"><%= link_to 'Statistic', statistic_path, class: 'white' %></li>
+                </ul>
+            </li>
         </ul>
     </div>
 </nav>
