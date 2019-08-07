@@ -50,9 +50,9 @@
             <li class="<%= is_active_controller('forms') %>">
                 <a href="#"><i class="fa fa-edit" style="color: white"></i> <span class="nav-label" style="color: white">Questions</span><span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level collapse <%= is_active_controller('forms') %>">
-                    <li class="<%= is_active_action('basic_forms') %> white"><%= link_to "List", questions_list_path, class: 'white' %></li>
+                    <li class="<%= is_active_action('basic_forms') %> white"><%= link_to "List", questions_path, class: 'white' %></li>
                     <% if can? :create, Question %>
-                        <li class="<%= is_active_action('basic_forms') %> white"><%= link_to 'New form', questions_new_path, class: 'white' %></li>
+                        <li class="<%= is_active_action('basic_forms') %> white"><%= link_to 'New form', new_question_path, class: 'white' %></li>
                     <% end %>
                 </ul>
             </li>

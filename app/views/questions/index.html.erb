@@ -20,14 +20,14 @@
             <h5>All Questions</h5>
             <% if can? :create, Question %>
                 <div class="ibox-tools">
-                    <%= link_to 'Create new question', questions_new_path, class: 'btn btn-primary btn-xs' %>
+                    <%= link_to 'Create new question', new_question_path, class: 'btn btn-primary btn-xs' %>
                 </div>
             <% end %>
         </div>
         <div class="ibox-content">
             <div class="row m-b-sm m-t-sm">
                 <div class="col-md-1">
-                    <button type="button" id="loading-example-btn" class="btn btn-white btn-sm"><i class="fa fa-refresh"></i> <%= link_to 'Refresh', questions_list_path %></button>
+                    <button type="button" id="loading-example-btn" class="btn btn-white btn-sm"><i class="fa fa-refresh"></i> <%= link_to 'Refresh', questions_path %></button>
                 </div>
                 <div class="col-md-11">
                     <div class="input-group">
@@ -59,8 +59,12 @@
                     	<%= question.question_type.try(:capitalize) %>
                     </td>
                     <td class="project-actions">
-                        <a href="#" class="btn btn-white btn-sm"><i class="fa fa-folder"></i> View </a>
-                        <a href="#" class="btn btn-white btn-sm"><i class="fa fa-pencil"></i> Edit </a>
+                        <%= link_to question_path(question), class: "btn btn-white btn-sm" do %>
+                            <i class="fa fa-folder"></i> View
+                        <% end %>
+                        <%= link_to edit_question_path(question), class: "btn btn-white btn-sm" do %>
+                            <i class="fa fa-pencil"></i> Edit
+                        <% end %>
                     </td>
                     </tr>
                     <% end %>

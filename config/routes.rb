@@ -139,9 +139,8 @@ Myapp::Application.routes.draw do
 
   get "landing/index"
 
-  get "questions/list"
-  get "questions/new"
-  post "questions/create"
+  resources :questions
+  post "questions/create_question"
 
   get "appointments/list"
   get "appointments/new"
@@ -150,9 +149,5 @@ Myapp::Application.routes.draw do
   get "appointments/generate_csv"
 
   resources :users
-
-  # get "users/list"
-  # get "users/new"
   post "users/create_user"
-  #resources :questions
 end

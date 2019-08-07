@@ -1,0 +1,67 @@
+<%= form_for(question, url: question.persisted? ? question_path(question) : questions_create_question_path(question), method: question.persisted? ? 'put' : 'post', html: {class: 'form-horizontal'}) do |f| %>
+    <div class="form-group"><label class="col-sm-2 control-label">Question</label>
+
+        <div class="col-sm-10"><%= f.text_field :title, value: question.title, class: "form-control" %></div>
+    </div>
+    <div class="hr-line-dashed"></div>
+    <div class="form-group"><label class="col-sm-2 control-label">Placeholder</label>
+
+        <div class="col-sm-10"><%= f.text_field :placeholder, value: question.placeholder, class: "form-control" %></div>
+    </div>
+    <div class="hr-line-dashed"></div>
+    <div class="form-group"><label class="col-sm-2 control-label">Question Type</label>
+
+        <div class="col-sm-10">
+        	<%= f.select(:question_type, options_for_select(['Text', 'Number', 'MCQs', 'Date'], question.question_type), {}, {class: "form-control m-b"}) %>
+        </div>
+    </div>
+
+    <div class="form-group"><label class="col-sm-2 control-label">For Doctor</label>
+
+        <div class="col-sm-10">
+            <%= f.select(:user_id, options_for_select(User.doctors.map{|u| [u.full_name, u.id]}, question.user_id), {}, {class: "form-control m-b"}) %>
+        </div>
+    </div>
+
+    <div class="hr-line-dashed"></div>
+    <div class="form-group"><label class="col-sm-2 control-label">Question options <br/><small class="text-navy">Answers</small></label>
+
+        <div class="col-sm-10">
+            <div class="i-checks"><label> <%= f.check_box :options, {}, 'yes', question.options.include?('yes') %> <i></i> Yes </label></div>
+            <div class="i-checks"><label> <%= f.check_box :options, {}, 'no', question.options.include?('no') %> <i></i> NO </label></div>
+
+        </div>
+    </div>
+    <div class="hr-line-dashed"></div>
+    
+    <div class="form-group"><label class="col-sm-2 control-label">Required <br/><small class="text-navy">Is question required?</small></label>
+
+        <div class="col-sm-10">
+
+        	<%= f.label 'Required' do %>
+              <%= f.radio_button :required, true %> Yes
+              <%= f.radio_button :required, false %> No
+          	<% end %>
+        </div>
+    </div>
+
+    <div class="form-group"><label class="col-sm-2 control-label">Active <br/><small class="text-navy">Is question active?</small></label>
+
+        <div class="col-sm-10">
+
+        	<%= f.label 'Required' do %>
+              <%= f.radio_button :active, true %> Yes
+              <%= f.radio_button :active, false %> No
+          	<% end %>
+        </div>
+    </div>
+
+    <div class="hr-line-dashed"></div>
+    <div class="form-group">
+        <div class="col-sm-4 col-sm-offset-2">
+            <button class="btn btn-white" type="submit">Cancel</button>
+      		<%= f.submit class: "btn btn-primary" %>
+
+        </div>
+    </div>
+<% end %>
