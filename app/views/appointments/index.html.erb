@@ -19,9 +19,8 @@
         <div class="ibox-title">
             <h5>All Appointments</h5>
             <div class="ibox-tools">
-                <%= link_to 'Email Report', appointments_generate_report_path, class: 'white btn btn-info btn-xs' %>
-
-                <%= link_to 'Download CSV', appointments_generate_csv_path(format: :csv), class: 'btn btn-primary btn-xs' %>
+                <%= link_to 'Email Report', generate_report_path, class: 'white btn btn-info btn-xs' %>
+                <%= link_to 'Export Stats', statistic_path, class: 'btn btn-primary btn-xs' %>
 
                 <%#= link_to 'Create new appointment', appointments_new_path, class: 'btn btn-primary btn-xs' %>
             </div>

@@ -18,14 +18,25 @@ class AppointmentsController < ApplicationController
   def show
   end
 
+  def statistic
+  	start_date = params[:start_date] || 1.year.ago
+  	end_date = params[:end_date] || Date.today
+
+  	@appointments = current_user.appointments.between(start_date, end_date).order('created_at DESC')
+  end
+
   def index
   	@appointments = current_user.appointments.order('created_at DESC')
   end
 
   def generate_csv
+  	start_date = params[:start_date] || 1.year.ago
+  	end_date = params[:end_date] || Date.today
+  	@appointments = current_user.appointments.between(start_date, end_date).order('created_at DESC')
+
   	respond_to do |format|
       format.html
-      format.csv { send_data Appointment.to_csv(current_user), filename: "Patients-#{Date.today}.csv" }
+      format.csv { send_data Appointment.to_csv(@appointments), filename: "Patients-#{Date.today}.csv" }
     end
   end
 

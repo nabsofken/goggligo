@@ -143,8 +143,9 @@ Myapp::Application.routes.draw do
   post "questions/create_question"
 
   resources :appointments
-  get "appointments/generate_report"
-  get "appointments/generate_csv"
+  get "generate_report", to: "appointments#generate_report"
+  post "generate_csv", to: "appointments#generate_csv"
+  get "statistic", to: "appointments#statistic"
 
   resources :users
   post "users/create_user"

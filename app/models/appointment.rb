@@ -6,14 +6,17 @@ class Appointment < ActiveRecord::Base
 	after_create :send_report
   	attr_accessor :current_user
 
-	def self.to_csv(user)
+  	scope :between, -> (start_date, end_date) { where('created_at BETWEEN ? AND ?', start_date, end_date) }
+
+
+	def self.to_csv(appointments)
 	    attributes = %w{first_name last_name email mobile_number date_of_visit reason_of_visit}
 
 	    CSV.generate(headers: true) do |csv|
 	      csv << attributes
 
-	      user.appointments.each do |user|
-	        csv << attributes.map{ |attr| user.send(attr) }
+	      appointments.each do |appointment|
+	        csv << attributes.map{ |attr| appointment.send(attr) }
 	      end
 	    end
 	end
