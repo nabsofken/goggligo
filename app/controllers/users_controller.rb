@@ -38,8 +38,7 @@ class UsersController < ApplicationController
 
   def index
   	@users = User.doctors.order('created_at DESC')
-    @users = @users.where("business_name like :s", :s => "%#{params[:search]}") if params[:search].present?
-    # @user = @user.where('first_name LIKE ? OR last_name LIKE ?', "%#{params[:search]}%", "%#{params[:search]}%") if params[:search].present?
+    @users = @users.where("business_name like :s", :s => "%#{params[:search]}%") if params[:search].present?
   end
 
   def user_params
