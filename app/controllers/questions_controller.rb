@@ -43,6 +43,8 @@ class QuestionsController < ApplicationController
       user = User.find_by_id(params[:user_id])
       @questions = user.questions.order('created_at DESC') if user.present?
     end
+
+    @questions = @questions.where('title LIKE ?', "%#{params[:search]}%") if params[:search].present?
   end
 
   def question_params

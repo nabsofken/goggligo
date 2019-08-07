@@ -31,11 +31,13 @@
                     <button type="button" id="loading-example-btn" class="btn btn-white btn-sm"><i class="fa fa-refresh"></i> <%= link_to 'Refresh', appointments_path %></button>
                 </div>
                 <div class="col-md-11">
-                    <div class="input-group">
-                        <input type="text" placeholder="Search" class="input-sm form-control"> <span class="input-group-btn">
-                                    <button type="button" class="btn btn-sm btn-primary"> Go!</button>
-                                </span>
-                    </div>
+                    <%= form_tag(appointments_search_path) do %>
+                        <div class="input-group">
+                            <%= text_field_tag :search, nil, placeholder: "Search", class: "input-sm form-control" %><span class="input-group-btn">
+                                        <%= submit_tag 'Go!', class: "btn btn-sm btn-primary" %>
+                                    </span>
+                        </div>
+                    <% end %>
                 </div>
             </div>
 

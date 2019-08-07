@@ -141,12 +141,18 @@ Myapp::Application.routes.draw do
 
   resources :questions
   post "questions/create_question"
+  post "questions_search", to: "questions#index"
+  get "questions_search", to: "questions#index"
 
   resources :appointments
   get "generate_report", to: "appointments#generate_report"
   post "generate_csv", to: "appointments#generate_csv"
   get "statistic", to: "appointments#statistic"
+  post "appointments_search", to: "appointments#index"
+  get "appointments_search", to: "appointments#index"
 
   resources :users
   post "users/create_user"
+  post "users_search", to: "users#index"
+  get "users_search", to: "users#index"
 end
