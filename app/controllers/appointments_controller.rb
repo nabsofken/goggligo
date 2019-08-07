@@ -36,6 +36,13 @@ class AppointmentsController < ApplicationController
   	end_date = params[:end_date] || Date.today
     @appointments = current_user.admin? ? Appointment.all : current_user.appointments
 
+    @appointments = current_user.appointments if current_user.doctor?
+    if current_user.admin?
+      @appointments = Appointment.all if params[:user_id].blank?
+      user = User.find_by_id(params[:user_id])
+      @appointments = user.appointments if user.present?
+    end
+
   	@appointments = @appointments.between(start_date, end_date).order('created_at DESC')
 
   	respond_to do |format|

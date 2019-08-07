@@ -3,7 +3,7 @@
         <h2>Appointment list</h2>
         <ol class="breadcrumb">
             <li>
-                <a href="<%= url_for :controller => 'dashboards', :action => 'dashboard_1' %>">Home</a>
+                Home
         </li>
         <li class="active">
             <strong>Appointment list</strong>
@@ -46,7 +46,7 @@
                     <% @appointments.each do |appointment| %>
                     <tr>
                         <td class="project-title">
-                            <a href="<%= url_for :controller => 'appviews', :action => 'project_detail' %>"><%= appointment.first_name %></a>
+                            <%= appointment.first_name %>
                         <br />
                         <small>Created <%= appointment.created_at.strftime("%d-%m-%Y") %></small>
                     </td>

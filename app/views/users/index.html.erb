@@ -3,7 +3,7 @@
         <h2>User list</h2>
         <ol class="breadcrumb">
             <li>
-                <a href="<%= url_for :controller => 'dashboards', :action => 'dashboard_1' %>">Home</a>
+                Home
         </li>
         <li class="active">
             <strong>User list</strong>
@@ -46,12 +46,9 @@
                             <span class="label <%= user.active ? 'label-primary' : 'label-default' %>"><%= user.active ? 'Active' : 'InActive' %></span>
                         </td>
                         <td class="project-title">
-                            <a href="<%= url_for :controller => 'appviews', :action => 'project_detail' %>"><%= user.first_name %></a>
+                            <%= user.business_name %>
                         <br />
                         <small>Created <%= user.created_at.strftime("%d-%m-%Y") %></small>
-                    </td>
-                    <td class="project-completion">
-                    	<%= user.last_name %>
                     </td>
                     <td class="project-people">
                     	<%= user.email %>

@@ -8,20 +8,6 @@
 	                    <a class="collapse-link">
 	                        <i class="fa fa-chevron-up"></i>
 	                    </a>
-	                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-	                        <i class="fa fa-wrench"></i>
-	                    </a>
-	                    <ul class="dropdown-menu dropdown-user">
-	                        <li>
-	                            <a href="#">Config option 1</a>
-	                        </li>
-	                        <li>
-	                            <a href="#">Config option 2</a>
-	                        </li>
-	                    </ul>
-	                    <a class="close-link">
-	                        <i class="fa fa-times"></i>
-	                    </a>
 	                </div>
 	            </div>
 	            <div class="ibox-content ibox-heading">
@@ -57,9 +43,18 @@
 	            <div class="ibox-tools">
 		            <%= form_tag(generate_csv_path(format: :csv)) do %>
 					  <div class="form-group">
-	                    <%= date_field_tag :start_date, class: "form-control" %>
-	                    <%= date_field_tag :end_date, class: "form-control" %> 
-					  </div>
+			            <%= select_tag :user_id, options_from_collection_for_select(User.doctors, "id", "full_name", params[:user_id]), prompt: "Select User", class: "form-control m-b" %>
+			        </div>
+			        <div class="form-group">
+			        	<div class="row">
+			        		<div class="col-md-6">
+			           			<%= date_field_tag :start_date, "", class: "form-control" %>
+			           		</div>
+			           		<div class="col-md-6">
+	                    		<%= date_field_tag :end_date, "", class: "form-control" %>
+							</div>
+						</div>
+					</div>
 
 					  <%= submit_tag "Download CSV", class: "btn btn-primary btn-xs" %>
 					<% end %>
