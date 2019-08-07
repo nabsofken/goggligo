@@ -41,7 +41,7 @@
                     <a href="#"><i class="fa fa-users white"></i> <span class="nav-label white">Users</span><span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level collapse <%= is_active_controller('forms') %>">
                         <li class="<%= is_active_action('basic_forms') %>"><%= link_to "List", users_path, class: 'white' %></li>
-                        <li class="<%= is_active_action('basic_forms') %>"><%= link_to 'New form', new_user_path, class: 'white' %></li>
+                        <li class="<%= is_active_action('basic_forms') %>"><%= link_to 'New User', new_user_path, class: 'white' %></li>
                     </ul>
                 </li>
 
@@ -52,7 +52,7 @@
                 <ul class="nav nav-second-level collapse <%= is_active_controller('forms') %>">
                     <li class="<%= is_active_action('basic_forms') %> white"><%= link_to "List", questions_path, class: 'white' %></li>
                     <% if can? :create, Question %>
-                        <li class="<%= is_active_action('basic_forms') %> white"><%= link_to 'New form', new_question_path, class: 'white' %></li>
+                        <li class="<%= is_active_action('basic_forms') %> white"><%= link_to 'New Question', new_question_path, class: 'white' %></li>
                     <% end %>
                 </ul>
             </li>
