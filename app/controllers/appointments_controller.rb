@@ -9,7 +9,7 @@ class AppointmentsController < ApplicationController
   def create
   	@appointment = Appointment.new(appointment_params)
   	if @appointment.save
-  		redirect_to appointments_list_path
+      redirect_to appointments_path
   	else
   		render :new
   	end
@@ -67,7 +67,7 @@ class AppointmentsController < ApplicationController
 	# attachments['report.pdf'] = pdf#File.read('path/to/file.pdf')
  #    mail(:to => current_user.email, :subject => "Patient Report")
 
-  	redirect_to appointments_list_path
+    redirect_to appointments_path
   end
 
   def set_appointment
