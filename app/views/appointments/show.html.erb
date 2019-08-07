@@ -1,0 +1,67 @@
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-sm-4">
+        <h2>Patient detail</h2>
+        <ol class="breadcrumb">
+            <li>
+                <a href="<%= url_for :controller => 'dashboards', :action => 'dashboard_1' %>">Home</a>
+        </li>
+        <li class="active">
+            <strong>Patient detail</strong>
+        </li>
+    </ol>
+</div>
+        </div>
+<div class="row">
+<div class="col-lg-9">
+<div class="wrapper wrapper-content animated fadeInUp">
+<div class="ibox">
+<div class="ibox-content">
+<div class="row">
+    <div class="col-lg-12">
+        <div class="m-b-md">
+            <%#= link_to 'Edit Patient', edit_appointment_path(@appointment), class: "btn btn-white btn-xs pull-right" %>
+            <h2>Details</h2>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-6">
+        <dl class="dl-horizontal">
+            <dt>First Name:</dt>
+            <dd><%= @appointment.first_name %></dd>
+            <dt>Last Name:</dt>
+            <dd><%= @appointment.last_name %></dd>
+            <dt>Email:</dt>
+            <dd><%= @appointment.email %></dd>
+            <dt>Date Of Visit:</dt>
+            <dd><%= @appointment.date_of_visit %></dd>
+            <dt>Reason Of Visit:</dt>
+            <dd><%= @appointment.reason_of_visit %></dd>
+        </dl>
+    </div>
+
+    <div class="col-lg-6" id="cluster_info">
+	    <dt>Questions:</dt>
+		<dd>
+           	<ul>
+        		<% @appointment.answer_values.keys.each do |key| %>
+        			<li><%= Question.find_by_id(key.to_s).try(:title) %>: <strong><%= @appointment.answer_values[key] %></strong></li>
+        		<% end %>
+            </ul>
+	    </dd>
+    </div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>

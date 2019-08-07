@@ -1,5 +1,6 @@
 class AppointmentsController < ApplicationController
   before_action :authenticate_user!
+  before_action :set_appointment, only: [:show]
 
   def new
   	@appointment = Appointment.new
@@ -14,7 +15,10 @@ class AppointmentsController < ApplicationController
   	end
   end
 
-  def list
+  def show
+  end
+
+  def index
   	@appointments = current_user.appointments.order('created_at DESC')
   end
 
@@ -53,6 +57,11 @@ class AppointmentsController < ApplicationController
  #    mail(:to => current_user.email, :subject => "Patient Report")
 
   	redirect_to appointments_list_path
+  end
+
+  def set_appointment
+  	@appointment = Appointment.find_by(id: params[:id])
+    redirect_to appointments_path if @appointment.blank?
   end
 
   def appointment_params

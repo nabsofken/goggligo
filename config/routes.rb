@@ -142,9 +142,7 @@ Myapp::Application.routes.draw do
   resources :questions
   post "questions/create_question"
 
-  get "appointments/list"
-  get "appointments/new"
-  post "appointments/create"
+  resources :appointments
   get "appointments/generate_report"
   get "appointments/generate_csv"
 
