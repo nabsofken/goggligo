@@ -38,7 +38,11 @@ class QuestionsController < ApplicationController
 
   def index
   	@questions = current_user.questions.order('created_at DESC') if current_user.doctor?
-    @questions = Question.all.order('created_at DESC') if current_user.admin?
+    if current_user.admin?
+      @questions = Question.all.order('created_at DESC') if params[:user_id].blank?
+      user = User.find_by_id(params[:user_id])
+      @questions = user.questions.order('created_at DESC') if user.present?
+    end
   end
 
   def question_params
