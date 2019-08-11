@@ -53,6 +53,7 @@
                     <li class="<%= is_active_action('basic_forms') %> white"><%= link_to "List", questions_path, class: 'white' %></li>
                     <% if can? :create, Question %>
                         <li class="<%= is_active_action('basic_forms') %> white"><%= link_to 'New Question', new_question_path, class: 'white' %></li>
+                        <li class="<%= is_active_action('basic_forms') %> white"><%= link_to 'Template Question', questions_template_path, class: 'white' %></li>
                     <% end %>
                 </ul>
             </li>
