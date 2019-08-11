@@ -19,6 +19,8 @@ class UsersController < ApplicationController
   	if @user.save
   		redirect_to users_path
   	else
+      #toastr.info(@user.errors.to_message.full_sentence)
+      flash[:alert] = @user.errors.full_messages.to_sentence
   		render :new
   	end
   end

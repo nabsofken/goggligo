@@ -157,6 +157,8 @@ GEM
     thor (0.20.3)
     thread_safe (0.3.6)
     tilt (1.4.1)
+    toastr-rails (1.0.3)
+      railties (>= 3.1.0)
     turbolinks (5.2.0)
       turbolinks-source (~> 5.2)
     turbolinks-source (5.2.0)
@@ -187,6 +189,7 @@ DEPENDENCIES
   rb-readline
   sass-rails (~> 4.0.2)
   sdoc
+  toastr-rails
   turbolinks
   wicked_pdf
   wkhtmltopdf-binary

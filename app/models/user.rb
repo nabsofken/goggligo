@@ -6,6 +6,10 @@ has_many :appointments, dependent: :destroy
 has_many :questions, dependent: :destroy
 scope :doctors, -> { where(role: 'doctor') }
 
+validates_format_of :contact_person_number, :phone, :fax,
+  :with => /\(?[0-9]{3}\)?-[0-9]{3}-[0-9]{3}/,
+  :message => "- must be in xxx-xxx-xxx format."
+
 def full_name
 	[self.first_name, self.last_name].join(' ')
 end

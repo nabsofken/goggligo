@@ -47,7 +47,7 @@ gem 'active_model_serializers'
 gem 'cancan'
 gem 'wicked_pdf'
 gem 'wkhtmltopdf-binary'
-
+gem 'toastr-rails'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
