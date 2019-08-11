@@ -7,7 +7,7 @@ class UserMailer < ApplicationMailer
 
 	attachments['report_' + Date.today.to_s + '.pdf'] = pdf
 
-    mail(to: @user.email, subject: 'Goggligo Patients Report')
+    mail(to: @user.email, subject: 'Goggligo Visitors Report')
   end
 
   def generate_patient_report(appointment, pdf, user)
@@ -19,6 +19,6 @@ class UserMailer < ApplicationMailer
 
     mail(to: @user.email,
     	bcc: bcc,
-        subject: 'Goggligo Patient Report')
+        subject: 'Goggligo Visitor Report')
   end
 end

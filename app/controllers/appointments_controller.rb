@@ -48,12 +48,12 @@ class AppointmentsController < ApplicationController
 
   	respond_to do |format|
       format.html
-      format.csv { send_data Appointment.to_csv(@appointments), filename: "Patients-#{Date.today}.csv" }
+      format.csv { send_data Appointment.to_csv(@appointments), filename: "Visitors-#{Date.today}.csv" }
     end
   end
 
   def generate_report
-  	header = '<h1 style="text-align: center; color: #4285F4">Patients Report!</h1>'
+  	header = '<h1 style="text-align: center; color: #4285F4">Visitors Report!</h1>'
   	body = '<table><tr><th>Full Name</th><th>Email</th><th>Mobile</th><th>Date</th><th>Reason</th><th>Questions</th></tr>'
   	next_column = '</td><td>'
 

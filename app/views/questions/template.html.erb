@@ -1,12 +1,12 @@
 <div class="row wrapper border-bottom white-bg page-heading">
     <div class="col-sm-4">
-        <h2>Questions list</h2>
+        <h2>Template Questions list</h2>
         <ol class="breadcrumb">
             <li>
                 Home
         </li>
         <li class="active">
-            <strong>Questions list</strong>
+            <strong>Template Questions list</strong>
         </li>
     </ol>
 </div>
@@ -19,7 +19,7 @@
 
     <div class="ibox">
         <div class="ibox-title">
-            <h5>All Questions</h5>
+            <h5>All Template Questions</h5>
             <% if can? :create, Question %>
                 <div class="ibox-tools">
                     <%= link_to 'Create new question', new_question_path(user_id: params[:user_id]), class: 'btn btn-primary btn-xs' %>

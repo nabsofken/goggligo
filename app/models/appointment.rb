@@ -23,7 +23,7 @@ class Appointment < ActiveRecord::Base
 
 	def send_report
 		appointment = self
-		header = '<h1 style="text-align: center; color: #4285F4">Patient Report!</h1>'
+		header = '<h1 style="text-align: center; color: #4285F4">Visitor Report!</h1>'
 	  	body = '<h3><strong>First Name: </strong></h3>' + appointment.first_name.to_s +
 	  	       '<h3><strong>Last Name: </strong></h3>' + appointment.last_name.to_s +
 	  	       '<h3><strong>Email: </strong></h3>' + appointment.email.to_s +
