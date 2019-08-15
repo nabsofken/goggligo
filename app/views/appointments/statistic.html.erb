@@ -48,10 +48,10 @@
 			        <div class="form-group">
 			        	<div class="row">
 			        		<div class="col-md-6">
-			           			<%= date_field_tag :start_date, "", class: "form-control" %>
+			           			<%= date_field_tag :start_date, params[:start_date] || Date.today, class: "form-control" %>
 			           		</div>
 			           		<div class="col-md-6">
-	                    		<%= date_field_tag :end_date, "", class: "form-control" %>
+	                    		<%= date_field_tag :end_date, params[:end_date] || Date.today, class: "form-control" %>
 							</div>
 						</div>
 					</div>

@@ -46,6 +46,11 @@ class AppointmentsController < ApplicationController
 
   	@appointments = @appointments.between(start_date, end_date).order('created_at DESC')
 
+    if @appointments.length < 1
+      flash[:alert] = 'Sorry! No results found'
+      return redirect_to statistic_path(start_date: params[:start_date], end_date: params[:end_date], user_id: params[:user_id])
+    end
+
   	respond_to do |format|
       format.html
       format.csv { send_data Appointment.to_csv(@appointments), filename: "Visitors-#{Date.today}.csv" }
