@@ -1,7 +1,7 @@
 class Question < ActiveRecord::Base
   belongs_to :user
 
-  enum question_type: { Text: 0, Number: 1, MCQs: 2, Date: 3 }
+  enum question_type: { Text: 0, Number: 1, MCQs: 2, Date: 3, Gender: 4, InsuranceNumber: 5, MobileNumber: 6 }
   scope :template, -> { where(template: true) }
   scope :not_template, -> { where(template: false) }
 
