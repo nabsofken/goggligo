@@ -54,6 +54,6 @@ class QuestionsController < ApplicationController
   end
 
   def question_params
-  	params.require(:question).permit(:title, :placeholder, :question_type, :active, :required, :options, :user_id, :template)
+  	params.require(:question).permit(:title, :placeholder, :question_type, :active, :required, :options, :user_id, :template, :pre_condition_question_id, :pre_condition_question_value)
   end
 end

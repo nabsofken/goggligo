@@ -1,5 +1,5 @@
 class QuestionSerializer < ActiveModel::Serializer
-  attributes :id, :title, :type, :placeholder, :options, :dateformat, :health_card_format, :phone_number_format, :required, :conditions, :template, :question_key
+  attributes :id, :title, :type, :placeholder, :options, :dateformat, :health_card_format, :phone_number_format, :required, :conditions, :template, :question_key, :pre_condition_question_id, :pre_condition_question_value
 
   def type
   	self.object.question_type
