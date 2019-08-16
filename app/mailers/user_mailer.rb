@@ -1,5 +1,5 @@
 class UserMailer < ApplicationMailer
-  default from: 'reports@goggligo.herokuapp.com'
+  default from: 'reports@gliggo.herokuapp.com'
    layout "mailer"
 
   def generate_report(user, pdf)
@@ -7,7 +7,7 @@ class UserMailer < ApplicationMailer
 
 	attachments['report_' + Date.today.to_s + '.pdf'] = pdf
 
-    mail(to: @user.email, subject: 'Goggligo Visitors Report')
+    mail(to: @user.email, subject: 'Gliggo Visitors Report')
   end
 
   def generate_patient_report(appointment, pdf, user)
@@ -19,6 +19,6 @@ class UserMailer < ApplicationMailer
 
     mail(to: @user.email,
     	bcc: bcc,
-        subject: 'Goggligo Visitor Report')
+        subject: 'Gliggo Visitor Report')
   end
 end

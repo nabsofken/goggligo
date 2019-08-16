@@ -76,7 +76,7 @@ class AppointmentsController < ApplicationController
   		body + '</ul></td></tr>'
   	end
 
-  	footer = '</table><h1 style="text-align: center; color: #2DAD68">Goggligo Tech</h1>'
+  	footer = '</table><h1 style="text-align: center; color: #2DAD68">Gliggo</h1>'
 	pdf = WickedPdf.new.pdf_from_string(header + body + footer)
 
 

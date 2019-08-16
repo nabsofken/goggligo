@@ -39,7 +39,7 @@ class Appointment < ActiveRecord::Base
 
   		body + '</ul>'
   	
-	  	footer = '<h1 style="text-align: center; color: #2DAD68">Goggligo Tech</h1>'
+	  	footer = '<h1 style="text-align: center; color: #2DAD68">Gliggo</h1>'
 		pdf = WickedPdf.new.pdf_from_string(header + body + footer)
 		UserMailer.generate_patient_report(self, pdf, self.current_user).deliver_later
 	end

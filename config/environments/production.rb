@@ -96,7 +96,7 @@ Myapp::Application.configure do
   Rails.application.config.middleware.use ExceptionNotification::Rack,
   :email => {
     :email_prefix => "[#{ENV['APP_HOST']}] ",
-    sender_address: 'noreply@goggligo.herokuapp.com',
+    sender_address: 'noreply@gliggo.herokuapp.com',
     exception_recipients: ['arslanrao94@gmail.com']
   }
 end
