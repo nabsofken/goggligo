@@ -22,7 +22,7 @@
             <h5>All Template Questions</h5>
             <% if can? :create, Question %>
                 <div class="ibox-tools">
-                    <%= link_to 'Create new question', new_question_path(user_id: params[:user_id]), class: 'btn btn-primary btn-xs' %>
+                    <%= link_to 'Create new question', new_question_path(user_id: params[:user_id], template: true), class: 'btn btn-primary btn-xs' %>
                 </div>
             <% end %>
         </div>
