@@ -37,14 +37,14 @@ class QuestionsController < ApplicationController
   end
 
   def index
-  	@questions = current_user.questions.not_template.order('created_at DESC') if current_user.doctor?
+    @questions = current_user.questions + Question.template if current_user.doctor?
     if current_user.admin?
-      @questions = Question.all.not_template.order('created_at DESC') if params[:user_id].blank?
+      @questions = Question.all.order('created_at DESC') if params[:user_id].blank?
       user = User.find_by_id(params[:user_id])
-      @questions = user.questions.not_template.order('created_at DESC') if user.present?
+      @questions = user.questions + Question.template if user.present?
     end
 
-    @questions = @questions.not_template.where('title LIKE ?', "%#{params[:search]}%") if params[:search].present?
+    @questions = @questions.where('title LIKE ?', "%#{params[:search]}%") if params[:search].present?
   end
 
 
