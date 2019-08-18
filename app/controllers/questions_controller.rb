@@ -17,25 +17,29 @@ class QuestionsController < ApplicationController
   def create_question
   	@question = Question.new(question_params)
   	if @question.save
+      session[:notice] = 'Successfully created new question'
   		redirect_to questions_path
   	else
+      @error = @question.errors.full_messages.to_sentence
   		render :new
   	end
   end
 
   def update
     if @question.update(question_params)
+      session[:notice] = 'Successfully updated question'
       redirect_to questions_path
     else
+      @error = @question.errors.full_messages.to_sentence
       render :edit
     end
   end
 
   def destroy
     if @question.destroy
-      flash[:notice] = 'Successfully deleted question'
+      session[:notice] = 'Successfully deleted question'
     else
-      flash[:notice] = 'Failed to deleted question'
+      session[:error] = 'Failed to deleted question'
     end
     redirect_to questions_path
   end
@@ -46,6 +50,10 @@ class QuestionsController < ApplicationController
   end
 
   def index
+    @notice = session[:notice]
+    session[:notice] = nil
+    @error = session[:error]
+    session[:error] = nil
     @questions = current_user.questions + Question.template if current_user.doctor?
     if current_user.admin?
       @questions = Question.all.order('created_at DESC') if params[:user_id].blank?

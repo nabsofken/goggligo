@@ -5,5 +5,7 @@ class Question < ActiveRecord::Base
   scope :template, -> { where(template: true) }
   scope :not_template, -> { where(template: false) }
 
+  validates :title, :placeholder, presence: true
+  validates :pre_condition_question_value, presence: true, if: "pre_condition_question_id.present?"
 
 end
