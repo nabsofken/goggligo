@@ -1,6 +1,6 @@
 class QuestionsController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_question, only: [:edit, :show, :update]
+  before_action :set_question, only: [:edit, :show, :update, :destroy]
 
   load_and_authorize_resource
 
@@ -29,6 +29,15 @@ class QuestionsController < ApplicationController
     else
       render :edit
     end
+  end
+
+  def destroy
+    if @question.destroy
+      flash[:notice] = 'Successfully deleted question'
+    else
+      flash[:notice] = 'Failed to deleted question'
+    end
+    redirect_to questions_path
   end
 
   def set_question

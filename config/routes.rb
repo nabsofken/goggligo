@@ -143,6 +143,8 @@ Myapp::Application.routes.draw do
   post "questions/create_question"
   post "questions_search", to: "questions#index"
   get "questions_search", to: "questions#index"
+  get "question_delete", to: "questions#destroy"
+
   get "questions_template", to: "questions#template"
 
 
