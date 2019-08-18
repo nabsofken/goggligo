@@ -17,28 +17,37 @@ class UsersController < ApplicationController
   def create_user
   	@user = User.new(user_params)
   	if @user.save
+      session[:notice] = 'Successfully created new user'
   		redirect_to users_path
   	else
-      #toastr.info(@user.errors.to_message.full_sentence)
-      flash[:alert] = @user.errors.full_messages.to_sentence
+      @error = @user.errors.full_messages.to_sentence
   		render :new
   	end
   end
 
   def update
     if @user.update(user_params)
+      session[:notice] = 'Successfully updated user'
       redirect_to users_path
     else
+      @error = @user.errors.full_messages.to_sentence
       render :edit
     end
   end
 
   def set_user
     @user = User.find_by(id: params[:id])
-    redirect_to users_path if @user.blank?
+    if @user.blank?
+      session[:error] = 'No user found'
+      redirect_to users_path
+    end
   end
 
   def index
+    @notice = session[:notice]
+    session[:notice] = nil
+    @error = session[:error]
+    session[:error] = nil
   	@users = User.doctors.order('created_at DESC')
     @users = @users.where("business_name like :s", :s => "%#{params[:search]}%") if params[:search].present?
   end

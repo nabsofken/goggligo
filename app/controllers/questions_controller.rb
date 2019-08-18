@@ -46,7 +46,10 @@ class QuestionsController < ApplicationController
 
   def set_question
     @question = Question.find_by(id: params[:id])
-    redirect_to questions_path if @question.blank?
+    if @question.blank?
+      session[:error] = 'No question found'
+      redirect_to questions_path
+    end
   end
 
   def index
