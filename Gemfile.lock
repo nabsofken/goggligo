@@ -106,6 +106,7 @@ GEM
     jbuilder (1.5.3)
       activesupport (>= 3.0.0)
       multi_json (>= 1.2.0)
+    jquery_mask_rails (0.1.0)
     jsonapi-renderer (0.2.2)
     loofah (2.2.3)
       crass (~> 1.0.2)
@@ -184,6 +185,7 @@ DEPENDENCIES
   exception_notification
   font-awesome-rails (= 4.3.0.0)
   jbuilder (~> 1.2)
+  jquery_mask_rails (~> 0.1.0)
   pg (~> 0.15)
   rails!
   rb-readline

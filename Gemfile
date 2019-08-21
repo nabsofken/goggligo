@@ -48,6 +48,8 @@ gem 'cancan'
 gem 'wicked_pdf'
 gem 'wkhtmltopdf-binary'
 gem 'toastr-rails'
+gem 'jquery_mask_rails', '~> 0.1.0'
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
