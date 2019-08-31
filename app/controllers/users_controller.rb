@@ -11,7 +11,11 @@ class UsersController < ApplicationController
   def edit
   end
 
-  def show    
+  def show
+    @notice = session[:notice]
+    session[:notice] = nil
+    @error = session[:error]
+    session[:error] = nil
   end
 
   def create_user
@@ -28,7 +32,7 @@ class UsersController < ApplicationController
   def update
     if @user.update(user_params)
       session[:notice] = 'Successfully updated user'
-      redirect_to users_path
+      redirect_to user_path(@user)
     else
       @error = @user.errors.full_messages.to_sentence
       render :edit

@@ -82,4 +82,4 @@ production:
   <<: *default
   database: Goggligo_production
   username: Goggligo
-  password: <%= ENV['GOGGLIGO_DATABASE_PASSWORD'] %>
+  password: Goggligo
