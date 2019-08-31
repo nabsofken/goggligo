@@ -17,7 +17,7 @@
 
   <div class="form-group">
     <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control", placeholder: "Email", required: true %>
+    <%= f.email_field :email, value: params[:email], autofocus: true, autocomplete: "email", class: "form-control", placeholder: "Email", required: true %>
   </div>
 
   <div class="actions">
