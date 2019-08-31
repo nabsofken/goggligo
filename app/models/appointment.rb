@@ -3,7 +3,7 @@ require 'csv'
 class Appointment < ActiveRecord::Base
 	belongs_to :user
 	serialize :answer_values
-	after_create :send_report
+	#after_create :send_report
   	attr_accessor :current_user
 
   	scope :between, -> (start_date, end_date) { where('created_at BETWEEN ? AND ?', start_date, end_date) }
