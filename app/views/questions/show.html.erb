@@ -39,8 +39,10 @@
             <dd><%= @question.placeholder %></dd>
             <dt>Question Type:</dt>
             <dd><%= @question.question_type %></dd>
-            <dt>For Doctor:</dt>
-            <dd><%= @question.user.try(:full_name) %></dd>
+            <% if can? :create, Question %>
+                <dt>For Client:</dt>
+                <dd><%= @question.user.try(:full_name) %></dd>
+            <% end %>
             <dt>Question options:</dt>
             <dd>
             	<ul>

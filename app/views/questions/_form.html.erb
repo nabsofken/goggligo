@@ -12,7 +12,7 @@
     <div class="form-group"><label class="col-sm-2 control-label">Question Type</label>
 
         <div class="col-sm-10">
-            <%= f.select(:question_type, options_for_select(['Text', 'Number', 'MCQs', 'Date', 'Gender', 'InsuranceNumber', 'MobileNumber'], question.question_type), {}, {class: "form-control m-b question_type_select"}) %>
+            <%= f.select(:question_type, options_for_select(['Text', 'Number', 'MCQs', 'Date', 'Gender', 'InsuranceNumber', 'MobileNumber', 'Email'], question.question_type), {}, {class: "form-control m-b question_type_select"}) %>
         </div>
     </div>
 
