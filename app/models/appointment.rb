@@ -6,7 +6,7 @@ class Appointment < ActiveRecord::Base
 	#after_create :send_report
   	attr_accessor :current_user
 
-  	scope :between, -> (start_date, end_date) { where('created_at BETWEEN ? AND ?', start_date, end_date) }
+    scope :between, -> (start_date, end_date) { where('created_at BETWEEN ? AND ?', start_date.beginning_of_day, end_date.end_of_day) }
 
 	validates_format_of :mobile_number, with: /\(?[0-9]{3}\)? ?[0-9]{3}-[0-9]{4}/, message: "- Phone numbers must be in xxx-xxx-xxxx format."
 
