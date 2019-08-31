@@ -1,5 +1,5 @@
-<% @current_month_count = Appointment.between(Date.today.beginning_of_month, Date.today.end_of_month).count %>
-<% @current_year_count = Appointment.between(Date.today.beginning_of_year, Date.today.end_of_year).count %>
+<% @current_month_count = Appointment.between(Time.now.utc.to_date.beginning_of_month, Time.now.utc.to_date.end_of_month).count %>
+<% @current_year_count = Appointment.between(Time.now.utc.to_date.beginning_of_year, Time.now.utc.to_date.end_of_year).count %>
 
 <div class="wrapper wrapper-content">
 	<div class="row">
@@ -16,7 +16,7 @@
 	            <div class="ibox-content ibox-heading">
 	                <h3>
 	                    Clients
-	                    <div class="stat-percent text-navy"><%= User.count %></div>
+	                    <div class="stat-percent text-navy"><%= User.doctors.count %></div>
 	                </h3>
 	                <small><i class="fa fa-stack-exchange"></i> New Client data from the previous quarter.</small>
 	            </div>
@@ -37,10 +37,10 @@
 			        <div class="form-group">
 			        	<div class="row">
 			        		<div class="col-md-6">
-			           			<%= date_field_tag :start_date, params[:start_date] || Date.today, class: "form-control" %>
+			           			<%= date_field_tag :start_date, params[:start_date] || Time.now.utc.to_date, class: "form-control" %>
 			           		</div>
 			           		<div class="col-md-6">
-	                    		<%= date_field_tag :end_date, params[:end_date] || Date.today, class: "form-control" %>
+	                    		<%= date_field_tag :end_date, params[:end_date] || Time.now.utc.to_date, class: "form-control" %>
 							</div>
 						</div>
 					</div>
