@@ -1,3 +1,8 @@
+<% @last_month_count = Appointment.between(Date.today.beginning_of_month - 1.month, Date.today.end_of_month - 1.month).count %>
+<% @current_month_count = Appointment.between(Date.today.beginning_of_month, Date.today.end_of_month).count %>
+<% @current_year_count = Appointment.between(Date.today.beginning_of_year, Date.today.end_of_year).count %>
+<% @last_year_count = Appointment.between(Date.today.beginning_of_year - 1.year, Date.today.end_of_year - 1.year).count %>
+
 <div class="wrapper wrapper-content">
 	<div class="row">
 	    <div class="col-lg-6">
@@ -12,10 +17,10 @@
 	            </div>
 	            <div class="ibox-content ibox-heading">
 	                <h3>
-	                    Visitor Registered up
-	                    <div class="stat-percent text-navy">34% <i class="fa fa-level-up"></i></div>
+	                    Client Registered up
+	                    <div class="stat-percent text-navy"><%= User.count %> <i class="fa fa-level-up"></i></div>
 	                </h3>
-	                <small><i class="fa fa-stack-exchange"></i> New visitor data from the previous quarter.</small>
+	                <small><i class="fa fa-stack-exchange"></i> New Client data from the previous quarter.</small>
 	            </div>
 	            <div class="ibox-content">
 	                <div>
@@ -27,7 +32,7 @@
 	                        <small class="font-bold">1k</small>
 	                    </div>
 	                    <h4>
-	                        Visitor report new data!
+	                        Client report new data!
 	                </h4>
 	            </div>
 	        </div>
@@ -65,6 +70,58 @@
 	</div>
 </div>
 
+
+
+<div class="wrapper wrapper-content">
+<div class="row">
+    <div class="col-md-3">
+        <div class="ibox float-e-margins">
+            <div class="ibox-title">
+                <span class="label label-success pull-right">Total Visit</span>
+                <h5>Total Visits</h5>
+            </div>
+            <div class="ibox-content">
+                <h1 class="no-margins"><%= Appointment.count %></h1>
+                <small>Total visits</small>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="ibox float-e-margins">
+            <div class="ibox-title">
+                <span class="label label-info pull-right">Monthly</span>
+                <h5>Visits</h5>
+            </div>
+            <div class="ibox-content">
+                <h1 class="no-margins"><%= @current_month_count %></h1>
+                <div class="stat-percent font-bold text-info"><%= (@current_month_count / (@last_month_count != 0 ? @last_month_count : 1)) * 100 %>% <i class="fa fa-level-up"></i></div>
+                <small>New orders</small>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <div class="ibox float-e-margins">
+            <div class="ibox-title">
+                <span class="label label-primary pull-right">Yearly</span>
+                <h5>Vistits</h5>
+            </div>
+            <div class="ibox-content">
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 class="no-margins"><%= @current_year_count %></h1>
+                        <div class="font-bold text-navy"><%= (@current_year_count / (@last_year_count != 0 ? @last_year_count : 1)) * 100 %>% <i class="fa fa-level-up"></i> <small>Rapid pace</small></div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
 <% content_for :javascript do %>
 
 <script type="text/javascript">
