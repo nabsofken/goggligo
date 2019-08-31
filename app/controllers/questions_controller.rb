@@ -66,6 +66,7 @@ class QuestionsController < ApplicationController
     end
 
     @questions = @questions.where('title LIKE ?', "%#{params[:search]}%") if params[:search].present?
+    @questions = @questions.sort_by{|e| e[:id]}
   end
 
 
@@ -76,6 +77,7 @@ class QuestionsController < ApplicationController
     session[:error] = nil
     @questions = Question.template.order('created_at DESC')
     @questions = @questions.where('title LIKE ?', "%#{params[:search]}%") if params[:search].present?
+    @questions = @questions.sort_by{|e| e[:id]}
   end
 
   def question_params
