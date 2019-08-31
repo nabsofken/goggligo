@@ -15,13 +15,13 @@
 <div class="col-lg-12">
 <div class="wrapper wrapper-content animated fadeInUp">
 
-
-    <div class="form-group"><label class="col-2 control-label">For Doctor:</label>
-
+    <% if current_user.admin? %>
+        <div class="form-group"><label class="col-2 control-label">For Client:</label>
         <div class="col-10">
             <%= select_tag :user_id, options_from_collection_for_select(User.doctors, "id", "full_name", params[:user_id]), onchange:"self.location='/questions'+'?user_id='+this.options[this.selectedIndex].value", prompt: "Select User", class: "form-control m-b" %>
+            </div>
         </div>
-    </div>
+    <% end %>
 
 
     <div class="ibox">
@@ -76,11 +76,17 @@
                         <%= link_to question_path(question), class: "btn btn-white btn-sm" do %>
                             <i class="fa fa-folder"></i> View
                         <% end %>
-                        <%= link_to edit_question_path(question), class: "btn btn-white btn-sm" do %>
-                            <i class="fa fa-pencil"></i> Edit
+                        <% if can? :create, Question %>
+                            <%= link_to edit_question_path(question), class: "btn btn-white btn-sm" do %>
+                                <i class="fa fa-pencil"></i> Edit
+                            <% end %>
                         <% end %>
-                        <%= link_to question_delete_path(id: question.id), class: "btn btn-white btn-sm", data: { confirm: 'Are you sure you want to delete this question?' } do %>
-                            <i class="fa fa-trash"></i> Destroy
+                        <% if can? :create, Question %>
+                            <% if question.template.blank? %>
+                                <%= link_to question_delete_path(id: question.id), class: "btn btn-white btn-sm", data: { confirm: 'Are you sure you want to delete this question?' } do %>
+                                    <i class="fa fa-trash"></i> Destroy
+                                <% end %>
+                            <% end %>
                         <% end %>
                     </td>
                     </tr>

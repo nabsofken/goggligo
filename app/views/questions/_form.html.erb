@@ -15,14 +15,16 @@
             <%= f.select(:question_type, options_for_select(['Text', 'Number', 'MCQs', 'Date', 'Gender', 'InsuranceNumber', 'MobileNumber'], question.question_type), {}, {class: "form-control m-b question_type_select"}) %>
         </div>
     </div>
-    <div class="hr-line-dashed"></div>
 
-    <div class="form-group"><label class="col-sm-2 control-label">For Doctor</label>
+    <% if params[:template].blank? %>
+        <div class="hr-line-dashed"></div>
+        <div class="form-group"><label class="col-sm-2 control-label">For Client</label>
 
-        <div class="col-sm-10">
-            <%= f.select(:user_id, options_for_select(User.doctors.map{|u| [u.full_name, u.id]}, question.user_id || params[:user_id]), {prompt: "Select User"}, {class: "form-control m-b"}) %>
+            <div class="col-sm-10">
+                <%= f.select(:user_id, options_for_select(User.doctors.map{|u| [u.full_name, u.id]}, question.user_id || params[:user_id]), {prompt: "Select User"}, {class: "form-control m-b"}) %>
+            </div>
         </div>
-    </div>
+    <% end %>
 
     <%= f.hidden_field :template, value: params[:template] || false %>
 

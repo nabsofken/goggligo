@@ -125,6 +125,12 @@ $(function() {
 });
 
 
+	<% if @notice.present? %>
+	    toastr.success("<%= @notice %>")
+	<% end %>
+	<% if @error.present? %>
+	    toastr.error("<%= @error %>")
+	<% end %>
 </script>
 
 <% end %>

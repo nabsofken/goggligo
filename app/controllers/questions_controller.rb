@@ -18,6 +18,7 @@ class QuestionsController < ApplicationController
   	@question = Question.new(question_params)
   	if @question.save
       session[:notice] = 'Successfully created new question'
+      return redirect_to questions_template_path if @question.template
   		redirect_to questions_path
   	else
       @error = @question.errors.full_messages.to_sentence
@@ -69,6 +70,10 @@ class QuestionsController < ApplicationController
 
 
   def template
+    @notice = session[:notice]
+    session[:notice] = nil
+    @error = session[:error]
+    session[:error] = nil
     @questions = Question.template.order('created_at DESC')
     @questions = @questions.where('title LIKE ?', "%#{params[:search]}%") if params[:search].present?
   end

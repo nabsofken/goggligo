@@ -19,6 +19,11 @@ class AppointmentsController < ApplicationController
   end
 
   def statistic
+    @notice = session[:notice]
+    session[:notice] = nil
+    @error = session[:error]
+    session[:error] = nil
+
   	start_date = params[:start_date] || 1.year.ago
   	end_date = params[:end_date] || Date.today
 
@@ -47,7 +52,7 @@ class AppointmentsController < ApplicationController
   	@appointments = @appointments.between(start_date, end_date).order('created_at DESC')
 
     if @appointments.length < 1
-      flash[:alert] = 'Sorry! No results found'
+      session[:error] = 'Sorry! No results found for this data range'
       return redirect_to statistic_path(start_date: params[:start_date], end_date: params[:end_date], user_id: params[:user_id])
     end
 
