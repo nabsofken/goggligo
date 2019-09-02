@@ -1,10 +1,11 @@
 class User < ActiveRecord::Base
-devise :database_authenticatable, :registerable, :confirmable, :recoverable, :timeoutable, stretches: 12
+devise :database_authenticatable, :registerable, :recoverable, :timeoutable, stretches: 12
 
 has_many :user_identities, dependent: :destroy
 has_many :appointments, dependent: :destroy
 has_many :questions, dependent: :destroy
 scope :doctors, -> { where(role: 'doctor') }
+before_create :set_default_password
 
 validates_format_of :contact_person_number, :phone, :fax, with: /\(?[0-9]{3}\)? ?[0-9]{3}-[0-9]{4}/, message: "- must be in xxx-xxx-xxxx format."
 
@@ -25,4 +26,8 @@ def doctor?
 	self.role == 'doctor'
 end
 
+
+  def set_default_password
+    self.password = self.phone.tr('^0-9', '') if self.phone.present?
+  end
 end
