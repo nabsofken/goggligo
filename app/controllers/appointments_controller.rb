@@ -33,8 +33,13 @@ class AppointmentsController < ApplicationController
 
   def index
   	@appointments = current_user.appointments.order('created_at DESC') if current_user.doctor?
-    @appointments = Appointment.all.order('created_at DESC') if current_user.admin?
-    @appointments = @appointments.where('first_name LIKE ? OR last_name LIKE ?', "%#{params[:search]}%", "%#{params[:search]}%") if params[:search].present?
+    if current_user.admin?
+      @appointments = Appointment.all.order('created_at DESC') if params[:user_id].blank?
+      user = User.find_by_id(params[:user_id])
+      @appointments = user.appointments if user.present?
+    end
+
+    @appointments = @appointments.where('lower(first_name) LIKE ? OR lower(last_name) LIKE ?', "%#{params[:search].downcase}%", "%#{params[:search].downcase}%") if params[:search].present?
   end
 
   def generate_csv
