@@ -1,5 +1,12 @@
-<% @current_month_count = Appointment.between(Time.now.utc.to_date.beginning_of_month, Time.now.utc.to_date.end_of_month).count %>
-<% @current_year_count = Appointment.between(Time.now.utc.to_date.beginning_of_year, Time.now.utc.to_date.end_of_year).count %>
+<div class="wrapper wrapper-content">
+    <% if current_user.admin? %>
+        <div class="form-group"><label class="col-2 control-label">For Client:</label>
+        <div class="col-10">
+            <%= select_tag :user_id, options_from_collection_for_select(User.doctors, "id", "full_name", params[:user_id]), onchange:"self.location='/statistic'+'?user_id='+this.options[this.selectedIndex].value; $('#user_id_field').val(this.options[this.selectedIndex].value)", prompt: "Select Client", class: "form-control m-b" %>
+            </div>
+        </div>
+    <% end %>
+</div>
 
 <div class="wrapper wrapper-content">
 	<div class="row">
@@ -18,7 +25,6 @@
 	                    Clients
 	                    <div class="stat-percent text-navy"><%= User.doctors.count %></div>
 	                </h3>
-	                <small><i class="fa fa-stack-exchange"></i> New Client data from the previous quarter.</small>
 	            </div>
 	    </div>
 	</div>
@@ -31,15 +37,16 @@
 	            <h5>Export Data</h5>
 	            <div class="ibox-tools">
 		            <%= form_tag(generate_csv_path(format: :csv)) do %>
-					  <div class="form-group">
-			            <%= select_tag :user_id, options_from_collection_for_select(User.doctors, "id", "full_name", params[:user_id]), prompt: "Select User", class: "form-control m-b" %>
-			        </div>
+					  <div class="form-group hidden">
+			            <%= select_tag :user_id, options_from_collection_for_select(User.doctors, "id", "full_name", params[:user_id]), prompt: "Select Client", class: "form-control m-b" %>
+			          </div>
+
 			        <div class="form-group">
 			        	<div class="row">
-			        		<div class="col-md-6">
+                            <div class="col-md-6" style="width: 40%">
 			           			<%= date_field_tag :start_date, params[:start_date] || Time.now.utc.to_date, class: "form-control" %>
 			           		</div>
-			           		<div class="col-md-6">
+                            <div class="col-md-6" style="width: 40%">
 	                    		<%= date_field_tag :end_date, params[:end_date] || Time.now.utc.to_date, class: "form-control" %>
 							</div>
 						</div>
@@ -65,7 +72,7 @@
                 <h5>Total Visits</h5>
             </div>
             <div class="ibox-content">
-                <h1 class="no-margins"><%= Appointment.count %></h1>
+                <h1 class="no-margins"><%= @appointments.count %></h1>
                 <small>Total visits</small>
             </div>
         </div>

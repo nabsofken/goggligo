@@ -18,7 +18,7 @@
     <% if current_user.admin? %>
         <div class="form-group"><label class="col-2 control-label">For Client:</label>
         <div class="col-10">
-            <%= select_tag :user_id, options_from_collection_for_select(User.doctors, "id", "full_name", params[:user_id]), onchange:"self.location='/appointments'+'?user_id='+this.options[this.selectedIndex].value", prompt: "Select User", class: "form-control m-b" %>
+            <%= select_tag :user_id, options_from_collection_for_select(User.doctors, "id", "full_name", params[:user_id]), onchange:"self.location='/appointments'+'?user_id='+this.options[this.selectedIndex].value", prompt: "Select Client", class: "form-control m-b" %>
             </div>
         </div>
     <% end %>

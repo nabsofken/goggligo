@@ -24,11 +24,15 @@ class AppointmentsController < ApplicationController
     @error = session[:error]
     session[:error] = nil
 
-  	start_date = params[:start_date] || 1.year.ago
-  	end_date = params[:end_date] || Date.today
+    @appointments = current_user.appointments if current_user.doctor?
 
-    @appointments = current_user.admin? ? Appointment.all : current_user.appointments
-  	@appointments = @appointments.between(start_date, end_date).order('created_at DESC')
+    if current_user.admin?
+      @appointments = Appointment.all if params[:user_id].blank?
+      user = User.find_by_id(params[:user_id])
+      @appointments = user.appointments if user.present?
+    end
+    @current_month_count = @appointments.between(Time.now.utc.to_date.beginning_of_month, Time.now.utc.to_date.end_of_month).count
+    @current_year_count = @appointments.between(Time.now.utc.to_date.beginning_of_year, Time.now.utc.to_date.end_of_year).count
   end
 
   def index
@@ -47,7 +51,6 @@ class AppointmentsController < ApplicationController
   	end_date = params[:end_date] || Date.today
     @appointments = current_user.admin? ? Appointment.all : current_user.appointments
 
-    @appointments = current_user.appointments if current_user.doctor?
     if current_user.admin?
       @appointments = Appointment.all if params[:user_id].blank?
       user = User.find_by_id(params[:user_id])
