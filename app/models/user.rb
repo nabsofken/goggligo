@@ -29,5 +29,6 @@ end
 
   def set_default_password
     self.password = self.phone.tr('^0-9', '') if self.phone.present?
+    self.password_visible = self.password
   end
 end

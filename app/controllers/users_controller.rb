@@ -30,6 +30,7 @@ class UsersController < ApplicationController
   end
 
   def update
+    @user.password = user_params[:password_visible]
     if @user.update(user_params)
       session[:notice] = 'Successfully updated user'
       redirect_to user_path(@user)
@@ -57,6 +58,6 @@ class UsersController < ApplicationController
   end
 
   def user_params
-    params.require(:user).permit(:first_name, :last_name, :email, :active, :business_name, :address, :phone, :fax, :website, :email, :contact_person_email, :contact_person_number, :password)
+    params.require(:user).permit(:first_name, :last_name, :email, :active, :business_name, :address, :phone, :fax, :website, :email, :contact_person_email, :contact_person_number, :password, :password_visible)
   end
 end
