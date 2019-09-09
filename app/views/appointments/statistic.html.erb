@@ -10,26 +10,26 @@
 
 <div class="wrapper wrapper-content">
 	<div class="row">
-	    <div class="col-lg-6">
-	        <div class="ibox float-e-margins">
-	            <div class="ibox-title">
-	                <h5>Registrations</h5>
-	                <div class="ibox-tools">
-	                    <a class="collapse-link">
-	                        <i class="fa fa-chevron-up"></i>
-	                    </a>
-	                </div>
-	            </div>
-	            <div class="ibox-content ibox-heading">
-	                <h3>
-	                    Clients
-	                    <div class="stat-percent text-navy"><%= User.doctors.count %></div>
-	                </h3>
-	            </div>
-	    </div>
-	</div>
-
-
+    <% if current_user.admin? %>
+      <div class="col-lg-6">
+        <div class="ibox float-e-margins">
+          <div class="ibox-title">
+              <h5>Registrations</h5>
+              <div class="ibox-tools">
+                  <a class="collapse-link">
+                      <i class="fa fa-chevron-up"></i>
+                  </a>
+              </div>
+          </div>
+          <div class="ibox-content ibox-heading">
+              <h3>
+                  Clients
+                  <div class="stat-percent text-navy"><%= User.doctors.count %></div>
+              </h3>
+          </div>
+        </div>
+      </div>
+    <% end %>
 
 	<div class="col-lg-6">
 	    <div class="ibox float-e-margins">
