@@ -1,5 +1,5 @@
 class UserMailer < ApplicationMailer
-  default from: 'reports@gliggo.herokuapp.com'
+  default from: 'reports@gliggo.com'
    layout "mailer"
 
   def generate_report(user, pdf)
