@@ -6,6 +6,7 @@ has_many :appointments, dependent: :destroy
 has_many :questions, dependent: :destroy
 scope :doctors, -> { where(role: 'doctor') }
 before_create :set_default_password
+validates :email, presence: true, uniqueness: true
 
 validates_format_of :contact_person_number, :phone, :fax, with: /\(?[0-9]{3}\)? ?[0-9]{3}-[0-9]{4}/, message: "- must be in xxx-xxx-xxxx format."
 
