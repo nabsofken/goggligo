@@ -146,6 +146,7 @@ Myapp::Application.routes.draw do
   get "question_delete", to: "questions#destroy"
 
   get "questions_template", to: "questions#template"
+  get "preview_question", to: "questions#preview"
 
 
   resources :appointments

@@ -29,6 +29,7 @@
             <h5>All Questions</h5>
             <% if can? :create, Question %>
                 <div class="ibox-tools">
+                    <%= link_to 'Preview Questions', preview_question_path(user_id: params[:user_id], search: params[:search]), class: 'btn btn-info btn-xs white' %>
                     <%= link_to 'Create new question', new_question_path(user_id: params[:user_id]), class: 'btn btn-primary btn-xs' %>
                 </div>
             <% end %>
