@@ -51,8 +51,7 @@ class Appointment < ActiveRecord::Base
 
     end
 
-    body = body + '</tbody></table><div style="border-bottom: 1px solid black;margin-bottom: 0.5rem;"></div><p style="padding-bottom: 5rem;">Recommandations:</p><p><strong>Disclaimer:'
-    body = body + '</strong> The information provided on Gliggo Visitor Report is intended for your general knowledge only and is not a substitute for professional medical or psychological advice or treatment for specific medical or psychological conditions. Always seek the advice of your physician or other qualified health care provider with any questions you may have regarding a medical condition. Always seek the advice of your physician or psychologist or other qualified healthcare provider with any questions you may have regarding a psychological condition. The information on this website is not intended to diagnose, treat, cure or prevent any disease.</p>'
+    body = body + '</tbody></table><div style="border-bottom: 1px solid black;margin-bottom: 0.5rem;"></div><p style="padding-bottom: 5rem;">Recommandations:</p>'
     body = body + '<p style="font-size: 0.7rem; text-align: center;">'
     body = body + 'Gliggo Visitor Report</p></section></body>'
 
