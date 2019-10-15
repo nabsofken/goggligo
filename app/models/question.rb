@@ -10,8 +10,12 @@ class Question < ActiveRecord::Base
 
   def self.preview(questions)
     body = ''
-    text_questions = questions.select { |questions| questions.question_type != 'MCQs' }
-    mcqs_questions = questions.select { |questions| questions.question_type == 'MCQs' }
+    template_questions = questions.select { |question| question.template == true || question.template == 'true' }
+    non_template_questions = questions.select { |question| question.template == false || question.template == 'false' }
+
+    # template section start
+    text_questions = template_questions.select { |question| question.question_type != 'MCQs' }
+    mcqs_questions = template_questions.select { |question| question.question_type == 'MCQs' }
 
     body = '<body style="font-size: 16px;line-height: 1.4;width:100%;height:500px;"><div style="width: 20%;margin: auto;margin-top: 1%;font-size: 16px;color: #2DAD68"><strong>Gliggo Visitor - Report</strong></div><section style="border: 1px solid black;margin: 20px;width: 90%;margin-left: 5%;margin-right: 5%;padding: 0.5rem;"><header style="border-bottom: 10px solid black;padding: 0 0 0.25rem 0;margin: 0 0 0.5rem 0;"><h1 style="font-weight: bold;font-size: 2rem;margin: 0 0 0.25rem 0;color: #2DAD68">Client Detail</h1></header>'
 
@@ -27,8 +31,29 @@ class Question < ActiveRecord::Base
       body = body + '<td colspan="6">No<input type="checkbox"></td>'
       body = body + '</tr>'
     end
+    body = body + '</tbody></table>'
+    # template section end
 
-    body = body + '</tbody></table><div style="border-bottom: 1px solid black;margin-bottom: 0.5rem;"></div><p style="padding-bottom: 5rem;">Recommandations:</p>'
+    # Non template section start
+    text_questions = non_template_questions.select { |question| question.question_type != 'MCQs' }
+    mcqs_questions = non_template_questions.select { |question| question.question_type == 'MCQs' }
+
+    text_questions.each do |question|
+      body = body + '<div style="font-size: 16px;padding-top: 0.5rem;padding-bottom: 1rem;">' + question.title + '</div><strong>' + ' ' + '</strong><div style="border-bottom: 1px solid black;margin-bottom: 0.5rem;"></div>'
+    end
+
+    body = body + '<table style="border-collapse: collapse;margin: 0 0 0.5rem 0;"><tbody>'
+
+    mcqs_questions.each do |question|
+      body = body + '<tr><th colspan="2">' + question.title + '</th>'
+      body = body + '<td colspan="6">Yes<input type="checkbox"></td>'
+      body = body + '<td colspan="6">No<input type="checkbox"></td>'
+      body = body + '</tr>'
+    end
+    body = body + '</tbody></table>'
+    # Non template section end
+
+    body = body + '<div style="border-bottom: 1px solid black;margin-bottom: 0.5rem;"></div><p style="padding-bottom: 5rem;">Recommandations:</p>'
     body = body + '<p style="font-size: 0.7rem; text-align: center;">'
     body = body + 'Gliggo Visitor Report</p></section></body>'
 
