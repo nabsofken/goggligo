@@ -67,7 +67,7 @@ class QuestionsController < ApplicationController
     end
 
     @questions = @questions.where('lower(title) LIKE ?', "%#{params[:search].downcase}%") if params[:search].present?
-    @questions = @questions.sort_by{|e| e[:id]}
+    @questions = @questions.sort_by{|e| e.template? ? 0 : 1}
   end
 
   def preview
@@ -80,7 +80,7 @@ class QuestionsController < ApplicationController
     end
 
     @questions = @questions.where('lower(title) LIKE ?', "%#{params[:search].downcase}%") if params[:search].present?
-    @questions = @questions.sort_by{|e| e[:id]}
+    @questions = @questions.sort_by{|e| e.template? ? 0 : 1}
 
     pdf = Question.preview(@questions)
     send_data pdf, filename: "Preview_Questions.pdf", type: :pdf
@@ -93,7 +93,7 @@ class QuestionsController < ApplicationController
     session[:error] = nil
     @questions = Question.template.order('created_at DESC')
     @questions = @questions.where('lower(title) LIKE ?', "%#{params[:search].downcase}%") if params[:search].present?
-    @questions = @questions.sort_by{|e| e[:id]}
+    @questions = @questions.sort_by{|e| e.template? ? 0 : 1}
   end
 
   def question_params
