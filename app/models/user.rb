@@ -8,7 +8,7 @@ scope :doctors, -> { where(role: 'doctor') }
 before_create :set_default_password
 validates :email, presence: true, uniqueness: true
 
-validates_format_of :contact_person_number, :phone, :fax, with: /\(?[0-9]{3}\)? ?[0-9]{3}-[0-9]{4}/, message: "- must be in xxx-xxx-xxxx format."
+validates_format_of :contact_person_number, :phone, with: /\(?[0-9]{3}\)? ?[0-9]{3}-[0-9]{4}/, message: "- must be in xxx-xxx-xxxx format."
 
 def full_name
 	[self.first_name, self.last_name].join(' ')
