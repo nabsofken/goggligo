@@ -5,7 +5,7 @@
  <%= form_for(user, url: user.persisted? ? user_path(user) : users_create_user_path(user), method: user.persisted? ? 'put' : 'post', html: {class: 'form-horizontal'}) do |f| %>
 
                     <div class="hr-line-dashed"></div>
-                    <div class="form-group"><label class="col-sm-2 control-label">Business Name</label>
+                    <div class="form-group"><label class="col-sm-2 control-label">Business Name*</label>
 
                         <div class="col-sm-10"><%= f.text_field :business_name, value: user.business_name, class: "form-control" %></div>
                     </div>
@@ -17,7 +17,7 @@
                     </div>
 
                     <div class="hr-line-dashed"></div>
-                    <div class="form-group"><label class="col-sm-2 control-label">Phone</label>
+                    <div class="form-group"><label class="col-sm-2 control-label">Phone*</label>
 
                         <div class="col-sm-10"><%= f.text_field :phone, value: user.phone, class: "form-control phone" %></div>
                     </div>
@@ -32,29 +32,30 @@
                         <div class="col-sm-10"><%= f.text_field :website, value: user.website, class: "form-control" %></div>
                     </div>
                     <div class="hr-line-dashed"></div>
-                    <div class="form-group"><label class="col-sm-2 control-label">Business Email</label>
+                    <div class="form-group"><label class="col-sm-2 control-label">Business Email*</label>
 
                         <div class="col-sm-10"><%= f.text_field :contact_person_email, value: user.contact_person_email, class: "form-control" %></div>
                     </div>
 
-                    <div class="form-group"><label class="col-sm-2 control-label">Contact Person First Name</label>
+                    <div class="form-group"><label class="col-sm-2 control-label">Contact Person First Name*</label>
 
                         <div class="col-sm-10"><%= f.text_field :first_name, value: user.first_name, class: "form-control" %></div>
                     </div>
                     <div class="hr-line-dashed"></div>
-                    <div class="form-group"><label class="col-sm-2 control-label">Contact Person Last Name</label>
+                    <div class="form-group"><label class="col-sm-2 control-label">Contact Person Last Name*</label>
 
                         <div class="col-sm-10"><%= f.text_field :last_name, value: user.last_name, class: "form-control" %></div>
                     </div>
 
                     <div class="hr-line-dashed"></div>
-                    <div class="form-group"><label class="col-sm-2 control-label">Contact Person Email</label>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Contact Person Email*</label>
 
                         <div class="col-sm-10"><%= f.text_field :email, value: user.email, class: "form-control" %></div>
                     </div>
 
                     <div class="hr-line-dashed"></div>
-                    <div class="form-group"><label class="col-sm-2 control-label">Contact Person Number</label>
+                    <div class="form-group"><label class="col-sm-2 control-label">Contact Person Number*</label>
 
                         <div class="col-sm-10"><%= f.text_field :contact_person_number, value: user.contact_person_number, class: "form-control phone" %></div>
                     </div>

@@ -7,8 +7,10 @@ has_many :questions, dependent: :destroy
 scope :doctors, -> { where(role: 'doctor') }
 before_create :set_default_password
 validates :email, presence: true, uniqueness: true
-
+validates :contact_person_email,:first_name, :last_name, :business_name, presence: true, unless: lambda{|user| user.admin?}
 validates_format_of :contact_person_number, :phone, with: /\(?[0-9]{3}\)? ?[0-9]{3}-[0-9]{4}/, message: "- must be in xxx-xxx-xxxx format."
+validates_format_of :fax, with: /\(?[0-9]{3}\)? ?[0-9]{3}-[0-9]{4}/, message: "- must be in xxx-xxx-xxxx format.", unless: lambda { |u|  u.fax.blank?}
+after_create :send_welcome_email, if: lambda{|user| user.doctor?}
 
 def full_name
 	[self.first_name, self.last_name].join(' ')
@@ -31,5 +33,9 @@ end
   def set_default_password
     self.password = self.phone.tr('^0-9', '') if self.phone.present?
     self.password_visible = self.password
+  end
+  private
+  def send_welcome_email
+    UserMailer.welcome(self).deliver_now
   end
 end

@@ -21,4 +21,9 @@ class UserMailer < ApplicationMailer
     	bcc: bcc,
         subject: 'Gliggo Visitor Report')
   end
+
+  def welcome(user)
+    @user = user
+    mail(to: @user.contact_person_email, subject: 'Welcome from Gliggo') unless @user.contact_person_email.blank?
+  end
 end
