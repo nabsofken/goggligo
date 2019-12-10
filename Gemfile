@@ -38,6 +38,7 @@ end
 group :development do
   gem 'rb-readline'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem "letter_opener"
 end
 
 #Exception Notifier
