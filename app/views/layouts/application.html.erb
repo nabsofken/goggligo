@@ -20,7 +20,16 @@
   <script type="text/javascript">
     <% flash.each do |key, value| %>
       <% type = key.to_s.gsub('alert','error').gsub('notice','success') %>
-      toastr['<%= type %>']('<%= value %>')
+      $(document).ready(function(){
+        <%- case type %>
+        <% when 'error' %>
+          toastr.error("<%= value %>");
+        <% when 'success' %>
+          toastr.success("<%= value %>");
+        <% else %>
+          toastr.info("<%= value %>");
+        <% end -%>
+      })
     <% end %>
   </script>
 <% end %>
