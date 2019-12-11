@@ -52,16 +52,20 @@
             <div class="project-list">
 
                 <table class="table table-hover">
+                    <tr>
+                        <th class="project-title">Full name</th>
+                        <th class="project-people">Email</th>
+                        <th class="project-people">Date of vist</th>
+                        <th class="project-people">Reason of visit</th>
+                        <th class="project-actions">Actions</th>
+                    </tr>
                     <tbody>
                     <% @appointments.each do |appointment| %>
                     <tr>
                         <td class="project-title">
-                            <%= appointment.first_name %>
+                            <%= [appointment.first_name, appointment.last_name].join(" ") %>
                         <br />
-                        <small>Created <%= appointment.created_at.strftime("%d-%m-%Y") %></small>
-                    </td>
-                    <td class="project-completion">
-                    	<%= appointment.last_name %>
+                        <!-- <small>Created <%= appointment.created_at.strftime("%d-%m-%Y") %></small> -->
                     </td>
                     <td class="project-people">
                     	<%= appointment.email %>
@@ -71,13 +75,6 @@
                     </td>
                     <td class="project-people">
                     	<%= appointment.reason_of_visit %>
-                    </td>
-                    <td class="">
-                    	<ul>
-                            <% appointment.answer_values && appointment.answer_values.keys.each do |key| %>
-                    			<li><%= Question.find_by_id(key.to_s).try(:title) %>: <strong><%= appointment.answer_values[key] %></strong></li>
-                    		<% end %>
-                    	</ul>
                     </td>
                     <td class="project-actions">
                         <%= link_to appointment_path(appointment), class: "btn btn-white btn-sm" do %>

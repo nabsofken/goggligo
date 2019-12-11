@@ -56,7 +56,7 @@ class Appointment < ActiveRecord::Base
     body = body + 'Gliggo Visitor Report</p></section></body>'
 
     pdf = WickedPdf.new.pdf_from_string(body, dpi: 75, lowquality: true, zoom: 1)
-    UserMailer.generate_patient_report(self, pdf, self.current_user).deliver_later
+    UserMailer.generate_patient_report(self, pdf, self.user).deliver_now
   end
 
 end
