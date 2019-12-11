@@ -52,7 +52,7 @@
 						</div>
 					</div>
 
-					  <%= submit_tag "Download CSV", class: "btn btn-primary btn-xs" %>
+					  <%= submit_tag "Download Visitor lineOptions", class: "btn btn-primary btn-xs" %>
 					<% end %>
 	            </div>
 	        </div>
@@ -69,19 +69,19 @@
         <div class="ibox float-e-margins">
             <div class="ibox-title">
                 <span class="label label-success pull-right">Total Visit</span>
-                <h5>Total Visits</h5>
+                <h5 class="gliggo-text">Total New Visitors</h5>
             </div>
             <div class="ibox-content">
                 <h1 class="no-margins"><%= @appointments.count %></h1>
-                <small>Total visits</small>
+                <small>Total New Visitors</small>
             </div>
         </div>
     </div>
-    <div class="col-md-3">
+    <div class="col-md-4">
         <div class="ibox float-e-margins">
             <div class="ibox-title">
                 <span class="label label-info pull-right">Monthly</span>
-                <h5>Visits</h5>
+                <h5 class="gliggo-text">Total New Visitors in <%= Date.today.strftime("%B") %></h5>
             </div>
             <div class="ibox-content">
                 <h1 class="no-margins"><%= @current_month_count %></h1>
@@ -90,11 +90,11 @@
         </div>
     </div>
 
-    <div class="col-md-6">
+    <div class="col-md-5">
         <div class="ibox float-e-margins">
             <div class="ibox-title">
                 <span class="label label-primary pull-right">Yearly</span>
-                <h5>Visits</h5>
+                <h5 class="gliggo-text">Total New Visitors in <%= Date.today.strftime("%Y") %></h5>
             </div>
             <div class="ibox-content">
 

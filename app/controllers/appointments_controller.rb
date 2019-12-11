@@ -71,7 +71,7 @@ class AppointmentsController < ApplicationController
   end
 
   def generate_report
-  	header = '<h1 style="text-align: center; color: #4285F4">New Visitor Report</h1>'
+  	header = '<h1 style="text-align: center; color: #2dad68;">New Visitor Report</h1>'
   	body = '<table><tr><th>Full Name</th><th>Email</th><th>Mobile</th><th>Date</th><th>Reason</th><th>Questions</th></tr>'
   	next_column = '</td><td>'
 
@@ -89,7 +89,7 @@ class AppointmentsController < ApplicationController
   		body + '</ul></td></tr>'
   	end
 
-  	footer = '</table><h1 style="text-align: center; color: #2DAD68">Gliggo</h1>'
+  	footer = '</table><h1 style="text-align: center; color: #2dad68;">Gliggo</h1>'
 	pdf = WickedPdf.new.pdf_from_string(header + body + footer)
 
 
