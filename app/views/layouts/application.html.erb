@@ -25,6 +25,7 @@
         <% when 'error' %>
           toastr.error("<%= value %>");
         <% when 'success' %>
+            <% binding.pry %>
           toastr.success("<%= value %>");
         <% else %>
           toastr.info("<%= value %>");
@@ -37,7 +38,6 @@
 
 </head>
 <body class="skin-3">
-
 <!-- Skin configuration box -->
 <%#= render 'layouts/skinconfig'  if user_signed_in? %>
 
