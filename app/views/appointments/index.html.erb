@@ -1,93 +1,91 @@
 <div class="row wrapper border-bottom white-bg page-heading">
-    <div class="col-sm-4">
-        <h2>Visitor list</h2>
-        <ol class="breadcrumb">
-            <li>
-                Home
-        </li>
-        <li class="active">
-            <strong>Visitor list</strong>
-        </li>
+  <div class="col-sm-4">
+    <h2>Visitor list</h2>
+    <ol class="breadcrumb">
+      <li>
+        Home
+      </li>
+      <li class="active">
+        <strong>Visitor list</strong>
+      </li>
     </ol>
+  </div>
 </div>
-        </div>
 <div class="row">
-<div class="col-lg-12">
-<div class="wrapper wrapper-content animated fadeInUp">
-
-    <% if current_user.admin? %>
-        <div class="form-group"><label class="col-2 control-label">For Client:</label>
+  <div class="col-lg-12">
+    <div class="wrapper wrapper-content animated fadeInUp">
+      <% if current_user.admin? %>
+      <div class="form-group">
+        <label class="col-2 control-label">For Client:</label>
         <div class="col-10">
-            <%= select_tag :user_id, options_from_collection_for_select(User.doctors, "id", "full_name", params[:user_id]), onchange:"self.location='/appointments'+'?user_id='+this.options[this.selectedIndex].value", prompt: "Select Client", class: "form-control m-b" %>
-            </div>
+          <%= select_tag :user_id, options_from_collection_for_select(User.doctors, "id", "full_name", params[:user_id]), onchange:"self.location='/appointments'+'?user_id='+this.options[this.selectedIndex].value", prompt: "Select Client", class: "form-control m-b" %>
         </div>
-    <% end %>
-
-    <div class="ibox">
+      </div>
+      <% end %>
+      <div class="ibox">
         <div class="ibox-title">
-            <h5>All Visitors</h5>
-            <div class="ibox-tools">
-                <%= link_to 'Email Report', generate_report_path, class: 'white btn btn-info btn-xs' %>
-                <%= link_to 'Export Stats', statistic_path, class: 'btn btn-primary btn-xs' %>
-
-                <%#= link_to 'Create new appointment', appointments_new_path, class: 'btn btn-primary btn-xs' %>
-            </div>
+          <h5>All Visitors</h5>
+          <div class="ibox-tools">
+            <%= link_to 'Email Report', generate_report_path, class: 'white btn btn-info btn-xs' %>
+            <%= link_to 'Export Stats', statistic_path, class: 'btn btn-primary btn-xs' %>
+            <%#= link_to 'Create new appointment', appointments_new_path, class: 'btn btn-primary btn-xs' %>
+          </div>
         </div>
         <div class="ibox-content">
-            <div class="row m-b-sm m-t-sm">
-                <div class="col-md-1">
-                    <button type="button" id="loading-example-btn" class="btn btn-white btn-sm"><i class="fa fa-refresh"></i> <%= link_to 'Refresh', appointments_path %></button>
-                </div>
-                <div class="col-md-11">
-                    <%= form_tag(appointments_search_path) do %>
-                        <div class="input-group">
-                            <%= text_field_tag :search, params[:search], placeholder: "Search", class: "input-sm form-control" %><span class="input-group-btn">
-                                        <%= submit_tag 'Go!', class: "btn btn-sm btn-primary" %>
-                                    </span>
-                        </div>
-                    <% end %>
-                </div>
+          <div class="row m-b-sm m-t-sm">
+            <div class="col-md-1">
+              <button type="button" id="loading-example-btn" class="btn btn-white btn-sm"><i class="fa fa-refresh"></i> <%= link_to 'Refresh', appointments_path %></button>
             </div>
-
-            <div class="project-list">
-
-                <table class="table table-hover">
-                    <tr>
-                        <th class="project-title">Full name</th>
-                        <th class="project-people">Email</th>
-                        <th class="project-people">Date of vist</th>
-                        <th class="project-people">Reason of visit</th>
-                        <th class="project-actions">Actions</th>
-                    </tr>
-                    <tbody>
-                    <% @appointments.each do |appointment| %>
-                    <tr>
-                        <td class="project-title">
-                            <%= [appointment.first_name, appointment.last_name].join(" ") %>
-                        <br />
-                        <!-- <small>Created <%= appointment.created_at.strftime("%d-%m-%Y") %></small> -->
-                    </td>
-                    <td class="project-people">
-                    	<%= appointment.email %>
-                    </td>
-                    <td class="project-people">
-                    	<%= appointment.date_of_visit %>
-                    </td>
-                    <td class="project-people">
-                    	<%= appointment.reason_of_visit %>
-                    </td>
-                    <td class="project-actions">
-                        <%= link_to appointment_path(appointment), class: "btn btn-white btn-sm" do %>
-                            <i class="fa fa-folder"></i> View
-                        <% end %>
-                    </td>
-                    </tr>
+            <div class="col-md-11">
+              <%= form_tag(appointments_search_path) do %>
+              <div class="input-group">
+                <%= text_field_tag :search, params[:search], placeholder: "Search", class: "input-sm form-control" %><span class="input-group-btn">
+                <%= submit_tag 'Go!', class: "btn btn-sm btn-primary" %>
+                </span>
+              </div>
+              <% end %>
+            </div>
+          </div>
+          <div class="project-list">
+            <table class="table table-hover">
+              <tr>
+                <th class="project-title">Full name</th>
+                <th class="project-people">Email</th>
+                <th class="project-people">Date of vist</th>
+                <th class="project-people">Reason of visit</th>
+                <th class="project-actions">Actions</th>
+              </tr>
+              <tbody>
+                <% @appointments.each do |appointment| %>
+                <tr>
+                  <td class="project-title">
+                    <%= [appointment.first_name, appointment.last_name].join(" ") %>
+                    <br />
+                    <!-- <small>Created <%= appointment.created_at.strftime("%d-%m-%Y") %></small> -->
+                  </td>
+                  <td class="project-people">
+                    <%= appointment.email %>
+                  </td>
+                  <td class="project-people">
+                    <%= appointment.date_of_visit %>
+                  </td>
+                  <td class="project-people">
+                    <%= appointment.reason_of_visit %>
+                  </td>
+                  <td class="project-actions">
+                    <%= link_to appointment_path(appointment), class: "btn btn-white btn-sm" do %>
+                    <i class="fa fa-folder"></i> View
                     <% end %>
-        </tbody>
-        </table>
+                  </td>
+                </tr>
+                <% end %>
+              </tbody>
+            </table>
+            <%= paginate @appointments %>
+          </div>
         </div>
-        </div>
-        </div>
-        </div>
-        </div>
-        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

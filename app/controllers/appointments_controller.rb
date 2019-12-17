@@ -36,9 +36,9 @@ class AppointmentsController < ApplicationController
   end
 
   def index
-  	@appointments = current_user.appointments.order('created_at DESC') if current_user.doctor?
+  	@appointments = current_user.appointments.order('created_at DESC').page params[:page] if current_user.doctor?
     if current_user.admin?
-      @appointments = Appointment.all.order('created_at DESC') if params[:user_id].blank?
+      @appointments = Appointment.all.order('created_at DESC').page params[:page] if params[:user_id].blank?
       user = User.find_by_id(params[:user_id])
       @appointments = user.appointments if user.present?
     end

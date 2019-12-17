@@ -115,6 +115,18 @@ GEM
       thor (>= 0.14, < 2.0)
     jquery_mask_rails (0.1.0)
     jsonapi-renderer (0.2.2)
+    kaminari (1.1.1)
+      activesupport (>= 4.1.0)
+      kaminari-actionview (= 1.1.1)
+      kaminari-activerecord (= 1.1.1)
+      kaminari-core (= 1.1.1)
+    kaminari-actionview (1.1.1)
+      actionview
+      kaminari-core (= 1.1.1)
+    kaminari-activerecord (1.1.1)
+      activerecord
+      kaminari-core (= 1.1.1)
+    kaminari-core (1.1.1)
     launchy (2.4.3)
       addressable (~> 2.3)
     letter_opener (1.7.0)
@@ -203,6 +215,7 @@ DEPENDENCIES
   jbuilder (~> 1.2)
   jquery-rails
   jquery_mask_rails (~> 0.1.0)
+  kaminari
   letter_opener
   pg (~> 0.15)
   pry
