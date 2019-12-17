@@ -4,8 +4,10 @@
             <li class="nav-header">
                 <div class="dropdown profile-element">
                     <span>
-                    <img src="<%= image_path('high-res.jpg') %>" width="100px" height="100px"class="img-responsive" style="margin: auto;">
+                    <%= link_to root_path do %>
+                        <img src="<%= image_path('high-res.jpg') %>" width="100px" height="100px"class="img-responsive" style="margin: auto;">
 
+                    <% end %>
                     </span>
                     <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                         <span class="clear">
@@ -24,8 +26,9 @@
                     </ul>
                 </div>
                 <div class="logo-element">
-                    
-                    <img src="<%= image_path('high-res.jpg') %>" class="img-responsive">
+                    <%= link_to root_path do %>
+                        <%= image_tag 'high-res.jpg', class: "img-responsive" %>
+                    <% end %>
                 </div>
             </li>
 
