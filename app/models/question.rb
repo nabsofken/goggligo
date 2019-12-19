@@ -7,6 +7,7 @@ class Question < ActiveRecord::Base
   scope :active, -> {where(active: true)}
   validates :title, presence: true
   validates :pre_condition_question_value, presence: true, if: "pre_condition_question_id.present?"
+  after_save :notify_user
 
   def self.preview(questions)
     body = ''
@@ -33,5 +34,9 @@ class Question < ActiveRecord::Base
 
     pdf = WickedPdf.new.pdf_from_string(body, dpi: 75, lowquality: true, zoom: 1)
     pdf
+  end
+  private
+  def notify_user
+    UserMailer.question_update_notification(self.user, self).deliver_now if self.changed?
   end
 end

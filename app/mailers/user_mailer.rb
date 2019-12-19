@@ -26,4 +26,10 @@ class UserMailer < ApplicationMailer
     @user = user
     mail(to: @user.contact_person_email, subject: 'Welcome from Gliggo', from: 'support@gliggo.com') unless @user.contact_person_email.blank?
   end
+
+  def question_update_notification(user, question)
+    @user = user
+    @question = question
+    mail(to: @user.email, subject: 'Question updated', from: 'support@gliggo.com')
+  end
 end
