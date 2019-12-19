@@ -71,33 +71,9 @@ class AppointmentsController < ApplicationController
   end
 
   def generate_report
-  	header = '<h1 style="text-align: center; color: #2dad68;">'+current_user. business_name+'</h1>'
-  	body = '<table><tr><th>Full Name</th><th>Email</th><th>Mobile</th><th>Date</th><th>Reason</th><th>Questions</th></tr>'
-  	next_column = '</td><td>'
-
-    @appointments = current_user.admin? ? Appointment.all : current_user.appointments
-  	@appointments = @appointments.order('created_at DESC')
-
-  	@appointments.each do |appointment|
-  		body = body + '<tr><td>' + appointment.first_name.to_s + ' ' + appointment.last_name.to_s + next_column + appointment.email.to_s + next_column + appointment.mobile_number.to_s + next_column + appointment.date_of_visit.to_s + next_column + appointment.reason_of_visit.to_s
-
-		body = body + '</td><td><ul>'
-        appointment.answer_values.keys.each do |key|
-            body = body + '<li>' + Question.find_by_id(key.to_s).try(:title) + ': <strong>' + appointment.answer_values[key].to_s + '</strong></li>'
-        end
-
-  		body + '</ul></td></tr>'
-  	end
-
-  	footer = '</table><h1 style="text-align: center; color: #2dad68;">Gliggo</h1>'
-	pdf = WickedPdf.new.pdf_from_string(header + body + footer)
-
-
-	UserMailer.generate_report(current_user, pdf).deliver_now
-
-	# attachments['report.pdf'] = pdf#File.read('path/to/file.pdf')
- #    mail(:to => current_user.email, :subject => "Patient Report")
-
+    @appointments = current_user.admin? ? Appointment.order('created_at DESC') : current_user.appointments.order('created_at DESC')
+  	pdf = WickedPdf.new.pdf_from_string(render_to_string('appointments_pdf', layout: false),)
+  	UserMailer.generate_report(current_user, pdf).deliver_now
     redirect_to appointments_path
   end
 

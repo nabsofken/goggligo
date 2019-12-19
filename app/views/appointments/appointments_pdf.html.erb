@@ -1,0 +1,15 @@
+<h1 style="text-align: center; color: #2dad68;"><%=current_user. business_name %></h1>
+<% @appointments.each do |appointment| %>
+  <strong>Full Name:</strong> <%=[appointment.first_name, appointment.last_name].join(" ") %></br>
+  <strong>Email:</strong> <%= appointment.email %></br>
+  <strong>Mobile:</strong> <%= appointment.mobile_number.to_s %></br>
+  <strong>Date:</strong> <%= appointment.date_of_visit.to_s%></br>
+  <strong>Reason:</strong> <%= appointment.reason_of_visit.to_s %></br>
+  <h3>Questions</h3>
+    <% appointment.answer_values.keys.each do |key|%>
+      <strong><%= Question.find_by_id(key.to_s).try(:title)%></strong></br>
+      <p><i><%= appointment.answer_values[key].to_s %></p>
+    <% end%>
+    <hr>
+<% end %>
+<h1 style="text-align: center; color: #2dad68;">Gliggo</h1>
