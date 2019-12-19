@@ -160,4 +160,5 @@ Myapp::Application.routes.draw do
   post "users/create_user"
   post "users_search", to: "users#index"
   get "users_search", to: "users#index"
+  resources :pages, path: '/', only:[:show]
 end

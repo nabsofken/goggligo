@@ -2,6 +2,10 @@ class PagesController < ApplicationController
   def search_results
   end
 
+  def show
+    render params[:id]
+  end
+
   def lockscreen
     render :layout => "empty"
   end
