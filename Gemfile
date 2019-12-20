@@ -53,7 +53,7 @@ gem 'toastr-rails'
 gem 'jquery_mask_rails', '~> 0.1.0'
 gem 'jquery-rails'
 gem 'kaminari'
-
+gem 'jquery-validation-rails'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 

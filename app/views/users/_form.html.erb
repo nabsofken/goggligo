@@ -1,7 +1,7 @@
 
 
 <!-- <form method="get" class="form-horizontal"> -->
-<%= form_for(user, url: user.persisted? ? user_path(user) : users_create_user_path(user), method: user.persisted? ? 'put' : 'post', html: {class: 'form-horizontal'}) do |f| %>
+<%= form_for(user, url: user.persisted? ? user_path(user) : users_create_user_path(user), method: user.persisted? ? 'put' : 'post', html: {class: 'form-horizontal validate'}) do |f| %>
   <div class="hr-line-dashed"></div>
   <div class="form-group">
     <label class="col-sm-2 control-label">Business Name*</label>

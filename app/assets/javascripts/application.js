@@ -15,3 +15,7 @@
 //= require inspinia.js
 //= require toastr
 //= require jquery.mask
+//= require jquery.validate
+$(document).ready(function(){
+  $(".validate").validate();
+})
