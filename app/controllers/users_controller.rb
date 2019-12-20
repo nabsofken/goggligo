@@ -39,11 +39,15 @@ class UsersController < ApplicationController
   def update
     @user.password = user_params[:password_visible]
     if @user.update(user_params)
-      session[:notice] = 'Successfully updated user'
-      redirect_to user_path(@user)
+      respond_to do |format|
+        format.html {redirect_to users_path, notice: 'Successfully updated user'}
+        format.js {render js: "window.location.href='"+users_path+"'"}
+      end
     else
-      @error = @user.errors.full_messages.to_sentence
-      render :edit
+      respond_to do |format|
+        format.html  {render :edit}
+        format.js
+      end
     end
   end
 
