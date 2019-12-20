@@ -50,5 +50,8 @@
 // Your custom style to override base style
 @import "base/custom";
 
+input[type="date"].form-control {
+  line-height: 14px;
+}
 
 
