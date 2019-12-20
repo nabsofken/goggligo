@@ -16,6 +16,4 @@
 //= require toastr
 //= require jquery.mask
 //= require jquery.validate
-$(document).ready(function(){
-  $(".validate").validate();
-})
+//= require custom

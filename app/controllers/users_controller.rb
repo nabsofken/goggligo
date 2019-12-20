@@ -22,11 +22,18 @@ class UsersController < ApplicationController
   	@user = User.new(user_params)
   	if @user.save
       session[:notice] = 'Successfully created new user'
-  		redirect_to users_path
-  	else
+  		
+  	  respond_to do |format|
+        format.html {redirect_to users_path}
+        format.js {render js: "window.location.href='"+users_path+"'"}
+      end 
+    else
       @error = @user.errors.full_messages.to_sentence
-  		render :new
-  	end
+  		respond_to do |format|
+        format.html  {render :new}
+        format.js
+      end
+    end
   end
 
   def update
@@ -56,7 +63,7 @@ class UsersController < ApplicationController
   	@users = User.doctors.order('created_at DESC')
     @users = @users.where("business_name like :s", :s => "%#{params[:search]}%") if params[:search].present?
   end
-
+  
   def user_params
     params.require(:user).permit(:first_name, :last_name, :email, :active, :business_name, :address, :phone, :fax, :website, :email, :contact_person_email, :contact_person_number, :password, :password_visible)
   end

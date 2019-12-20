@@ -156,7 +156,11 @@ Myapp::Application.routes.draw do
   post "appointments_search", to: "appointments#index"
   get "appointments_search", to: "appointments#index"
 
-  resources :users
+  resources :users do
+    collection do
+      post :validate
+    end
+  end
   post "users/create_user"
   post "users_search", to: "users#index"
   get "users_search", to: "users#index"
