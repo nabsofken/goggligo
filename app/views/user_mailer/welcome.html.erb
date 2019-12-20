@@ -1,2 +1,11 @@
-<p>Hello <%= @user.full_name %>,</p>
-<p>Welcome to gliggo!</p>
+Dear <%= @user.full_name %>
+<p>Thank you for registering <%= @user.business_name %> with Gliggo. </p>
+<p>Your login information to your account at www.admin.gliggo.com is:</p>
+<p>Your Username : <%= @user.email %> – default is contact email</p>
+<p>Your Password : <%= @user.password_visible %> – default will be the business phone number
+(Please change your password after logging in.)</p>
+<p>
+  Your account will let you view your questions list and the number of visitors. If you have any questions or concerns or wish to add or update your questions list, please email us at support@gliggo.com or call us at 1833 3244445
+</p>
+Sincerely,
+Gliggo Team
