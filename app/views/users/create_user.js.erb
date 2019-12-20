@@ -1,1 +1,1 @@
-toastr.error("<%= @user.errors.full_messages.join(", ") %>")
+toastr.error("<%= @user.errors.full_messages.join(", ").gsub('Email','Contact Person Email') %>")
