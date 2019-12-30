@@ -151,7 +151,7 @@ Myapp::Application.routes.draw do
 
   resources :appointments
   get "generate_report", to: "appointments#generate_report"
-  post "generate_csv", to: "appointments#generate_csv"
+  post "import_excel", to: "appointments#import_excel"
   get "statistic", to: "appointments#statistic"
   post "appointments_search", to: "appointments#index"
   get "appointments_search", to: "appointments#index"

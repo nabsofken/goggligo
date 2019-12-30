@@ -46,7 +46,7 @@ class AppointmentsController < ApplicationController
     @appointments = @appointments.where('lower(first_name) LIKE ? OR lower(last_name) LIKE ?', "%#{params[:search].downcase}%", "%#{params[:search].downcase}%") if params[:search].present?
   end
 
-  def generate_csv
+  def import_excel
   	start_date = params[:start_date] || 1.year.ago
   	end_date = params[:end_date] || Date.today
     @appointments = current_user.admin? ? Appointment.all : current_user.appointments
@@ -67,7 +67,7 @@ class AppointmentsController < ApplicationController
   	respond_to do |format|
       format.html
       format.csv { send_data Appointment.to_csv(@appointments), filename: "Visitors-#{Date.today}.csv" }
-      format.xlsx
+      format.xlsx {response.headers['Content-Disposition'] = "attachment; filename=Visitors#{start_date}-#{end_date}.xlsx"}
     end
   end
 
