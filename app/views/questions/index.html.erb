@@ -71,7 +71,7 @@
                     	<%= question.required ? 'Required' : 'Optional' %>
                     </td>
                     <td class="project-people">
-                    	<%= question.question_type.try(:capitalize) %>
+                    	<%= question.question_type.try(:capitalize) == "Mobilenumber" ? "Phone Number" :  question.question_type.try(:capitalize)%>
                     </td>
                     <td class="project-actions">
                         <%= link_to question_path(question), class: "btn btn-white btn-sm" do %>
