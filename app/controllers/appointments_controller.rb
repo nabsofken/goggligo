@@ -67,6 +67,7 @@ class AppointmentsController < ApplicationController
   	respond_to do |format|
       format.html
       format.csv { send_data Appointment.to_csv(@appointments), filename: "Visitors-#{Date.today}.csv" }
+      format.xlsx
     end
   end
 

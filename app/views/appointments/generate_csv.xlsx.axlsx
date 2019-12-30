@@ -1,0 +1,10 @@
+wb = xlsx_package.workbook
+wb.styles do |style|
+  header_cell = style.add_style(b: true)
+  wb.add_worksheet(name: "Appointments") do |sheet|
+    sheet.add_row ["First name", "Last name", "Email", "Mobile number", "Date of visit", "Reason of visit"], :style=>[header_cell, header_cell, header_cell, header_cell, header_cell,header_cell]
+    @appointments.each do |appointment|
+      sheet.add_row [appointment.first_name, appointment.last_name, appointment.email, appointment.mobile_number, appointment.date_of_visit, appointment.reason_of_visit]
+    end
+  end
+end

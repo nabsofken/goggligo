@@ -36,7 +36,7 @@
 	        <div class="ibox-title">
 	            <h5>Export Data</h5>
 	            <div class="ibox-tools">
-		            <%= form_tag(generate_csv_path(format: :csv)) do %>
+		            <%= form_tag(generate_csv_path(format: :xlsx)) do %>
 					  <div class="form-group hidden">
 			            <%= select_tag :user_id, options_from_collection_for_select(User.doctors, "id", "full_name", params[:user_id]), prompt: "Select Client", class: "form-control m-b" %>
 			          </div>
