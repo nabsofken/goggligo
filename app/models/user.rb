@@ -13,7 +13,8 @@ validates_format_of :fax, with: /\(?[0-9]{3}\)? ?[0-9]{3}-[0-9]{4}/, message: "-
 after_create :send_welcome_email, if: lambda{|user| user.doctor?}
 
 def full_name
-	[self.first_name, self.last_name].join(' ')
+  f_name = [self.first_name, self.last_name].join(' ')
+  return f_name == " " ? "User" : f_name
 end
 
 def generate_access_token(device_id)
