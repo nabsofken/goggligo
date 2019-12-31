@@ -1,6 +1,6 @@
 Dear <%= @user.full_name %>
 <p>Thank you for registering <%= @user.business_name %> with Gliggo. </p>
-<p>Your login information to your account at www.admin.gliggo.com is:</p>
+<p>Your login information to your account at <%= ENV["SIGN_IN_URL"] || "www.admin.gliggo.com" %> is:</p>
 <p>Your Username : <%= @user.email %> – default is contact email</p>
 <p>Your Password : <%= @user.password_visible %> – default will be the business phone number
 (Please change your password after logging in.)</p>

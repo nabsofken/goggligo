@@ -82,15 +82,13 @@ Myapp::Application.configure do
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.default_url_options = { host: ENV['APP_HOST'] }
   config.action_mailer.asset_host = ENV['APP_HOST']
-
-  ActionMailer::Base.smtp_settings = {
-    user_name: ENV['SENDGRID_USERNAME'],
-    password: ENV['SENDGRID_PASSWORD'],
-    domain: ENV['APP_HOST'],
-    address: 'smtp.sendgrid.net',
-    port: 587,
-    authentication: :plain,
-    enable_starttls_auto: true
+  config.action_mailer.smtp_settings = {
+    address:               ENV["EMAIL_SERVER"],
+    port:                  587,
+    enable_starttls_auto:  false,
+    authentication:        "plain",
+    user_name:             ENV["EMAIL_USERNAME"],
+    password:              ENV["EMAIL_PASSWORD"]
   }
 
   Rails.application.config.middleware.use ExceptionNotification::Rack,
