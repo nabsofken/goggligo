@@ -38,7 +38,7 @@ class Question < ActiveRecord::Base
   end
   private
   def notify_user
-    UserMailer.question_update_notification(self.user, self).deliver_now if self.changed?
+    UserMailer.question_update_notification(self.user, self).deliver_now if self.changed? && self.user.present?
   end
   def set_question_key
     self.question_key = self.question_type.tableize.singularize if self.question_key.blank?
