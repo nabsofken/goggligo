@@ -8,6 +8,7 @@ class Question < ActiveRecord::Base
   validates :title, presence: true
   validates :pre_condition_question_value, presence: true, if: "pre_condition_question_id.present?"
   after_save :notify_user
+  before_validation :set_question_key
 
   def self.preview(questions)
     body = ''
@@ -38,5 +39,8 @@ class Question < ActiveRecord::Base
   private
   def notify_user
     UserMailer.question_update_notification(self.user, self).deliver_now if self.changed?
+  end
+  def set_question_key
+    self.question_key = self.question_type.tableize.singularize if self.question_key.blank?
   end
 end
