@@ -9,7 +9,7 @@ class Appointment < ActiveRecord::Base
     scope :between, -> (start_date, end_date) { where('created_at BETWEEN ? AND ?', start_date.to_datetime.beginning_of_day, end_date.to_datetime.end_of_day) }
 
   validates_format_of :mobile_number, with: /\(?[0-9]{3}\)? ?[0-9]{3}-[0-9]{4}/, message: "- Phone numbers must be in xxx xxx-xxxx format."
-
+  before_validation :set_mobile_number
   def self.to_csv(appointments)
       attributes = %w{first_name last_name email mobile_number date_of_visit reason_of_visit}
 
@@ -58,5 +58,9 @@ class Appointment < ActiveRecord::Base
     pdf = WickedPdf.new.pdf_from_string(body, dpi: 75, lowquality: true, zoom: 1)
     UserMailer.generate_patient_report(self, pdf, self.user).deliver_now
   end
+  private
 
+  def set_mobile_number
+    self.mobile_number = self.mobile_number.insert(3,' ') if self.mobile_number.present? && self.mobile_number[3] != " "
+  end
 end
