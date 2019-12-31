@@ -61,6 +61,6 @@ class Appointment < ActiveRecord::Base
   private
 
   def set_mobile_number
-    self.mobile_number = self.mobile_number.insert(3,' ') if self.mobile_number.present? && self.mobile_number[3] != " "
+    self.mobile_number = self.mobile_number.insert(3,' ') if self.mobile_number.present? && self.mobile_number.length > 4 && self.mobile_number[3] != " "
   end
 end
