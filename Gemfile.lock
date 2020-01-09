@@ -67,12 +67,12 @@ GEM
     apipie-rails (0.5.16)
       rails (>= 4.1)
     arel (6.0.4)
-    autoprefixer-rails (9.6.1)
+    autoprefixer-rails (9.7.3)
       execjs
     bcrypt (3.1.13)
-    bootstrap-sass (3.3.5)
-      autoprefixer-rails (>= 5.0.0.1)
-      sass (>= 3.2.19)
+    bootstrap-sass (3.4.1)
+      autoprefixer-rails (>= 5.2.1)
+      sassc (>= 2.0.0)
     builder (3.2.3)
     byebug (11.0.1)
     cancan (1.6.10)
@@ -107,6 +107,7 @@ GEM
       actionmailer (>= 4.0, < 6)
       activesupport (>= 4.0, < 6)
     execjs (2.7.0)
+    ffi (1.11.3)
     font-awesome-rails (4.3.0.0)
       railties (>= 3.2, < 5.0)
     globalid (0.4.2)
@@ -184,6 +185,8 @@ GEM
       sass (~> 3.2.2)
       sprockets (~> 2.8, < 3.0)
       sprockets-rails (~> 2.0)
+    sassc (2.2.1)
+      ffi (~> 1.9)
     sdoc (1.0.0)
       rdoc (>= 5.0)
     sprockets (2.12.5)
@@ -217,7 +220,7 @@ PLATFORMS
 DEPENDENCIES
   active_model_serializers
   apipie-rails
-  bootstrap-sass (~> 3.3.5)
+  bootstrap-sass (~> 3.4.1)
   byebug
   cancan
   caxlsx_rails

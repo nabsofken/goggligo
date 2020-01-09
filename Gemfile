@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 # gem 'rails', '4.2.3'
 gem 'rails', github: 'rails/rails', branch: '4-2-stable'
 
-gem 'bootstrap-sass', '~> 3.3.5'
+gem 'bootstrap-sass', '~> 3.4.1'
 gem 'font-awesome-rails', '4.3.0.0'
 
 # Use sqlite3 as the database for Active Record
