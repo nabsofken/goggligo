@@ -1,10 +1,19 @@
 Myapp::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
-  root to: 'appointments#statistic'
+  # root to: 'appointments#statistic'
   apipie
 
   devise_for :users, controllers: { confirmations: 'confirmations' }
+  devise_scope :user do
+    authenticated :user do
+      root 'appointments#statistic'
+    end
+
+    unauthenticated do
+      root 'devise/sessions#new', as: :unauthenticated_root
+    end
+  end
   namespace :api, defaults: {format: 'json'} do
     scope module: :v1, constraints: ApiConstraints.new(version: 1, default: true) do
       devise_for :users, only: [:sessions, :registrations ], controllers: {sessions: 'api/v1/devise/sessions', registrations: 'api/v1/devise/registrations'}
